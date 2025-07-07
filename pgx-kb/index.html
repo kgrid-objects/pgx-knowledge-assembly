@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>cpic-kb</title>
+        <title>pgx knowledgebase</title>
         <style>
         body {
             font-family: Arial, sans-serif;
@@ -90,18 +90,18 @@
         <div class="container">
         <div class="left-column">
             <div class="metadata" id="metadata">
-            <h1>cpic-kb</h1>
-            <p>KO_Description</p>
-            <p><strong>Id:</strong> <a href="https://github.com/kgrid-objects/cpic-collection/blob/master/cpic-kb" target='_blank'> 
-                cpic-kb
+            <h1>pgx knowledgebase</h1>
+            <p>A sample knowledgebase that uses CPIC collection (KnowledgeSet).</p>
+            <p><strong>Id:</strong> <a href="https://github.com/kgrid-objects/cpic-collection/blob/KB-implementation/pgx-kb" target='_blank'> 
+                pgx-kb
             </a></p>
-            <p><strong>Identifier:</strong> ark:cpic-kb</p>
-            <p><strong>Type:</strong> <a href="https://kgrid.org/koio#KnowledgeObject" target='_blank'>https://kgrid.org/koio#KnowledgeObject</a></p>
+            <p><strong>Identifier:</strong> ark:pgx-kb</p>
+            <p><strong>Type:</strong> <a href="https://kgrid.org/koio#KnowledgeBase" target='_blank'>https://kgrid.org/koio#KnowledgeBase</a></p>
             <p><strong>Version:</strong> v1.0</p>
             <p><strong>Date:</strong> 2025-05-06</p>
             
             <p><strong>License:</strong> 
-                    <a href="https://github.com/kgrid-objects/cpic-collection/blob/master/cpic-kb/license.md" target='_blank'>
+                    <a href="https://github.com/kgrid-objects/cpic-collection/blob/KB-implementation/pgx-kb/license.md" target='_blank'>
                         license.md
                     </a></p>
             
@@ -109,18 +109,76 @@
             <hr>
             <h2>Creator Information</h2>
             <p><strong>Name:</strong> 
-                 KO_CreatorName</p>
-            <p><strong>Affiliation:</strong> KO_CreatorAffiliation</p>
+                 KGrid team</p>
+            <p><strong>Affiliation:</strong> University of Michigan</p>
             <p><strong>Email:</strong> 
-                <a href="mailto:KO_CreatorEmail" target='_blank'>
-                    KO_CreatorEmail
+                <a href="mailto:kgrid-developers@umich.edu" target='_blank'>
+                    kgrid-developers@umich.edu
                 </a>
             </p>
             <p><strong>Website:</strong> 
-                <a href="https://github.com/kgrid-objects/cpic-collection/blob/master/cpic-kb/KO_CreatorWebSite" target='_blank'>
-                    https://github.com/kgrid-objects/cpic-collection/blob/master/cpic-kb/KO_CreatorWebSite
+                <a href="https://kgrid.org" target='_blank'>
+                    https://kgrid.org
                 </a>
             </p>
+
+            
+                <hr>
+                <h2>Knowledge</h2>
+                
+                    <p><h3> ks1</h3></p>
+                    <p><strong>Type:</strong> 
+                            <a href="https://kgrid.org/koio#KnowledgeSet" target='_blank'>
+                                https://kgrid.org/koio#KnowledgeSet
+                            </a>
+                    </p>
+                    
+                        <p><strong>Description:</strong> Genotype to Phenotype mapping</p>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <b>Creator Information:</b>
+                    
+                
+                    <p><h3> metadata.json</h3></p>
+                    <p><strong>Type:</strong> 
+                            <a href="https://kgrid.org/koio#KnowledgeSet" target='_blank'>
+                                https://kgrid.org/koio#KnowledgeSet
+                            </a>
+                    </p>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <b>Creator Information:</b>
+                    
+                
+                    <p><h3> ks3</h3></p>
+                    <p><strong>Type:</strong> 
+                            <a href="https://kgrid.org/koio#KnowledgeSet" target='_blank'>
+                                https://kgrid.org/koio#KnowledgeSet
+                            </a>
+                    </p>
+                    
+                        <p><strong>Description:</strong> Phenotype to recommendation mapping</p>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <b>Creator Information:</b>
+                    
+                
+            
 
             
             <hr>
@@ -132,86 +190,29 @@
                             https://kgrid.org/koio#Service
                         </a>
                 </p>
-                <p><strong>Depends on:</strong> KO_KnowlegeId</p>
+                <p><strong>Depends on:</strong> ks1</p>
                 <p><strong>Implemented by:</strong> 
                     
-                        <a href="https://github.com/kgrid-objects/cpic-collection/blob/master/cpic-kb/KO_ServicePath" target='_blank'>
-                            KO_ServicePath
+                        <a href="https://github.com/kgrid-objects/cpic-collection/blob/KB-implementation/pgx-kb/src/api-service.js" target='_blank'>
+                            api-service.js
                         </a>                                 
                                          
                 </p>
             
-            
-            
-            
-            
-            <hr>
-            <h2>Knowledge</h2>
-            
-                <p><h3> KO_KnowledgeId</h3></p>
+                <p><h3> </h3></p>
                 <p><strong>Type:</strong> 
-                        <a href="https://kgrid.org/koio#Knowledge" target='_blank'>
-                            https://kgrid.org/koio#Knowledge
+                        <a href="https://kgrid.org/koio#Service" target='_blank'>
+                            https://kgrid.org/koio#Service
                         </a>
                 </p>
-                
-                
-                
+                <p><strong>Depends on:</strong> ks1</p>
                 <p><strong>Implemented by:</strong> 
-                <ul>
-                
-                    <li>
-                    <a href="https://github.com/kgrid-objects/cpic-collection/blob/master/cpic-kb/KO_KnowledgeImplementationPath" target='_blank'>
-                        KO_KnowledgeImplementationPath
-                    </a><br/>(type: 
-                        
-                        <ul>
-                          
-                            <li>
-                                <a href="https://kgrid.org/koio#Implementation" target='_blank'>
-                                    https://kgrid.org/koio#Implementation
-                                </a>
-                            </li>    
-                          
-                            <li>
-                                <a href="https://w3id.org/function/ontology#Function" target='_blank'>
-                                    https://w3id.org/function/ontology#Function
-                                </a>
-                            </li>    
-                        
-                        </ul>
-                        )
-                    </li>
-                
-                </ul>
+                    
+                        <a href="https://github.com/kgrid-objects/cpic-collection/blob/KB-implementation/pgx-kb/src/library-service.js" target='_blank'>
+                            library-service.js
+                        </a>                                 
+                                         
                 </p>
-                
-                
-                <p><strong>Source:</strong> 
-                    <a href="KO_KnowLedgeSource" target='_blank'>
-                        KO_KnowLedgeSource
-                    </a>
-                </p>
-                
-                
-                <p><strong>Format:</strong> 
-                    text/html
-                </p>
-                
-                
-                <p><strong>Date:</strong> 
-                    KO_KnowledgeCreationDate
-                </p>
-                
-                <b>Creator Information:</b>
-                
-                <p><strong>Name:</strong> 
-                     KO_KnwoledgeCreatorName
-                </p>
-                
-                
-                
-                
             
             
         </div>            
@@ -221,25 +222,18 @@
             
                 <h2>Documentation</h2>
                 
-                    <h3><a href="https://github.com/kgrid-objects/cpic-collection/blob/master/cpic-kb/README.md" target='_blank'>README.md</a></h3>
-                    <p>KO readme file.</p>
+                    <h3><a href="https://github.com/kgrid-objects/cpic-collection/blob/KB-implementation/pgx-kb/README.md" target='_blank'>README.md</a></h3>
+                    <p>KB readme file.</p>
                 
-                    <h3><a href="https://github.com/kgrid-objects/cpic-collection/blob/master/cpic-kb/index.html" target='_blank'>Knowledge Object Information Page</a></h3>
+                    <h3><a href="https://github.com/kgrid-objects/cpic-collection/blob/KB-implementation/pgx-kb/index.html" target='_blank'>Knowledge Object Information Page</a></h3>
                     <p>Knowledge object information page.</p>
-                
-                    <h3><a href="https://github.com/kgrid-objects/cpic-collection/blob/master/cpic-kb/KO_KnowledgeDocumentationPath" target='_blank'>KO_KnowledgeDocumentationTitle</a></h3>
-                    <p>KO_KnowledgeDocumentationDescription</p>
                 
             
         </div>
 
             <div class="test-section" id="test-section">
             
-                <h2>Tests</h2>
-                
-                    <h3><a href="https://github.com/kgrid-objects/cpic-collection/blob/master/cpic-kb/KO_KnowledgeTestImplementationPath" target='_blank'>KO_KnowledgeTestTitle</a></h3>
-                    <p>KO_KnowledgeTestDescription</p>
-                
+                <p>No tests available</p>
             
             </div>
         </div>
