@@ -1,39 +1,9 @@
-function phenotype (inputs) {
-  var output = {}
-  output[gene] = {}
-  var alleles = inputs[gene].split('/')
-  var count = 0
-  if(((list[alleles[0]]!='Unknown function/Uncertain function') && list[alleles[0]]!='Possible decreased function')
-      && ((list[alleles[1]]!='Unknown function/Uncertain function') && list[alleles[1]]!='Possible decreased function')){
-    alleles.forEach(function(e, index){
-      switch(list[e]){
-        case 'Normal function':
-          count=count+2;
-          break;
-        case 'Decreased function':
-        case 'No function':
-          count=count+1;
-          break;
-    }
-  })
-  count=count-1
-}
+const gene = 'CYP2C9';
 
-  output[gene].diplotype = inputs[gene]
-  output[gene].phenotype = dict[count]
-  if(count>0) {
-    output[gene].phenotype = output[gene].phenotype +' metabolizer'
-  }
-  return output
+const dict = ['TBD', 'Poor', 'Intermediate', 'Extensive'];
 
-}
-
-var gene = 'CYP2C9'
-
-var dict = ['TBD', 'Poor', 'Intermediate', 'Extensive']
-
-
-var list = {"*1": "Normal function", "*2": "Decreased function", "*3": "Decreased function",
+const list = {
+  "*1": "Normal function", "*2": "Decreased function", "*3": "Decreased function",
   "*4": "Possible decreased function", "*5": "Possible decreased function", "*6": "No function",
   "*7": "Unknown function/Uncertain function", "*8": "Possible decreased function",
   "*9": "Normal function", "*10": "Unknown function/Uncertain function", "*11": "Possible decreased function",
@@ -60,8 +30,41 @@ var list = {"*1": "Normal function", "*2": "Decreased function", "*3": "Decrease
   "*53": "Unknown function/Uncertain function", "*54": "Unknown function/Uncertain function",
   "*55": "Unknown function/Uncertain function", "*56": "Unknown function/Uncertain function",
   "*57": "Unknown function/Uncertain function", "*58": "Unknown function/Uncertain function",
-  "*59": "Unknown function/Uncertain function", "*60": "Unknown function/Uncertain function"}
+  "*59": "Unknown function/Uncertain function", "*60": "Unknown function/Uncertain function"
+};
 
-  module.exports = { phenotype };
+function phenotype(inputs) {
+  const output = {};
+  output[gene] = {};
+  const alleles = inputs[gene].split('/');
+  let count = 0;
 
+  if (
+    (list[alleles[0]] !== 'Unknown function/Uncertain function' && list[alleles[0]] !== 'Possible decreased function') &&
+    (list[alleles[1]] !== 'Unknown function/Uncertain function' && list[alleles[1]] !== 'Possible decreased function')
+  ) {
+    alleles.forEach(function (e) {
+      switch (list[e]) {
+        case 'Normal function':
+          count += 2;
+          break;
+        case 'Decreased function':
+        case 'No function':
+          count += 1;
+          break;
+      }
+    });
+    count -= 1;
+  }
 
+  output[gene].diplotype = inputs[gene];
+  output[gene].phenotype = dict[count];
+  if (count > 0) {
+    output[gene].phenotype += ' metabolizer';
+  }
+
+  return output;
+}
+
+// ✅ ESM export
+export { phenotype };

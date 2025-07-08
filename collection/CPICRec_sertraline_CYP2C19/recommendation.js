@@ -74,4 +74,4 @@ var recommendations = {
           'recommendation': 'Consider a 50% reduction of recommended starting dose and titrate to response or select alternative drug not predominantly metabolized by CYP2C19.',
           'classification': 'Optional'}}
 
-module.exports = { dosingrecommendation };
+export { dosingrecommendation };

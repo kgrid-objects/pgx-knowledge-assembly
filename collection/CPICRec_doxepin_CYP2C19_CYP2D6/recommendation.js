@@ -157,4 +157,4 @@ var recommendations = {
         'classification': 'Optional'}
 }
 
-module.exports = { dosingrecommendation };
+export { dosingrecommendation };
