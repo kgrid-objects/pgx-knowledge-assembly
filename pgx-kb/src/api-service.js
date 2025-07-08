@@ -1,12 +1,15 @@
-const express = require('express');
-const { loadKnowledgeFunctions, loadMetadata, loadKnowledgeSet } = require('./knowledgeLoader');
-const swaggerUi = require('swagger-ui-express');
-const swaggerJSDoc = require('swagger-jsdoc');
+import express from 'express';
+import { loadKnowledgeFunctions, loadMetadata, loadKnowledgeSet } from './knowledgeLoader.js';
+import swaggerUi from 'swagger-ui-express';
+import swaggerJSDoc from 'swagger-jsdoc';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-const path = require('path');
 
 const app = express();
 app.use(express.json());
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 let knowledgeSet1 = [];
 let knowledgeSet2 = [];
