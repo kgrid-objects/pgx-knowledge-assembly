@@ -101,6 +101,20 @@ app.post('/run', async (req, res) => {
     const intermediateResults = await Promise.all(
       knowledgeSet1.map(ko => ko.function(input['diplotype']))
     );
+    const responseGenes = new Set(intermediateResults.map(obj => Object.keys(obj)[0]));
+
+    // Add missing genes
+    for (const gene in input['diplotype']) {
+      if (!responseGenes.has(gene)) {
+        const value = input['diplotype'][gene];
+        if (value) {
+          intermediateResults.push({ [gene]: { diplotype: value, phenotype: "" } });
+        } else {
+          intermediateResults.push({ [gene]: {} });
+        }
+      }
+    }
+
     const mergedResults = intermediateResults.reduce((acc, obj) => {
       return { ...acc, ...obj };
     }, {});
