@@ -83,4 +83,4 @@ var recommendations = {'cyp2c9extensivehla-b15:02carrier':{'implication': 'Incre
     'classification': 'Strong'},
 }
 
-module.exports = { dosingrecommendation };
+export { dosingrecommendation };

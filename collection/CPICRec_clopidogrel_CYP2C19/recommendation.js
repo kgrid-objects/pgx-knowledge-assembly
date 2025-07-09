@@ -74,4 +74,4 @@ var recommendations = {
           'recommendation': 'Alternative antiplatelet therapy (if no contraindication), e.g., prasugrel, ticagrelor.',
           'classification': 'Strong'}}
 
-module.exports = { dosingrecommendation };
+export { dosingrecommendation };

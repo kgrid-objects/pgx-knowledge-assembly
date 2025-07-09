@@ -71,4 +71,4 @@ var recommendations = {
           'recommendation': 'Prescribe a lower dose or consider an alternative statin (e.g., pravastatin or rosuvastatin); consider routine CK surveillance.',
           'classification': 'Strong'}}
 
-module.exports = { dosingrecommendation };
+export { dosingrecommendation };

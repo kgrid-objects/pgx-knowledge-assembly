@@ -62,4 +62,4 @@ var reference = {'CYP2C19':{field:'phenotype', value:''}}
 // # Dictionary containing Phenotype to Recommendation Information
 var recommendations = {
 }
-module.exports = { dosingrecommendation };
+export { dosingrecommendation };

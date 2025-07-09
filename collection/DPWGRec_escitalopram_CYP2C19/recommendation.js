@@ -64,4 +64,4 @@ var recommendations = {
           'recommendation': 'Do not exceed the following doses (50% of the standard maximum dose): adults < 65 years 10 mg/day, =65 years 5 mg/day',
           'classification': ''}}
 
-module.exports = { dosingrecommendation };
+export { dosingrecommendation };

@@ -1,72 +1,87 @@
-function dosingrecommendation (inputs) {
+const drug = 'abacavir';
+
+const reference = {
+  'HLA-B': { field: 'diplotype', value: '57:01' }
+};
+
+const keysuffix = {
+  'HLA-B': { negative: 'noncarrier', positive: 'carrier' }
+};
+
+const recommendations = {
+  'hla-b57:01noncarrier': {
+    implication: 'Low or reduced risk of abacavir hypersensitivity',
+    recommendation: 'abacavir: Use abacavir per standard dosing guidelines',
+    classification: 'Strong'
+  },
+  'hla-b57:01carrier': {
+    implication: 'Significantly increased risk of abacavir hypersensitivity',
+    recommendation: 'abacavir: Abacavir is not recommended',
+    classification: 'Strong'
+  }
+};
+
+function dosingrecommendation(inputs) {
   try {
-    var genes = {}
-    var output = {}
-    var searchkeyReady = true
-    var phenotypesValue = ''
-    var lowercaseInput = {}
-    var searchKey = ''
-    var targetfield =''
-    for(var inputkey in inputs){
-      var key = inputkey.toLowerCase()
-      lowercaseInput[key]=inputs[inputkey]
+    const genes = {};
+    const output = {};
+    let searchkeyReady = true;
+    let searchKey = '';
+    const lowercaseInput = {};
+
+    for (const inputkey in inputs) {
+      const key = inputkey.toLowerCase();
+      lowercaseInput[key] = inputs[inputkey];
     }
-    for(var genekey in reference) {
-      key = genekey.toLowerCase()
-      if(!lowercaseInput[key]) {
-        break
-      }
-      genes[genekey]={}
-      genes[genekey].diplotype = lowercaseInput[key].diplotype || ''
-      genes[genekey].phenotype = lowercaseInput[key].phenotype || ''
-      genes[genekey].phenotype = genes[genekey].phenotype.toLowerCase()
-      targetfield = reference[genekey].field
-      searchkeyReady = searchkeyReady && (genes[genekey][targetfield]!='')
-      if(targetfield=='diplotype'){
-        if (genes[genekey].diplotype.indexOf(reference[genekey].value) != -1) {
-          searchKey = searchKey+genekey.toLowerCase()+reference[genekey].value+keysuffix[genekey].positive
+
+    for (const genekey in reference) {
+      const key = genekey.toLowerCase();
+      if (!lowercaseInput[key]) break;
+
+      genes[genekey] = {
+        diplotype: lowercaseInput[key].diplotype || '',
+        phenotype: (lowercaseInput[key].phenotype || '').toLowerCase()
+      };
+
+      const targetfield = reference[genekey].field;
+      searchkeyReady = searchkeyReady && genes[genekey][targetfield] !== '';
+
+      if (targetfield === 'diplotype') {
+        if (genes[genekey].diplotype.includes(reference[genekey].value)) {
+          searchKey += key + reference[genekey].value + keysuffix[genekey].positive;
         } else {
-          searchKey = searchKey+ genekey.toLowerCase()+reference[genekey].value+keysuffix[genekey].negative
+          searchKey += key + reference[genekey].value + keysuffix[genekey].negative;
         }
       }
-      if(targetfield=='phenotype'){
-        if (genes[genekey].phenotype != "") {
-          searchKey = searchKey+genekey.toLowerCase()+genes[genekey].phenotype.replace('metabolizer','').replace(' ','')
+
+      if (targetfield === 'phenotype') {
+        if (genes[genekey].phenotype !== '') {
+          searchKey += key + genes[genekey].phenotype.replace('metabolizer', '').replace(/\s/g, '');
         }
       }
     }
+
     if (searchkeyReady) {
-      if(recommendations[searchKey]!=null){
-        output.type='CPIC Recommendation'
-        output.drug=drug
-        output["genes"] = JSON.parse(JSON.stringify(genes))
-        output.recommendation={}
-        output.recommendation.implication=recommendations[searchKey].implication
-        output.recommendation.content=recommendations[searchKey].recommendation
-        output.recommendation.classification=recommendations[searchKey].classification
-        return output
+      const recommendation = recommendations[searchKey];
+      if (recommendation != null) {
+        output.type = 'CPIC Recommendation';
+        output.drug = drug;
+        output.genes = structuredClone(genes);
+        output.recommendation = {
+          implication: recommendation.implication,
+          content: recommendation.recommendation,
+          classification: recommendation.classification
+        };
+        return output;
       } else {
-        return "Incorrect/invalid input for drug " + drug
+        return `Incorrect/invalid input for drug ${drug}`;
       }
-    }else {
-      return "Incorrect/invalid input."
+    } else {
+      return 'Incorrect/invalid input.';
     }
-  } catch(error){
-    return 'Error: '+ error
+  } catch (error) {
+    return 'Error: ' + error;
   }
 }
-// KGrid CPIC guidelines HLA-B gene to abacavir Recommendation
-var drug = 'abacavir'
-var reference = {'HLA-B':{field:'diplotype', value:'57:01'}}
-var keysuffix= {'HLA-B':{negative:'noncarrier', positive:'carrier'}}   //dipltotype only
 
-var recommendations = {
-  'hla-b57:01noncarrier': {'implication': 'Low or reduced risk of abacavir hypersensitivity',
-          'recommendation': 'abacavir: Use abacavir per standard dosing guidelines',
-          'classification': 'Strong'},
-  'hla-b57:01carrier': {'implication': 'Significantly increased risk of abacavir hypersensitivity',
-                  'recommendation': 'abacavir: Abacavir is not recommended',
-                  'classification': 'Strong'}}
-
-
-module.exports = { dosingrecommendation };
+export { dosingrecommendation };

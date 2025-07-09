@@ -77,4 +77,4 @@ var recommendations = {
 
 }
 
-module.exports = { dosingrecommendation };
+export { dosingrecommendation };

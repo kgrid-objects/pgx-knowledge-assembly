@@ -15,5 +15,6 @@
   "bugs": {
     "url": "https://github.com/kgrid-objects/cpic-collection/issues"
   },
-  "homepage": "https://github.com/kgrid-objects/cpic-collection/tree/master#readme"
+  "homepage": "https://github.com/kgrid-objects/cpic-collection/tree/master#readme",
+  "type": "module"
 }

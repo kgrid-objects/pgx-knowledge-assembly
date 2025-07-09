@@ -66,4 +66,4 @@ var recommendations = {
         'classification': ''}
 }
 
-module.exports = { dosingrecommendation };
+export { dosingrecommendation };

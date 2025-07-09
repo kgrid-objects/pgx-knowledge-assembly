@@ -77,4 +77,4 @@ var recommendations = {
           'recommendation': 'Choose an alternative agent that is not dependent on CYP2C19 metabolism as primary therapy in lieu of voriconazole. Such agents include isavuconazole, liposomal amphotericin B, and posaconazole.b In the event that voriconazole is considered to be the most appropriate agent, based on clinical advice, for a patient with poor metabolizer genotype, voriconazole should be administered at a preferably lower than standard dosage with careful therapeutic drug monitoring.',
           'classification': 'Moderate'}}
 
-module.exports = { dosingrecommendation };
+export { dosingrecommendation };

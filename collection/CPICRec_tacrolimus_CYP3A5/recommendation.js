@@ -71,4 +71,4 @@ var recommendations = {
           'recommendation': 'Initiate therapy with standard recommended dose. Use therapeutic drug monitoring to guide dose adjustments.',
           'classification': 'Strong'}}
 
-module.exports = { dosingrecommendation };
+export { dosingrecommendation };

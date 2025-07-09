@@ -73,4 +73,4 @@ var recommendations = {
           'classification': 'No recommendation'}
         }
 
-module.exports = { dosingrecommendation };
+export { dosingrecommendation };

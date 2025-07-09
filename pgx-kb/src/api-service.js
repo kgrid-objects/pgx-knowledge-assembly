@@ -1,12 +1,15 @@
-const express = require('express');
-const { loadKnowledgeFunctions, loadMetadata, loadKnowledgeSet } = require('./knowledgeLoader');
-const swaggerUi = require('swagger-ui-express');
-const swaggerJSDoc = require('swagger-jsdoc');
+import express from 'express';
+import { loadKnowledgeFunctions, loadMetadata, loadKnowledgeSet } from './knowledgeLoader.js';
+import swaggerUi from 'swagger-ui-express';
+import swaggerJSDoc from 'swagger-jsdoc';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-const path = require('path');
 
 const app = express();
 app.use(express.json());
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 let knowledgeSet1 = [];
 let knowledgeSet2 = [];
@@ -98,6 +101,20 @@ app.post('/run', async (req, res) => {
     const intermediateResults = await Promise.all(
       knowledgeSet1.map(ko => ko.function(input['diplotype']))
     );
+    const responseGenes = new Set(intermediateResults.map(obj => Object.keys(obj)[0]));
+
+    // Add missing genes
+    for (const gene in input['diplotype']) {
+      if (!responseGenes.has(gene)) {
+        const value = input['diplotype'][gene];
+        if (value) {
+          intermediateResults.push({ [gene]: { diplotype: value, phenotype: "" } });
+        } else {
+          intermediateResults.push({ [gene]: {} });
+        }
+      }
+    }
+
     const mergedResults = intermediateResults.reduce((acc, obj) => {
       return { ...acc, ...obj };
     }, {});
