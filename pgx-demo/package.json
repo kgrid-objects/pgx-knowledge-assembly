@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prebuild": "mkdir -p public/static/pgx-kb && cp node_modules/pgx-kb/metadata.json public/pgx-kb/metadata.json",
+    "build": "npm run prebuild && vite build"
   },
   "keywords": [],
   "author": "",
@@ -13,5 +15,8 @@
     "express": "^5.1.0",
     "pgx-kb": "file:../pgx-kb"
   },
-    "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "vite": "^6.3.5"
+  }
 }

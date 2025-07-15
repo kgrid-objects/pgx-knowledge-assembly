@@ -1,3 +1,13 @@
+import pgx from 'pgx-kb';
+
+async function initialize() {
+  await pgx.initialize();
+}
+
+
+initialize();
+
+
 // define the item component
 Vue.component('recomtile', {
   template: '#recomtile-template',
@@ -71,17 +81,17 @@ var demo = new Vue({
       self.patientsamples = initresp.data.patientsamples
       self.phenotypePanel = JSON.parse(JSON.stringify(initresp.data.initrequest.diplotype))
       self.diplotypePanel = JSON.parse(JSON.stringify(initresp.data.initrequest.diplotype))
-      
+
     })).catch(function (error) {
       console.log(error)
     })
   },
-  computed: {    
+  computed: {
     debouncegetdata: function () {
       return _.debounce(this.getdata, this.delay)
     }
   },
-  watch: {    
+  watch: {
     autofillSelection: function () {
       var self = this
       if (this.autofillSelection != '') {
@@ -108,7 +118,7 @@ var demo = new Vue({
       deep: true
     }
   },
-  methods: {    
+  methods: {
     appendLog: function (key, s) {
       var ts = moment().format('ddd, MMM Do YYYY, h:mm:ss A Z')
       var entry = {}
@@ -140,15 +150,10 @@ var demo = new Vue({
         self.phenotypePanel[key] = {}
       })
       try {
-        const response = await fetch('/api/recommend', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            "diplotype": self.diplotypePanel
-          }
-          )
-        });
-        const result = await response.json();
+        const result = await pgx.run({
+          "diplotype": self.diplotypePanel
+        }
+        );
 
         self.recommendationlistks2 = result.finalKS2
           .filter(item => typeof item === 'object' && item !== null)

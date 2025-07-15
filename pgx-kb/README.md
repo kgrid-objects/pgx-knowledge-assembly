@@ -30,24 +30,52 @@ Here is a sample input
 ```
 
 ## Library Service
+This version of the app allows importing and using pgx-kb on the client side js files that execute on the beroswer without any need for server side processing.
+
 To use library service add and install the pgx-kb package as a dependency in your node.js app using
 
 ```batch
 npm install /path/to/pgx-kb
 ```
 
-Then import the initialize and run methods from pgx-kb package using
+To be able to load pgx-kb metadata in the browser of the app, copy it to the public folder by adding the following script to the package.json
+```json
+  "scripts": {
+    "prebuild": "mkdir -p public/static/pgx-kb && cp node_modules/pgx-kb/metadata.json public/pgx-kb/metadata.json",
+    "build": "npm run prebuild && vite build"
+  }
+```
+
+and running the following command in the shell
+```shell
+npm run build  
+```
+
+Update the cpic.js file import in the index.html file as follows
+```html
+<script type="module" src="static/js/cpic.js"> </script>
+```
+
+Then import the pgx-kb package using
 
 ```javascript
-const { run, initialize } = require('pgx-kb');
-// or import {run, initialize} from 'pgx-kb';
+import pgx from 'pgx-kb';
+
 ```
 
 Then initialize the package and run the service using
 
 ```javascript
-await initialize();
-let result = await run({
+import pgx from 'pgx-kb';
+
+async function initialize() {
+  await pgx.initialize();
+}
+
+
+initialize();
+
+let result = await pgx.run({
     "patient": {
         "name": "Hank Hill",
         "id": "1"
@@ -66,3 +94,33 @@ let result = await run({
   }
 );
 ```
+
+Then add a `vite.config.js` as the build confige for vite with the following content
+```javascript
+export default {
+  root: 'public',
+  build: {
+    outDir: 'dist',
+    rollupOptions: {
+      input: 'public/index.html'
+    }
+  }
+}
+```  
+
+Then run the application using the following command
+```shell
+npx vite   
+```
+
+For production build the app using
+```
+npx vite build 
+```
+
+To run a built version in dev environment use serve
+```shell
+npm install -g serve
+serve dist
+```
+
