@@ -2,14 +2,7 @@
     "@context": [
         "https://kgrid.org/koio/2.1/context.jsonld",
         {
-            "@version": 1.1,
-            "hasKnowledgeObject": {
-                "@id": "koio:hasKnowledgeObject",
-                "@container": [
-                    "@id",
-                    "@set"
-                ]
-            },
+            "@version": 1.1,            
             "Purpose": "http://purl.obolibrary.org/obo/NCIT_C25634"
         }
     ],
@@ -25,11 +18,11 @@
     "schema:creator": {
         "@id": "https://kgrid.org",
         "@type": "schema:Organization",
-        "schema:name": "KGrid team",
+        "schema:name": "Knowledge Systems Lab, University of Michigan",
         "schema:affiliation": "University of Michigan",
         "schema:email": "kgrid-developers@umich.edu"
     },
-    "dc:publisher": "KGrid team",
+    "dc:publisher": "Knowledge Systems Lab, University of Michigan",
     "dc:license": {
         "@id": "license.md"
     },
@@ -38,63 +31,56 @@
             "@id": "ks1",
             "@type": "koio:KnowledgeSet",
             "dc:description": "Genotype to Phenotype mapping",
-            "hasKnowledgeObject": {
-                "https://github.com/kgrid-objects/cpic-collection/tree/master/collection/CPIC_Phenotype_CYP2C19/": {
-                    "title": "CPIC Genotype - Phenotype for CYP2C19",
-                    "dc:version": "v1.0"
+            "koio:hasKnowledgeObject": [
+                {
+                    "@id": "https://github.com/kgrid-objects/cpic-collection/tree/master/collection/CPIC_Phenotype_CYP2C19/"
                 },
-                "https://github.com/kgrid-objects/cpic-collection/tree/master/collection/CPIC_Phenotype_CYP2C9/": {
-                    "title": "CPIC Genotype - Phenotype for CYP2C9",
-                    "dc:version": "v1.0"
+                {
+                    "@id": "https://github.com/kgrid-objects/cpic-collection/tree/master/collection/CPIC_Phenotype_CYP2C9/"
                 },
-                "https://github.com/kgrid-objects/cpic-collection/tree/master/collection/CPIC_Phenotype_CYP2D6-V1/": {
-                    "title": "CPIC Genotype - Phenotype for CYP2D6 v0.3.0",
-                    "dc:version": "v1.0"
+                {
+                    "@id": "https://github.com/kgrid-objects/cpic-collection/tree/master/collection/CPIC_Phenotype_CYP2D6-V1/"
                 },
-                "https://github.com/kgrid-objects/cpic-collection/tree/master/collection/CPIC_Phenotype_CYP2D6/": {
-                    "title": "CPIC Genotype - Phenotype for CYP2D6 v0.3.0",
-                    "dc:version": "v1.0"
+                {
+                    "@id": "https://github.com/kgrid-objects/cpic-collection/tree/master/collection/CPIC_Phenotype_CYP2D6/"
                 },
-                "https://github.com/kgrid-objects/cpic-collection/tree/master/collection/CPIC_Phenotype_CYP3A5/": {
-                    "title": "CPIC Genotype - Phenotype for CYP3A5",
-                    "dc:version": "v1.0"
+                {
+                    "@id": "https://github.com/kgrid-objects/cpic-collection/tree/master/collection/CPIC_Phenotype_CYP3A5/"
                 },
-                "https://github.com/kgrid-objects/cpic-collection/tree/master/collection/CPIC_Phenotype_SLCO1B1/": {
-                    "title": "CPIC Genotype - Phenotype for SLCO1B1",
-                    "dc:version": "v1.0"
+                {
+                    "@id": "https://github.com/kgrid-objects/cpic-collection/tree/master/collection/CPIC_Phenotype_SLCO1B1/"
                 },
-                "https://github.com/kgrid-objects/cpic-collection/tree/master/collection/CPIC_Phenotype_TPMT/": {
-                    "title": "CPIC Genotype - Phenotype for TPMT",
-                    "dc:version": "v1.0"
+                {
+                    "@id": "https://github.com/kgrid-objects/cpic-collection/tree/master/collection/CPIC_Phenotype_TPMT/"
                 },
-                "https://github.com/kgrid-objects/cpic-collection/tree/master/collection/CPIC_Phenotype_UGT1A1/": {
-                    "title": "CPIC Genotype - Phenotype for UGT1A1",
-                    "dc:version": "v1.0"
+                {
+                    "@id": "https://github.com/kgrid-objects/cpic-collection/tree/master/collection/CPIC_Phenotype_UGT1A1/"
                 }
-            }
+            ]
         },
         {
-            "@id": "https://raw.githubusercontent.com/kgrid-objects/cpic-collection/refs/heads/KB-implementation/collection/drug_recommendation_knowledge_set/metadata.json",
-            "@type": "koio:KnowledgeSet"
+            "@id": "ks2",
+            "@type": "koio:KnowledgeSet",
+            "dc:description": "Phenotype to recommendation mapping",
+            "koio:hasKnowledgeObject": [
+                "https://raw.githubusercontent.com/kgrid-objects/cpic-collection/refs/tags/External-KSet-1.0/collection/external_kset/kset_export1.json"
+            ]
         },
         {
             "@id": "ks3",
             "@type": "koio:KnowledgeSet",
             "dc:description": "Phenotype to recommendation mapping",
-            "hasKnowledgeObject": {
-                "https://github.com/kgrid-objects/cpic-collection/tree/master/collection/DPWGRec_amitriptyline_CYP2C19/": {
-                    "title": "DPWG amitriptyline Recommendations based on CYP2C19 phenotype",
-                    "dc:version": "v1.0"
+            "koio:hasKnowledgeObject": [
+                {
+                    "@id": "https://github.com/kgrid-objects/cpic-collection/tree/master/collection/DPWGRec_amitriptyline_CYP2C19/"
                 },
-                "https://github.com/kgrid-objects/cpic-collection/tree/master/collection/DPWGRec_clomipramine_CYP2C19/": {
-                    "title": "DPWG clomipramine Recommendations based on CYP2C19 phenotype",
-                    "dc:version": "v1.0"
+                {
+                    "@id": "https://github.com/kgrid-objects/cpic-collection/tree/master/collection/DPWGRec_clomipramine_CYP2C19/"
                 },
-                "https://github.com/kgrid-objects/cpic-collection/tree/master/collection/DPWGRec_escitalopram_CYP2C19/": {
-                    "title": "DPWG escitalopram Recommendations based on CYP2C19 phenotype",
-                    "dc:version": "v1.0"
+                {
+                    "@id": "https://github.com/kgrid-objects/cpic-collection/tree/master/collection/DPWGRec_escitalopram_CYP2C19/"
                 }
-            }
+            ]
         }
     ],
     "hasService": [
@@ -105,8 +91,8 @@
             "dc:description": "An API service that accepts a genetic profile and provide access to patient specific drug selection and dosing recommendations. See sample.profile for example.",
             "dependsOn": [
                 "ks1",
-                "https://raw.githubusercontent.com/kgrid-objects/cpic-collection/refs/heads/KB-implementation/collection/drug_recommendation_knowledge_set/metadata.json",
-                "ks3"            
+                "ks2",
+                "ks3"
             ],
             "implementedBy": {
                 "@id": "src/api-service.js",
@@ -122,7 +108,7 @@
             "dc:description": "A JavaScript library with a function that accepts a genetic profile and provide access to patient specific drug selection and dosing recommendations. See sample.profile for example.",
             "dependsOn": [
                 "ks1",
-                "https://raw.githubusercontent.com/kgrid-objects/cpic-collection/refs/heads/KB-implementation/collection/drug_recommendation_knowledge_set/metadata.json",
+                "ks2",
                 "ks3"
             ],
             "implementedBy": {
