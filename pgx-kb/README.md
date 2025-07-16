@@ -41,7 +41,7 @@ npm install /path/to/pgx-kb
 To be able to load pgx-kb metadata in the browser of the app, copy it to the public folder by adding the following script to the package.json
 ```json
   "scripts": {
-    "prebuild": "mkdir -p public/static/pgx-kb && cp node_modules/pgx-kb/metadata.json public/pgx-kb/metadata.json",
+    "prebuild": "mkdir -p public/pgx-kb && cp node_modules/pgx-kb/metadata.json public/pgx-kb/metadata.json",
     "build": "npm run prebuild && vite build"
   }
 ```

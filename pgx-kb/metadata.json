@@ -63,7 +63,7 @@
             "@type": "koio:KnowledgeSet",
             "dc:description": "Phenotype to recommendation mapping",
             "koio:hasKnowledgeObject": [
-                "https://raw.githubusercontent.com/kgrid-objects/cpic-collection/refs/tags/External-KSet-1.0/collection/external_kset/kset_export1.json"
+                "https://raw.githubusercontent.com/kgrid-objects/cpic-collection/refs/tags/ExternalKSet1.0/collection/external_kset/kset_export1.json"
             ]
         },
         {

@@ -31,8 +31,7 @@ async function loadKnowledgeSet(ks) {
         for (let i = 0; i < ks["https://kgrid.org/koio#hasKnowledgeObject"].length; i++) {
             let response = await fetch(ks["https://kgrid.org/koio#hasKnowledgeObject"][i]["@value"]);
             const compacted = await response.json();
-            const expanded = await jsonld.expand(compacted);        
-            knowledgeSet.concat(expanded[0])
+            knowledgeSet.push(...compacted)
         }
         return knowledgeSet
     }
