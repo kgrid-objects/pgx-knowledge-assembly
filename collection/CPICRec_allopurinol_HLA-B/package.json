@@ -1,0 +1,6 @@
+{
+  "name": "cpicrec-allopurinol_hla-b",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./recommendation.js"
+}

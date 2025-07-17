@@ -85,6 +85,7 @@
     ],
     "hasService": [
         {
+            "@id": "API Service",
             "@type": [
                 "Service"
             ],
@@ -102,6 +103,7 @@
             }
         },
         {
+            "@id": "Plugin Service",
             "@type": [
                 "Service"
             ],
@@ -113,6 +115,25 @@
             ],
             "implementedBy": {
                 "@id": "src/plugin-service.js",
+                "@type": [
+                    "Implementation"
+                ]
+            }
+        }
+        ,
+        {
+            "@id": "Library Service",
+            "@type": [
+                "Service"
+            ],
+            "dc:description": "A JavaScript library with a function that accepts a genetic profile and provide access to patient specific drug selection and dosing recommendations. See sample.profile for example.",
+            "dependsOn": [
+                "ks1",
+                "ks2",
+                "ks3"
+            ],
+            "implementedBy": {
+                "@id": "src/library-service",
                 "@type": [
                     "Implementation"
                 ]

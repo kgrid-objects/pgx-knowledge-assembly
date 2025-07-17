@@ -6,7 +6,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "exports": {
-    "./plugin-service": "./src/plugin-service.js"
+    "./plugin-service": "./src/plugin-service.js",
+    "./library-service": "./src/library-service/library-service.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,13 @@
     "url": "https://github.com/kgrid-objects/cpic-collection/issues"
   },
   "homepage": "https://github.com/kgrid-objects/cpic-collection/tree/master#readme",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "cpic-phenotype-cyp2c19": "file:../collection/CPIC_Phenotype_CYP2C19",
+    "cpic-phenotype-cyp2c9": "file:../collection/CPIC_Phenotype_CYP2C9",
+    "cpicrec-abacavir_hla-b": "file:../collection/CPICRec_abacavir_HLA-B",
+    "cpicrec-allopurinol_hla-b": "file:../collection/CPICRec_allopurinol_HLA-B",
+    "dpwgrec-amitriptyline_cyp2c19": "file:../collection/DPWGRec_amitriptyline_CYP2C19",
+    "dpwgrec-clomipramine_cyp2c19": "file:../collection/DPWGRec_clomipramine_CYP2C19"
+  }
 }
