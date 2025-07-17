@@ -2,7 +2,7 @@
 import fs from 'fs/promises';
 import jsonld from 'jsonld';
 import path from 'path';
-
+import { fileURLToPath } from 'url';
 import os from 'os';
 
 
@@ -15,7 +15,9 @@ async function loadMetadata(filePath) {
         }
         compacted = await response.json();
     } else {
-        const raw = await fs.readFile(filePath, 'utf-8');
+        const __filename = fileURLToPath(import.meta.url);
+        const __dirname = path.dirname(__filename);
+        const raw = await fs.readFile(path.join(path.join(__dirname, '..'), 'metadata.json'), 'utf-8');
         compacted = JSON.parse(raw);
     }
     const expanded = await jsonld.expand(compacted);

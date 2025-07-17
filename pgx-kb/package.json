@@ -2,9 +2,11 @@
   "name": "pgx-kb",
   "version": "1.0.0",
   "description": "A sample knowledgebase that uses CPIC collection (KnowledgeSet).",
-  "main": "src/library-service.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "exports": {
+    "./plugin-service": "./src/plugin-service.js"
   },
   "repository": {
     "type": "git",

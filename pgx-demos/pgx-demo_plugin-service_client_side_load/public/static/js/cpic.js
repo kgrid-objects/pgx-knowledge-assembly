@@ -1,4 +1,4 @@
-import pgx from 'pgx-kb';
+import pgx from 'pgx-kb/plugin-service';
 
 async function initialize() {
   await pgx.initialize();

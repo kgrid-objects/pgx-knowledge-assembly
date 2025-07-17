@@ -112,7 +112,7 @@
                 "ks3"
             ],
             "implementedBy": {
-                "@id": "src/library-service.js",
+                "@id": "src/plugin-service.js",
                 "@type": [
                     "Implementation"
                 ]

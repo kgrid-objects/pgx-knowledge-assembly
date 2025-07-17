@@ -29,10 +29,10 @@ Here is a sample input
 
 ```
 
-## Library Service
-This version of the app allows importing and using pgx-kb on the client side js files that execute on the beroswer without any need for server side processing.
+## Plugin Service
 
-To use library service add and install the pgx-kb package as a dependency in your node.js app using
+### Client Side
+To import and use pgx-kb on the client side js files that execute on the beroswer without any need for server side processing install the pgx-kb package as a dependency in your node.js app using
 
 ```batch
 npm install /path/to/pgx-kb
@@ -51,19 +51,14 @@ and running the following command in the shell
 npm run build  
 ```
 
-Update the cpic.js file import in the index.html file as follows
-```html
-<script type="module" src="static/js/cpic.js"> </script>
-```
-
-Then import the pgx-kb package using
+In your client side js import the pgx-kb package using
 
 ```javascript
 import pgx from 'pgx-kb';
 
 ```
 
-Then initialize the package and run the service using
+then initialize the package and run the service using
 
 ```javascript
 import pgx from 'pgx-kb';
@@ -95,14 +90,19 @@ let result = await pgx.run({
 );
 ```
 
-Then add a `vite.config.js` as the build confige for vite with the following content
+Note that your client side js file needs to be imported with type="module" like the following example
+```html
+<script type="module" src="static/js/cpic.js"> </script>
+```
+
+Then add a `vite.config.js` as the build config for vite with the following content
 ```javascript
 export default {
-  root: 'public',
+  root: '.',
   build: {
     outDir: 'dist',
     rollupOptions: {
-      input: 'public/index.html'
+      input: 'index.html'
     }
   }
 }
@@ -113,7 +113,7 @@ Then run the application using the following command
 npx vite   
 ```
 
-For production build the app using
+For production, build the app using
 ```
 npx vite build 
 ```
@@ -124,3 +124,44 @@ npm install -g serve
 serve dist
 ```
 
+See the [demo app](/pgx-demos/pgx-demo_plugin-service_client_side_load/) that uses plugin service from [pgx-kb](/pgx-kb/) on the client side for a complete demo example.
+
+### Server Side
+To use library service on server side, install the pgx-kb package as a dependency in your node.js app using
+
+```batch
+npm install /path/to/pgx-kb
+```
+
+Then import the initialize and run methods from pgx-kb package in your serverside code (node.js) using
+
+```javascript
+const { run, initialize } = require('pgx-kb');
+// or import {run, initialize} from 'pgx-kb';
+```
+
+Then initialize the package and run the service using
+
+```javascript
+await initialize();
+let result = await run({
+    "patient": {
+        "name": "Hank Hill",
+        "id": "1"
+    },
+    "diplotype": {
+      "CYP2C19": "*1/*11",
+      "CYP2C9": "",
+      "CYP2D6": "*3/*3",
+      "CYP3A5": "",
+      "HLA-B": "*1/*1",
+      "SLCO1B1": "",
+      "TPMT": "",
+      "UGT1A1": "*1/*1"
+    },
+    "prescriptions": "atazanavir codeine abacavir"
+  }
+);
+```
+
+See the [demo app](/pgx-demos/pgx-demo_plugin-service_server_side_load/) that uses plugin service from [pgx-kb](/pgx-kb/) on the server side for a complete example.
