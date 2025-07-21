@@ -31,7 +31,7 @@ Here is a sample input
 
 ## Plugin Service
 Plugin service could be used both on client side or server side. This service will load the knwoledge objects at runtime.
-### Client Side
+### Client Side at Runtime
 To import and use plugin service of pgx-kb on the client side js files that execute on the beroswer without any need for server side processing install the pgx-kb package as a dependency in your node.js app using
 
 ```batch
@@ -125,7 +125,7 @@ serve dist
 
 See the [demo app](/pgx-demos/pgx-demo_plugin-service_client_side_load/) that uses plugin service from [pgx-kb](/pgx-kb/) on the client side, for a complete demo example.
 
-### Server Side
+### Server Side at Runtime
 To use plugin service on server side, install the pgx-kb package as a dependency in your node.js app using
 
 ```batch
@@ -168,7 +168,7 @@ See the [demo app](/pgx-demos/pgx-demo_plugin-service_server_side_load/) that us
 
 ## Library Service
 Library service could be used both on client side or server side. This service will load the knwoledge objects at build time.
-### Client Side
+### Client Side at Build time
 To import and use library service of pgx-kb on the client side js files that execute on the beroswer without any need for server side processing install the pgx-kb package as a dependency in your node.js app using
 
 ```batch
@@ -242,7 +242,7 @@ serve dist
 
 See the [demo app](/pgx-demos/pgx-demo_library-service_client_side_load/) that uses library service from [pgx-kb](/pgx-kb/) on the client side, for a complete demo example.
 
-### Server Side
+### Server Side at Build Time
 To use library service on server side, install the pgx-kb package as a dependency in your node.js app using
 
 ```batch
@@ -259,7 +259,6 @@ const run = pgx.run;
 Then initialize the package and run the service using
 
 ```javascript
-await initialize();
 let result = await run({
     "patient": {
         "name": "Hank Hill",

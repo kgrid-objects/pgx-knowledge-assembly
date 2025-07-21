@@ -1,10 +1,10 @@
-import {knowledgeSet1, knowledgeSet2, knowledgeSet3} from "./knowledge-sets.js";
+import {knowledgeSet1Payloads, knowledgeSet2Payloads, knowledgeSet3Payloads} from "./knowledge-sets.js";
 
 async function run(input) {
 
   try {
     const intermediateResults = await Promise.all(
-      knowledgeSet1.map(f => f(input['diplotype']))
+      knowledgeSet1Payloads.map(f => f(input['diplotype']))
     );
 
     const responseGenes = new Set(intermediateResults.map(obj => Object.keys(obj)[0]));
@@ -25,11 +25,11 @@ async function run(input) {
       return { ...acc, ...obj };
     }, {});
     const finalResultsKS2 = await Promise.all(
-      knowledgeSet2.map(f => f(mergedResults))
+      knowledgeSet2Payloads.map(f => f(mergedResults))
     );
 
     const finalResultsKS3 = await Promise.all(
-      knowledgeSet3.map(f => f(mergedResults))
+      knowledgeSet3Payloads.map(f => f(mergedResults))
     );
     return {
       intermediate: mergedResults,
