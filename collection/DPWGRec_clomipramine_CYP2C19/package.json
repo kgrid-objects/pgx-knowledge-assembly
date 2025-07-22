@@ -1,0 +1,6 @@
+{
+  "name": "dpwgrec-clomipramine_cyp2c19",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./recommendation.js"
+}

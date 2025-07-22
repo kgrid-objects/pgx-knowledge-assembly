@@ -1,36 +1,32 @@
 import { loadKnowledgeFunctions, loadMetadata, loadKnowledgeSet } from './knowledgeLoader.js';
-import path from 'path';
-import { fileURLToPath } from 'url';
 
 let knowledgeSet1 = [];
 let knowledgeSet2 = [];
 let knowledgeSet3 = [];
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
-async function initialize(){
-  const mainMeta = await loadMetadata(path.join(path.join(__dirname, '..'), 'metadata.json'));
+async function initialize() {
+  const mainMeta = await loadMetadata('/pgx-kb/metadata.json');
   const knowledgeSets = mainMeta['https://kgrid.org/koio#hasKnowledge']
-  
+
   console.log("loading knowledgeSet 1")
   knowledgeSet1 = await loadKnowledgeSet(knowledgeSets[0]);
   knowledgeSet1 = await loadKnowledgeFunctions(knowledgeSet1, 'phenotype');
   console.log(knowledgeSet1)
- 
+
   console.log("loading knowledgeSet 2")
   knowledgeSet2 = await loadKnowledgeSet(knowledgeSets[1]);
   knowledgeSet2 = await loadKnowledgeFunctions(knowledgeSet2, 'dosingrecommendation');
   console.log(knowledgeSet2)
 
   console.log("loading knowledgeSet 3")
-  knowledgeSet3 = await loadKnowledgeSet(knowledgeSets[2]); 
+  knowledgeSet3 = await loadKnowledgeSet(knowledgeSets[2]);
   knowledgeSet3 = await loadKnowledgeFunctions(knowledgeSet3, 'dosingrecommendation');
   console.log(knowledgeSet3)
 }
 
 async function run(input) {
 
-try {
+  try {
     const intermediateResults = await Promise.all(
       knowledgeSet1.map(ko => ko.function(input['diplotype']))
     );

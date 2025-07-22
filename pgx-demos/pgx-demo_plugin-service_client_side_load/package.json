@@ -1,0 +1,23 @@
+{
+  "name": "pgx-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prebuild": "mkdir -p public/pgx-kb && cp node_modules/pgx-kb/metadata.json public/pgx-kb/metadata.json",
+    "build": "npm run prebuild && vite build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0",
+    "jsonld": "^8.3.3",
+    "pgx-kb": "file:../../pgx-kb"
+  },
+  "type": "module",
+  "devDependencies": {
+    "vite": "^6.3.5"
+  }
+}
