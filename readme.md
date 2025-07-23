@@ -1,5 +1,3 @@
-# CPIC Collection
+# PGx Knowledgebase (PGx-KB)
 
-Find documentation here:
-
-[CPIC COLLECTION DOCS](https://kgrid-objects.github.io/cpic-collection/)
+The PGx-KB 
