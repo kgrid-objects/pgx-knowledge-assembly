@@ -1,5 +1,0 @@
-/druglist:
-  post:
-    engine: javascript
-    artifact: genedruglist.js
-    function: druglist

@@ -1,5 +1,0 @@
-/genophenokolist:
-  post:
-    engine: javascript
-    artifact: genophenokolist.js
-    function: genophenokolist
