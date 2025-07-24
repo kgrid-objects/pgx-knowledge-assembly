@@ -26,5 +26,13 @@ The PGx-KB was created as an **experiement** in building Knowledge Bases by usin
 
 Several more specific motivations for creating the PGx-KB are these:
 
+- - - 
+
+### What does a diagram of the PGx-KB's components look like?
+
+The PGx-KB can be depicted in a diagram showing all of its components like this:
+
+
+
  
 
