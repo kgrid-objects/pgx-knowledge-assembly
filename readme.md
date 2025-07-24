@@ -2,7 +2,9 @@
 
 ### What is the PGx-KB?
 
-The PGx-KB is an example of a distinct Knowledge Object (KO) of the **Knowledge Base (KB) type**.
+The PGx-KB is a prototype pharmacogenomics knowledgebase enabling general explorations into knowledgebase construction.
+
+Its formal architecture is an example Knowledge Object (KO) of the **Knowledge Base (KB) type**.
 
 By our working definition, a **Knowledge Base** is defined as a **distinct type** of KO that has one or more Knowledge Sets and one or more Purposes.
 
