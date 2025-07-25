@@ -1,7 +1,5 @@
-const rewire = require('rewire');
-const script = rewire('../../collection/CPIC_Phenotype_UGT1A1/phenotype');
-
-var phenotype = script.__get__("phenotype");
+import {phenotype}  from '../../collection/CPIC_Phenotype_UGT1A1/phenotype.js';
+import expect from 'expect';
 
 describe('Give correct UGT1A1 phenotypes', () => {
   let inputList = {};

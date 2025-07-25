@@ -1,6 +1,6 @@
-const rewire = require('rewire');
-const script = rewire('../../collection/CPICRec_clopidogrel_CYP2C19/recommendation');
-var recommendation = script.__get__("dosingrecommendation");
+
+import {dosingrecommendation}  from '../../collection/CPICRec_clopidogrel_CYP2C19/recommendation.js';
+import expect from 'expect';
 
 describe('Give correct clopidogrel recommendations', () => {
   let inputList = {};
@@ -12,7 +12,7 @@ describe('Give correct clopidogrel recommendations', () => {
     inputList.CYP2C19 = {
       "diplotype":"*1/*1", "phenotype":"Normal metabolizer"
     };
-    let result = recommendation(inputList);
+    let result = dosingrecommendation(inputList);
     expect(result.recommendation.implication).toEqual(
         "Normal (EM) or increased (UM) platelet inhibition; normal (EM) or decreased (UM) residual platelet aggregation.");
   });
@@ -21,32 +21,32 @@ describe('Give correct clopidogrel recommendations', () => {
     inputList.CYP2C19 = {
       "diplotype":"*1/*1", "phenotype":"Poor metabolizer"
     };
-    let result = recommendation(inputList);
+    let result = dosingrecommendation(inputList);
     expect(result.recommendation.content).toEqual(
         "Alternative antiplatelet therapy (if no contraindication), e.g., prasugrel, ticagrelor.");
   });
 
   it('Should fail if no phenotype', () => {
     inputList.CYP2C19 = { "diplotype":"*1/*1" };
-    let result = recommendation(inputList);
+    let result = dosingrecommendation(inputList);
     expect(result).toEqual("Incorrect/invalid input.");
   });
 
   it('Should fail if unrecognized phenotype', () => {
     inputList.CYP2C19 = { "diplotype":"*1/*1", "phenotype":"Amazing metabolizer" };
-    let result = recommendation(inputList);
+    let result = dosingrecommendation(inputList);
     expect(result).toEqual("Incorrect/invalid input for drug clopidogrel");
   });
 
   it('Should fail if no CYP2C19 gene in list', () => {
-    let result = recommendation(inputList);
+    let result = dosingrecommendation(inputList);
     expect(result).toEqual("Incorrect/invalid input for drug clopidogrel");
   });
 
   it('Should ignore other gene fields', () => {
     inputList.CYP2C19 = { "diplotype":"*1/*1", "phenotype":"Normal metabolizer" };
     inputList.CYP2C20 = { "diplotype":"*1/*1", "phenotype":"Rapid metabolizer" };
-    let result = recommendation(inputList);
+    let result = dosingrecommendation(inputList);
     expect(result.recommendation.content).toEqual(
         "Clopidogrel: label-recommended dosage and administration");
   });

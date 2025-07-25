@@ -1,7 +1,6 @@
-const rewire = require('rewire');
-const script = rewire('../../collection/CPICRec_carbamazepine_HLA-A_HLA-B/recommendation');
 
-var recommendation = script.__get__("dosingrecommendation");
+import {dosingrecommendation}  from '../../collection/CPICRec_carbamazepine_HLA-A_HLA-B/recommendation.js';
+import expect from 'expect';
 
 describe('Give correct carbamazepine recommendations', () => {
   let inputList = {};
@@ -16,7 +15,7 @@ describe('Give correct carbamazepine recommendations', () => {
     inputList["HLA-B"] = {
       "diplotype":"*1/*1", "phenotype":"Normal metabolizer"
     };
-    let result = recommendation(inputList);
+    let result = dosingrecommendation(inputList);
     expect(result.recommendation.implication).toEqual(expect.stringContaining(
         "Normal risk of carbamazepine-induced Stevens-Johnson syndrome/toxic epidermal necrolysis,"));
   });
@@ -28,7 +27,7 @@ describe('Give correct carbamazepine recommendations', () => {
     inputList["HLA-B"] = {
       "diplotype":"15:02", "phenotype":"Normal metabolizer"
     };
-    let result = recommendation(inputList);
+    let result = dosingrecommendation(inputList);
     expect(result.recommendation.implication).toEqual(
         "Greater risk of carbamazepine-induced Stevens-Johnson syndrome/toxic epidermal necrolysis");
     expect(result.recommendation.content).toEqual(expect.stringContaining(
@@ -43,7 +42,7 @@ describe('Give correct carbamazepine recommendations', () => {
       "diplotype":"15:02", "phenotype":"Normal metabolizer"
     };
     inputList.CYP2C19 = {};
-    let result = recommendation(inputList);
+    let result = dosingrecommendation(inputList);
     expect(result.recommendation.implication).toEqual(
         "Greater risk of carbamazepine-induced Stevens-Johnson syndrome/toxic epidermal necrolysis");
   });
@@ -53,14 +52,14 @@ describe('Give correct carbamazepine recommendations', () => {
       "diplotype":"31:01", "phenotype":"Normal metabolizer"
     };
     inputList["HLA-B"] = {};
-    let result = recommendation(inputList);
+    let result = dosingrecommendation(inputList);
     expect(result.recommendation).toEqual(undefined);
   });
 
   it('Should fail if no diplotype', () => {
     inputList["HLA-A"] = {"phenotype":"Normal metabolizer"};
     inputList["HLA-B"] = {"phenotype":"Normal metabolizer"};
-    let result = recommendation(inputList);
+    let result = dosingrecommendation(inputList);
     expect(result).toEqual("Incorrect/invalid input.");
   });
 
@@ -68,7 +67,7 @@ describe('Give correct carbamazepine recommendations', () => {
     inputList["HLA-A"] = {
       "diplotype":"31:01", "phenotype":"Normal metabolizer"
     };
-    let result = recommendation(inputList);
+    let result = dosingrecommendation(inputList);
     expect(result).toEqual("Incorrect/invalid input for drug carbamazepine");
   });
 
@@ -82,7 +81,7 @@ describe('Give correct carbamazepine recommendations', () => {
     inputList["HLA-C"] = {
       "diplotype":"15:02", "phenotype":"Normal metabolizer"
     };
-    let result = recommendation(inputList);
+    let result = dosingrecommendation(inputList);
     expect(result.recommendation.implication).toEqual(
         "Greater risk of carbamazepine-induced Stevens-Johnson syndrome/toxic epidermal necrolysis");
   });

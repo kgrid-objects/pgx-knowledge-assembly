@@ -1,7 +1,5 @@
-const rewire = require('rewire');
-const script = rewire('../../collection/CPICRec_phenytoin_CYP2C9_HLA-B/recommendation');
-
-var recommendation = script.__get__("dosingrecommendation");
+import {dosingrecommendation}  from '../../collection/CPICRec_phenytoin_CYP2C9_HLA-B/recommendation.js';
+import expect from 'expect';
 
 describe('Give correct phenytoin recommendations', () => {
   let inputList = {};
@@ -16,7 +14,7 @@ describe('Give correct phenytoin recommendations', () => {
     inputList["HLA-B"] = {
       "diplotype":"*1/*1", "phenotype":"Normal metabolizer"
     };
-    let result = recommendation(inputList);
+    let result = dosingrecommendation(inputList);
     expect(result.recommendation.implication).toEqual(
         "Reduced phenytoin metabolism. Higher plasma concentrations will increase probability of toxicities");
   });
@@ -26,7 +24,7 @@ describe('Give correct phenytoin recommendations', () => {
       "diplotype":"*1/*1", "phenotype":"Intermediate metabolizer"
     };
     inputList["HLA-B"] = {};
-    let result = recommendation(inputList);
+    let result = dosingrecommendation(inputList);
     expect(result.recommendation).toEqual(undefined);
   });
 
@@ -35,7 +33,7 @@ describe('Give correct phenytoin recommendations', () => {
     inputList["HLA-B"] = {
       "diplotype":"15:02", "phenotype":"Normal metabolizer"
     };
-    let result = recommendation(inputList);
+    let result = dosingrecommendation(inputList);
     expect(result.recommendation).toEqual(undefined);
   });
 
@@ -46,7 +44,7 @@ describe('Give correct phenytoin recommendations', () => {
     inputList["HLA-B"] = {
       "diplotype":"15:02", "phenotype":"Normal metabolizer"
     };
-    let result = recommendation(inputList);
+    let result = dosingrecommendation(inputList);
     expect(result.recommendation.content).toEqual(
         "If patient is phenytoin naive, do not use phenytoin/fosphenytoinc");
   });
@@ -58,7 +56,7 @@ describe('Give correct phenytoin recommendations', () => {
     inputList["HLA-B"] = {
       "diplotype":"15:02", "phenotype":"Normal metabolizer"
     };
-    let result = recommendation(inputList);
+    let result = dosingrecommendation(inputList);
     expect(result).toEqual("Incorrect/invalid input.");
   });
 
@@ -69,14 +67,14 @@ describe('Give correct phenytoin recommendations', () => {
     inputList["HLA-B"] = {
       "diplotype":"15:02", "phenotype":"Normal metabolizer"
     };
-    let result = recommendation(inputList);
+    let result = dosingrecommendation(inputList);
     console.log(result);
     expect(result).toEqual("Incorrect/invalid input for drug Phenytoin");
   });
 
   it('Should fail if no HLA-B gene in list', () => {
     inputList.CYP2C9 = { "diplotype":"*1/*1", "phenotype":"Poor metabolizer" };
-    let result = recommendation(inputList);
+    let result = dosingrecommendation(inputList);
     expect(result).toEqual("Incorrect/invalid input for drug Phenytoin");
   });
 
@@ -88,7 +86,7 @@ describe('Give correct phenytoin recommendations', () => {
       "diplotype":"*1/*1", "phenotype":"Normal metabolizer"
     };
     inputList.CYP2D6 = { "diplotype":"*1/*1", "phenotype":"Normal metabolizer" };
-    let result = recommendation(inputList);
+    let result = dosingrecommendation(inputList);
     expect(result.recommendation.content).toEqual(
         "Initiate therapy with recommended maintenance dose");
   });

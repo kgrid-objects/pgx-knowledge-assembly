@@ -1,7 +1,5 @@
-const rewire = require('rewire');
-const script = rewire('../../collection/CPICRec_thioguanine_TPMT/recommendation');
-
-var recommendation = script.__get__("dosingrecommendation");
+import {dosingrecommendation}  from '../../collection/CPICRec_thioguanine_TPMT/recommendation.js';
+import expect from 'expect';
 
 describe('Give correct thioguanine recommendations', () => {
   let inputList = {};
@@ -13,7 +11,7 @@ describe('Give correct thioguanine recommendations', () => {
     inputList.TPMT = {
       "diplotype":"*1/*1", "phenotype":"Normal metabolizer"
     };
-    let result = recommendation(inputList);
+    let result = dosingrecommendation(inputList);
     expect(result.recommendation.content).toEqual(expect.stringContaining(
         "Start with normal starting dose. Adjust doses of TG and of other myelosuppressive therapy"));
   });
@@ -22,7 +20,7 @@ describe('Give correct thioguanine recommendations', () => {
     inputList.TPMT = {
       "diplotype":"*1/*1", "phenotype":"Intermediate metabolizer"
     };
-    let result = recommendation(inputList);
+    let result = dosingrecommendation(inputList);
     expect(result.recommendation.content).toEqual(expect.stringContaining(
         "Start with reduced doses (reduce by 30-50%) and adjust doses"));
   });
@@ -31,33 +29,33 @@ describe('Give correct thioguanine recommendations', () => {
     inputList.TPMT = {
       "diplotype":"*1/*1", "phenotype":"Low metabolizer"
     };
-    let result = recommendation(inputList);
+    let result = dosingrecommendation(inputList);
     expect(result.recommendation.content).toEqual(expect.stringContaining(
         "Start with drastically reduced doses16 (reduce daily dose by 10-fold"));
   });
 
   it('Should fail if no phenotype', () => {
     inputList.TPMT = { "diplotype":"*1/*1" };
-    let result = recommendation(inputList);
+    let result = dosingrecommendation(inputList);
     expect(result).toEqual("Incorrect/invalid input.");
   });
 
   it('Should fail if unrecognized phenotype', () => {
     inputList.TPMT = { "diplotype":"*1/*1", "phenotype":"Amazing metabolizer" };
-    let result = recommendation(inputList);
+    let result = dosingrecommendation(inputList);
     expect(result).toEqual("Incorrect/invalid input for drug thioguanine");
   });
 
   it('Should fail if no TPMT gene in list', () => {
     inputList.UGT1A2 = { "diplotype":"*1/*1", "phenotype":"Amazing metabolizer" };
-    let result = recommendation(inputList);
+    let result = dosingrecommendation(inputList);
     expect(result).toEqual("Incorrect/invalid input for drug thioguanine");
   });
 
   it('Should ignore other gene fields', () => {
     inputList.TPMT = { "diplotype":"*1/*1", "phenotype":"Normal metabolizer" };
     inputList.UGT1A2 = { "diplotype":"*1/*1", "phenotype":"Poor metabolizer" };
-    let result = recommendation(inputList);
+    let result = dosingrecommendation(inputList);
     expect(result.recommendation.implication).toEqual(
         "Lower concentrations of TGN metabolites, but note that TGN after TG are 5-10x higher than TGN after MP or azathioprine");
   });

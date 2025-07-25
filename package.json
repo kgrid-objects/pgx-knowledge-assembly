@@ -1,0 +1,57 @@
+{
+  "template": "kotemplate",
+  "project": "cpic",
+  "devDependencies": {
+    "expect": "^30.0.5",
+    "file-exists": "^5.0.1",
+    "jest": "^25.5.4",
+    "jsonpath": "^1.1.0",
+    "mocha": "^8.4.0",
+    "rewire": "^4.0.1",
+    "vuepress": "^1.6.0"
+  },
+  "scripts": {
+    "test": "jest --ci --reporters=default --reporters=jest-junit",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "jest": {
+    "verbose": true,
+    "reporters": [
+      "default",
+      "jest-junit"
+    ]
+  },
+  "jest-junit": {
+    "suiteName": "jest tests",
+    "output": "./test-results/junit.xml"
+  },
+  "engines": {
+    "node": ">= 4.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "dependencies": {
+    "await-sleep": "0.0.1",
+    "axios": "^0.21.1",
+    "express": "^5.1.0",
+    "firstline": "^2.0.2",
+    "fs-extra": "^7.0.0",
+    "jest-junit": "^7.0.0",
+    "jsonld": "^8.3.3",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "yamljs": "^0.3.0"
+  },
+  "name": "cpic-collection",
+  "version": "1.0.0",
+  "description": "Find documentation here:",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}

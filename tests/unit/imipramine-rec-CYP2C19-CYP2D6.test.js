@@ -1,6 +1,5 @@
-const rewire = require('rewire');
-const script = rewire('../../collection/CPICRec_imipramine_CYP2C19_CYP2D6/recommendation');
-var recommendation = script.__get__("dosingrecommendation");
+import {dosingrecommendation}  from '../../collection/CPICRec_imipramine_CYP2C19_CYP2D6/recommendation.js';
+import expect from 'expect';
 
 describe('Give correct imipramine recommendations', () => {
   let inputList = {};
@@ -15,7 +14,7 @@ describe('Give correct imipramine recommendations', () => {
     inputList.CYP2D6 = {
       "diplotype":"*1/*1", "phenotype":"Normal metabolizer"
     };
-    let result = recommendation(inputList);
+    let result = dosingrecommendation(inputList);
     expect(result.recommendation.content).toEqual("Initiate therapy with recommended starting dose");
   });
 
@@ -24,7 +23,7 @@ describe('Give correct imipramine recommendations', () => {
       "diplotype":"*1/*1", "phenotype":"Normal metabolizer"
     };
     inputList.CYP2D6 = {};
-    let result = recommendation(inputList);
+    let result = dosingrecommendation(inputList);
     expect(result.recommendation.implication).toEqual(
         "Normal metabolism of tertiary amines");
     expect(result.recommendation.content).toEqual(
@@ -36,7 +35,7 @@ describe('Give correct imipramine recommendations', () => {
       "diplotype":"*1/*1", "phenotype":"Ultrarapid metabolizer"
     };
     inputList.CYP2C19 = {};
-    let result = recommendation(inputList);
+    let result = dosingrecommendation(inputList);
     expect(result.recommendation.implication).toEqual(expect.stringContaining(
         "Increased metabolism of TCAs to less active compounds"));
   });
@@ -48,7 +47,7 @@ describe('Give correct imipramine recommendations', () => {
     inputList.CYP2D6 = {
       "diplotype":"*1/*1", "phenotype":"Poor metabolizer"
     };
-    let result = recommendation(inputList);
+    let result = dosingrecommendation(inputList);
     expect(result.recommendation.content).toEqual(
         "Avoid imipramine use");
   });
@@ -56,20 +55,20 @@ describe('Give correct imipramine recommendations', () => {
   it('Should fail if no phenotype', () => {
     inputList.CYP2C19 = { "diplotype":"*1/*1" };
     inputList.CYP2D6 = { "diplotype":"*1/*1" };
-    let result = recommendation(inputList);
+    let result = dosingrecommendation(inputList);
     expect(result).toEqual("Incorrect/invalid input for drug imipramine");
   });
 
   it('Should fail if unrecognized phenotype', () => {
     inputList.CYP2C19 = { "diplotype":"*1/*1", "phenotype":"Amazing metabolizer" };
     inputList.CYP2D6 = { "diplotype":"*1/*1", "phenotype":"Amazing metabolizer" };
-    let result = recommendation(inputList);
+    let result = dosingrecommendation(inputList);
     expect(result).toEqual("Incorrect/invalid input for drug imipramine");
   });
 
   it('Should fail if no CYP2D6 gene in list', () => {
     inputList.CYP2C19 = { "diplotype":"*1/*1", "phenotype":"Amazing metabolizer" };
-    let result = recommendation(inputList);
+    let result = dosingrecommendation(inputList);
     expect(result).toEqual("Incorrect/invalid input for drug imipramine");
   });
 
@@ -77,7 +76,7 @@ describe('Give correct imipramine recommendations', () => {
     inputList.CYP2C19 = { "diplotype":"*1/*1", "phenotype":"Normal metabolizer" };
     inputList.CYP2C20 = { "diplotype":"*1/*1", "phenotype":"Rapid metabolizer" };
     inputList.CYP2D6 = { "diplotype":"*1/*1", "phenotype":"Normal metabolizer" };
-    let result = recommendation(inputList);
+    let result = dosingrecommendation(inputList);
     expect(result.recommendation.content).toEqual(
         "Initiate therapy with recommended starting dose");
   });

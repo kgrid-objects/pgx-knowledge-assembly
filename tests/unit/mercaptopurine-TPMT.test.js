@@ -1,7 +1,5 @@
-const rewire = require('rewire');
-const script = rewire('../../collection/CPICRec_mercaptopurine_TPMT/recommendation');
-
-var recommendation = script.__get__("dosingrecommendation");
+import {dosingrecommendation}  from '../../collection/CPICRec_mercaptopurine_TPMT/recommendation.js';
+import expect from 'expect';
 
 describe('Give correct mercaptopurine recommendations', () => {
   let inputList = {};
@@ -13,7 +11,7 @@ describe('Give correct mercaptopurine recommendations', () => {
     inputList.TPMT = {
       "diplotype":"*1/*1", "phenotype":"Normal metabolizer"
     };
-    let result = recommendation(inputList);
+    let result = dosingrecommendation(inputList);
     expect(result.recommendation.content).toEqual(expect.stringContaining(
         "Start with normal starting dose (e.g., 75mg/m2/d or 1.5mg/kg/d) and adjust"));
   });
@@ -22,7 +20,7 @@ describe('Give correct mercaptopurine recommendations', () => {
     inputList.TPMT = {
       "diplotype":"*1/*1", "phenotype":"Intermediate metabolizer"
     };
-    let result = recommendation(inputList);
+    let result = dosingrecommendation(inputList);
     expect(result.recommendation.content).toEqual(expect.stringContaining(
         "Start with reduced doses (start at 30-70% of full dose: e.g., at 50mg/m2/d or 0.75mg/kg/d)"));
   });
@@ -31,33 +29,33 @@ describe('Give correct mercaptopurine recommendations', () => {
     inputList.TPMT = {
       "diplotype":"*1/*1", "phenotype":"Low metabolizer"
     };
-    let result = recommendation(inputList);
+    let result = dosingrecommendation(inputList);
     expect(result.recommendation.content).toEqual(expect.stringContaining(
         "For malignancy, start with drastically reduced doses"));
   });
 
   it('Should fail if no phenotype', () => {
     inputList.TPMT = { "diplotype":"*1/*1" };
-    let result = recommendation(inputList);
+    let result = dosingrecommendation(inputList);
     expect(result).toEqual("Incorrect/invalid input.");
   });
 
   it('Should fail if unrecognized phenotype', () => {
     inputList.TPMT = { "diplotype":"*1/*1", "phenotype":"Amazing metabolizer" };
-    let result = recommendation(inputList);
+    let result = dosingrecommendation(inputList);
     expect(result).toEqual("Incorrect/invalid input for drug mercaptopurine");
   });
 
   it('Should fail if no TPMT gene in list', () => {
     inputList.UGT1A2 = { "diplotype":"*1/*1", "phenotype":"Amazing metabolizer" };
-    let result = recommendation(inputList);
+    let result = dosingrecommendation(inputList);
     expect(result).toEqual("Incorrect/invalid input for drug mercaptopurine");
   });
 
   it('Should ignore other gene fields', () => {
     inputList.TPMT = { "diplotype":"*1/*1", "phenotype":"Normal metabolizer" };
     inputList.UGT1A2 = { "diplotype":"*1/*1", "phenotype":"Poor metabolizer" };
-    let result = recommendation(inputList);
+    let result = dosingrecommendation(inputList);
     expect(result.recommendation.implication).toEqual(
         "Lower concentrations of TGN metabolites, higher methylTIMP, this is the \"normal\" pattern");
   });

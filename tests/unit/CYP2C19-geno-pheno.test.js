@@ -1,7 +1,5 @@
-const rewire = require('rewire');
-const script = rewire('../../collection/CPIC_Phenotype_CYP2C19/phenotype');
-
-var phenotype = script.__get__("phenotype");
+import {phenotype}  from '../../collection/CPIC_Phenotype_CYP2C19/phenotype.js';
+import expect from 'expect';
 
 describe('Give correct CYP2C19 phenotypes', () => {
   let inputList = {};
