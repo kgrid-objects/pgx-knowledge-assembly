@@ -18,6 +18,8 @@ and then install it from a local place or published version if any, using
 npm install /home/path/to/cpic-collection/pgx-kb
 ```
 
+If you are installing pgx-kb from a local place, make sure all its dependencies are installed there by running `npm install` in the root of that local place.
+
 3. Then run the app using 
 ```shell
 node server.js

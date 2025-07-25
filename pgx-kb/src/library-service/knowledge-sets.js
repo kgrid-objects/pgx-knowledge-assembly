@@ -1,12 +1,44 @@
 import * as cpicPhenotypeCYP2C9 from 'cpic-phenotype-cyp2c9';
 import * as cpicPhenotypeCYP2C19 from 'cpic-phenotype-cyp2c19';
+import * as cpicPhenotypeCYP2D6 from 'cpic-phenotype-cyp2d6';
+import * as cpicPhenotypeCYP2D6V1 from 'cpic-phenotype-cyp2d6-v1';
+import * as cpicPhenotypeCYP3A5 from 'cpic-phenotype-cyp3a5';
+import * as cpicPhenotypeSLCO1B1 from 'cpic-phenotype-slco1b1';
+import * as cpicPhenotypeTPMT from 'cpic-phenotype-tpmt';
+import * as cpicPhenotypeUGT1A1 from 'cpic-phenotype-ugt1a1';
 
 import * as cpicRecAbacavirHLAB from 'cpicrec-abacavir_hla-b';
 import * as cpicRecAllopurinolHLAB from 'cpicrec-allopurinol_hla-b';
+import * as cpicRecAmitriptylineCYP2C19_CYP2D6 from 'cpicrec-amitriptyline-cyp2c19-cyp2d6';
+import * as cpicRecAtazanavirUGT1A1 from 'cpicrec-atazanavir-ugt1a1';
+import * as cpicRecAzathioprineTPMT from 'cpicrec-azathioprine-tpmt';
+import * as cpicRecCarbamazepineHLAA_HLAB from 'cpicrec-carbamazepine-hla-a-hla-b';
+import * as cpicRecCitalopramCYP2C19 from 'cpicrec-citalopram-cyp2c19';
+import * as cpicRecClomipramineCYP2C19_CYP2D6 from 'cpicrec-clomipramine-cyp2c19-cyp2d6';
+import * as cpicRecClopidogrelCYP2C19 from 'cpicrec-clopidogrel-cyp2c19';
+import * as cpicRecCodeineCYP2D6 from 'cpicrec-codeine-cyp2d6';
+import * as cpicRecDesipramineCYP2C19_CYP2D6 from 'cpicrec-desipramine-cyp2c19-cyp2d6';
+import * as cpicRecDoxepinCYP2C19_CYP2D6 from 'cpicrec-doxepin-cyp2c19-cyp2d6';
+import * as cpicRecEscitalopramCYP2C19 from 'cpicrec-escitalopram-cyp2c19';
+import * as cpicRecFluvoxamineCYP2D6 from 'cpicrec-fluvoxamine-cyp2d6';
+import * as cpicRecImipramineCYP2C19CYP2D6 from 'cpicrec-imipramine-cyp2c19-cyp2d6';
+import * as cpicRecMercaptopurineTPMT from 'cpicrec-mercaptopurine-tpmt';
+import * as cpicRecNortripylineCYP2C19_CYP2D6 from 'cpicrec-nortripyline-cyp2c19-cyp2d6';
+import * as cpicRecOndansetronCYP2D6 from 'cpicrec-ondansetron-cyp2d6';
+import * as cpicRecOxcarbazepine_HLAB from 'cpicrec-oxcarbazepine-hla-b';
+import * as cpicRecParoxetineCYP2D6 from 'cpicrec-paroxetine-cyp2d6';
+import * as cpicRecPhenytoinCYP2C9_HLAB from 'cpicrec-phenytoin-cyp2c9-hla-b';
+import * as cpicRecSertralineCYP2C19 from 'cpicrec-sertraline-cyp2c19';
+import * as cpicRecSimvastatin_SLCO1B1 from 'cpicrec-simvastatin-slco1b1';
+import * as cpicRecTacrolimusCYP3A5 from 'cpicrec-tacrolimus-cyp3a5';
+import * as cpicRecThioguanineTPMT from 'cpicrec-thioguanine-tpmt';
+import * as cpicRecTrimipramineCYP2C19_CYP2D6 from 'cpicrec-trimipramine-cyp2c19-cyp2d6';
+import * as cpicRecTropisetronCYP2D6 from 'cpicrec-tropisetron-cyp2d6';
+import * as cpicRecVoriconazoleCYP2C19 from 'cpicrec-voriconazole-cyp2c19';
 
 import * as dpwgRecAmitriptylineCYP2C19 from 'dpwgrec-amitriptyline_cyp2c19';
 import * as dpwgRecClomipramineCYP2C19 from 'dpwgrec-clomipramine_cyp2c19';
-
+import * as dpwgRecEscitalopramCYP2C19 from "dpwgrec-escitalopram-cyp2c19";
 
 let knowledgeSet1Payloads = [];
 let knowledgeSet2Payloads = [];
@@ -14,12 +46,44 @@ let knowledgeSet3Payloads = [];
 
 knowledgeSet1Payloads.push(cpicPhenotypeCYP2C9.phenotype);
 knowledgeSet1Payloads.push(cpicPhenotypeCYP2C19.phenotype);
+knowledgeSet1Payloads.push(cpicPhenotypeCYP2D6V1.phenotype);
+knowledgeSet1Payloads.push(cpicPhenotypeCYP2D6.phenotype);
+knowledgeSet1Payloads.push(cpicPhenotypeCYP3A5.phenotype);
+knowledgeSet1Payloads.push(cpicPhenotypeSLCO1B1.phenotype);
+knowledgeSet1Payloads.push(cpicPhenotypeTPMT.phenotype);
+knowledgeSet1Payloads.push(cpicPhenotypeUGT1A1.phenotype);
 
 knowledgeSet2Payloads.push(cpicRecAbacavirHLAB.dosingrecommendation);
 knowledgeSet2Payloads.push(cpicRecAllopurinolHLAB.dosingrecommendation);
+knowledgeSet2Payloads.push(cpicRecAmitriptylineCYP2C19_CYP2D6.dosingrecommendation);
+knowledgeSet2Payloads.push(cpicRecAtazanavirUGT1A1.dosingrecommendation);
+knowledgeSet2Payloads.push(cpicRecAzathioprineTPMT.dosingrecommendation);
+knowledgeSet2Payloads.push(cpicRecCarbamazepineHLAA_HLAB.dosingrecommendation);
+knowledgeSet2Payloads.push(cpicRecCitalopramCYP2C19.dosingrecommendation);
+knowledgeSet2Payloads.push(cpicRecClomipramineCYP2C19_CYP2D6.dosingrecommendation);
+knowledgeSet2Payloads.push(cpicRecClopidogrelCYP2C19.dosingrecommendation);
+knowledgeSet2Payloads.push(cpicRecCodeineCYP2D6.dosingrecommendation);
+knowledgeSet2Payloads.push(cpicRecDesipramineCYP2C19_CYP2D6.dosingrecommendation);
+knowledgeSet2Payloads.push(cpicRecDoxepinCYP2C19_CYP2D6.dosingrecommendation);
+knowledgeSet2Payloads.push(cpicRecEscitalopramCYP2C19.dosingrecommendation);
+knowledgeSet2Payloads.push(cpicRecFluvoxamineCYP2D6.dosingrecommendation);
+knowledgeSet2Payloads.push(cpicRecImipramineCYP2C19CYP2D6.dosingrecommendation);
+knowledgeSet2Payloads.push(cpicRecMercaptopurineTPMT.dosingrecommendation);
+knowledgeSet2Payloads.push(cpicRecNortripylineCYP2C19_CYP2D6.dosingrecommendation);
+knowledgeSet2Payloads.push(cpicRecOndansetronCYP2D6.dosingrecommendation);
+knowledgeSet2Payloads.push(cpicRecOxcarbazepine_HLAB.dosingrecommendation);
+knowledgeSet2Payloads.push(cpicRecParoxetineCYP2D6.dosingrecommendation);
+knowledgeSet2Payloads.push(cpicRecPhenytoinCYP2C9_HLAB.dosingrecommendation);
+knowledgeSet2Payloads.push(cpicRecSertralineCYP2C19.dosingrecommendation);
+knowledgeSet2Payloads.push(cpicRecSimvastatin_SLCO1B1.dosingrecommendation);
+knowledgeSet2Payloads.push(cpicRecTacrolimusCYP3A5.dosingrecommendation);
+knowledgeSet2Payloads.push(cpicRecThioguanineTPMT.dosingrecommendation);
+knowledgeSet2Payloads.push(cpicRecTrimipramineCYP2C19_CYP2D6.dosingrecommendation);
+knowledgeSet2Payloads.push(cpicRecTropisetronCYP2D6.dosingrecommendation);
+knowledgeSet2Payloads.push(cpicRecVoriconazoleCYP2C19.dosingrecommendation);
 
 knowledgeSet3Payloads.push(dpwgRecAmitriptylineCYP2C19.dosingrecommendation);
 knowledgeSet3Payloads.push(dpwgRecClomipramineCYP2C19.dosingrecommendation);
-
+knowledgeSet3Payloads.push(dpwgRecEscitalopramCYP2C19.dosingrecommendation);
 
 export { knowledgeSet1Payloads, knowledgeSet2Payloads , knowledgeSet3Payloads };

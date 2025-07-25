@@ -1,0 +1,6 @@
+{
+  "name": "cpicrec-codeine-cyp2d6",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./recommendation.js"
+}

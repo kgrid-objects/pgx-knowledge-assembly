@@ -1,0 +1,6 @@
+{
+  "name": "cpic-phenotype-ugt1a1",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./phenotype.js"
+}

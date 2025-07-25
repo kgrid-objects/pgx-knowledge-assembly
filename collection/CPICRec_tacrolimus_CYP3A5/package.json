@@ -1,0 +1,6 @@
+{
+  "name": "cpicrec-tacrolimus-cyp3a5",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./recommendation.js"
+}

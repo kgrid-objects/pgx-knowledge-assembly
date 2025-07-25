@@ -1,0 +1,6 @@
+{
+  "name": "cpicrec-azathioprine-tpmt",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./recommendation.js"
+}

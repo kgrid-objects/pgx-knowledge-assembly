@@ -18,7 +18,9 @@ and then install it from a local place or published version if any, using
 npm install /home/path/to/cpic-collection/pgx-kb
 ```
 
-then run the following command to copy the pgx-kb locally to the public folder of this app so that it could be accessed by the knowledge base code in the browser 
+If you are installing pgx-kb from a local place, make sure all its dependencies are installed there by running `npm install` in the root of that local place.
+
+Then run the following command to copy the pgx-kb locally to the public folder of this app so that it could be accessed by the knowledge base code in the browser 
 ```shell
 npm run build  
 ```

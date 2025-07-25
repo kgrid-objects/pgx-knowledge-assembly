@@ -1,0 +1,6 @@
+{
+  "name": "cpicrec-clopidogrel-cyp2c19",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./recommendation.js"
+}

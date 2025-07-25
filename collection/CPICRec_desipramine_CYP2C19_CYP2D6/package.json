@@ -1,0 +1,6 @@
+{
+  "name": "cpicrec-desipramine-cyp2c19-cyp2d6",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./recommendation.js"
+}

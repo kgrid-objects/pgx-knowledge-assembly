@@ -1,0 +1,6 @@
+{
+  "name": "cpicrec-phenytoin-cyp2c9-hla-b",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./recommendation.js"
+}

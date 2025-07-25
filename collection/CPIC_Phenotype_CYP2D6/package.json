@@ -1,0 +1,6 @@
+{
+  "name": "cpic-phenotype-cyp2d6",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./phenotype.js"
+}
