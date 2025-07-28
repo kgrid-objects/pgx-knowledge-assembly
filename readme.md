@@ -18,7 +18,7 @@ The PGx-KB also has the following Purpose:
 
 (       )
 
-The PGx-KB meets all of the requirements of a Knowledge Base type of Knowledge Object or "KB-KO."
+The PGx-KB meets all of the requirements of a Knowledge Base type of Knowledge Object or "KB-KO." For more information about the formalized Knowledge Objects (KOs) we work with, see the Knowledge Object Implementation Ontology [here at Github](https://github.com/kgrid/koio) and [here at Bioportal](https://bioportal.bioontology.org/ontologies/KOIO).
 
 - - - 
 
