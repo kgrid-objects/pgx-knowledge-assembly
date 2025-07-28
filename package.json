@@ -4,10 +4,8 @@
   "devDependencies": {
     "expect": "^30.0.5",
     "file-exists": "^5.0.1",
-    "jest": "^25.5.4",
     "jsonpath": "^1.1.0",
     "mocha": "^8.4.0",
-    "rewire": "^4.0.1",
     "vuepress": "^1.6.0"
   },
   "scripts": {
@@ -36,7 +34,6 @@
     "express": "^5.1.0",
     "firstline": "^2.0.2",
     "fs-extra": "^7.0.0",
-    "jest-junit": "^7.0.0",
     "jsonld": "^8.3.3",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1",
