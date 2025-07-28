@@ -22,6 +22,12 @@ The PGx-KB meets all of the requirements of a Knowledge Base type of Knowledge O
 
 - - - 
 
+### Who created the PGx-KB?
+
+The PGx-KB is experimental work of the Knowledge Systems Lab (KSL) at the University of Michigan. For more details about our lab, see [KSL @ U-M](https://knowledge-systems.lab.medicine.umich.edu/).
+
+- - - 
+
 ### Why was the PGx-KB example KB-KO created?
 
 The PGx-KB was created as an **experiement** in building Knowledge Bases by using and extending formal model for all Knowledge Objects, [KOIO 2.1] (https://github.com/kgrid/koio/releases/tag/2.1).
