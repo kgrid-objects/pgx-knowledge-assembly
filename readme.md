@@ -14,9 +14,11 @@ In keeping with this definition of a KB, the PGx-KB has the following three Know
 - Knowledge Set 2: A list of KOs with implementations of knowledge for mapping PGx phenotypes to drug-specific recommendations based on CPIC guidelines.
 - Knowledge Set 3: A list of KOs with implementations of knowledge for mapping PGx phenotypes to drug-specific recommendations based on DPWG guidelines.
 
-The PGx-KB also has the following Purpose:
+The PGx-KB also has the following quoted Purpose:
 
-"To compute patient specific drug selection and dosing recommendations."   Although it is not very specific, this Purpose meets with our working definition of a Purpose for a KB, which is simply a statement indicating why something exists that may also detail its audience, its intended context and platform for use, its use case(s), and/or its stakeholders.    
+"To compute patient specific drug selection and dosing recommendations."   
+
+Although it is not very specific, this Purpose meets with our working definition of a Purpose for a KB, which is simply a statement indicating why something exists that may also detail its audience, its intended context and platform for use, its use case(s), and/or its stakeholders.    
 
 The PGx-KB meets all of the requirements of a Knowledge Base type of Knowledge Object or "KB-KO." For more information about the formalized Knowledge Objects (KOs) we work with, see the Knowledge Object Implementation Ontology [here at Github](https://github.com/kgrid/koio) and [here at Bioportal](https://bioportal.bioontology.org/ontologies/KOIO).
 
