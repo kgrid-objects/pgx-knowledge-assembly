@@ -18,7 +18,7 @@ The PGx-KB also has the following quoted Purpose:
 
 "To compute patient specific drug selection and dosing recommendations."   
 
-Although it is not very specific, this Purpose meets with our working definition of a Purpose for a KB, which is simply a statement indicating why something exists that may also detail its audience, its intended context and platform for use, its use case(s), and/or its stakeholders.    
+Although it is not very specific, this Purpose meets with the definition of a Purpose for a KB, which is what something is used for; reason or intention.   
 
 The PGx-KB meets all of the requirements of a Knowledge Base type of Knowledge Object or "KB-KO." For more information about the formalized Knowledge Objects (KOs) we work with, see the Knowledge Object Implementation Ontology [here at Github](https://github.com/kgrid/koio) and [here at Bioportal](https://bioportal.bioontology.org/ontologies/KOIO).
 
