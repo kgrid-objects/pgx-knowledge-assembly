@@ -150,7 +150,7 @@
             "dc:description": "PGx-KB readme file."
         },
         {
-            "@id": "ServiceREADME.md",
+            "@id": "ServiceReadMe.md",
             "@type": "InformationArtifact",
             "dc:title": "PGx-KB Service Documentation",
             "dc:description": "PGx-KB Service Documentation"
