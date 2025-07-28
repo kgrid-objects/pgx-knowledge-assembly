@@ -31,11 +31,16 @@ The PGx-KB is experimental work of the Knowledge Systems Lab (KSL) at the Univer
 
 - - - 
 
-### Why was the PGx-KB example KB-KO created?
+### Why was the PGx-KB example KB-KO initially created?
 
-The PGx-KB was created as an **experiement** in building Knowledge Bases by using and extending formal model for all Knowledge Objects, [KOIO 2.1] (https://github.com/kgrid/koio/releases/tag/2.1).
+Expanding on its Purposes, the PGx-KB was initially created as an **experiement** in building Knowledge Bases by using and extending formal model for all Knowledge Objects, [KOIO 2.1] (https://github.com/kgrid/koio/releases/tag/2.1).
 
-Several more specific motivations for creating the PGx-KB are these:
+Several more specific goals met when initially creating the PGx-KB are these:
+
+- The PGx-KB conforms to the KOIO 2.1 specification in all ways except when new terms were needed. The following new terms were developed or adopted from other sources in draft form as part of this work: Knowledge Base, KnowledgeSet, Purpose and hasKnowledgeObject.
+- The PGx-KB uses more than one KnowledgeSet.
+- The PGx-KB uses both KnowledgeSets defined in its metadata and a KnowledgeSet that is external to its metadata.
+- The PGx-KB includes Services that make use of all of the KOs listed in each of its three KnowledgeSets. 
 
 - - - 
 
