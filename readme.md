@@ -10,9 +10,9 @@ By our working definition, a **Knowledge Base** is defined as a **distinct type*
 
 In keeping with this definition of a KB, the PGx-KB has the following three Knowledge Sets:
 
-Knowledge Set 1: A list of KOs with implementations of knowledge for mapping genotypes to pharmacogenomic (PGx) phenotypes based on CPIC guidelines.
-Knowledge Set 2: A list of KOs with implementations of knowledge for mapping PGx phenotypes to drug-specific recommendations based on CPIC guidelines.
-Knowledge Set 3: A list of KOs with implementations of knowledge for mapping PGx phenotypes to drug-specific recommendations based on DPWG guidelines.
+- Knowledge Set 1: A list of KOs with implementations of knowledge for mapping genotypes to pharmacogenomic (PGx) phenotypes based on CPIC guidelines.
+- Knowledge Set 2: A list of KOs with implementations of knowledge for mapping PGx phenotypes to drug-specific recommendations based on CPIC guidelines.
+- Knowledge Set 3: A list of KOs with implementations of knowledge for mapping PGx phenotypes to drug-specific recommendations based on DPWG guidelines.
 
 The PGx-KB also has the following Purpose:
 
