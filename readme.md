@@ -45,6 +45,10 @@ The PGx-KB can be depicted in a diagram showing all of its components like this:
 
 - - - 
 
+### What metadata are provided with the PGx-KB?
+
+The PGx-KB has its own metadata file with linked metadata in JSON.LD format that conform to KOIO 2.1. 
+
 ### What Services does the PGx-KB include?
 
 The PGx-KB 
