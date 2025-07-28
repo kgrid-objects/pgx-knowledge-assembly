@@ -2,7 +2,7 @@
     "@context": [
         "https://kgrid.org/koio/2.1/context.jsonld",
         {
-            "@version": 1.1,            
+            "@version": 1.1,
             "Purpose": "http://purl.obolibrary.org/obo/NCIT_C25634"
         }
     ],
@@ -14,7 +14,10 @@
     "dc:version": "v1.0",
     "dc:date": "2025-05-06",
     "dc:description": "A sample knowledgebase that uses CPIC collection (KnowledgeSet).",
-    "ncit:Purpose": "To compute patient specific drug selection and dosing recommendations.",
+    "ncit:Purpose": [
+        "To compute patient specific drug selection and dosing recommendations.",
+        "To serve as an example of building a Knowledge Base by adopting and extending the properties and relationships defined for Knowledge Objects."
+    ],
     "schema:creator": {
         "@id": "https://kgrid.org",
         "@type": "schema:Organization",
@@ -119,8 +122,7 @@
                     "Implementation"
                 ]
             }
-        }
-        ,
+        },
         {
             "@id": "Library Service",
             "@type": [
