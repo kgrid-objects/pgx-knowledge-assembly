@@ -34,7 +34,29 @@ Several more specific motivations for creating the PGx-KB are these:
 
 The PGx-KB can be depicted in a diagram showing all of its components like this:
 
+- - - 
 
+### What Services does the PGx-KB include?
+
+The PGx-KB 
+
+- - - 
+
+### What Tests does the PGx-KB include?
+
+The PGx-KB
+
+- - -
+
+### What Documentation does the PGx-KB include?
+
+The PGx-KB
+
+- - - 
+
+### What sample Apps are available that make use of the PGx-KB?
+
+The following apps are available
 
  
 
