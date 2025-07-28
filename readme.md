@@ -46,7 +46,7 @@ Several more specific goals met when initially creating the PGx-KB are these:
 
 ### What does a diagram of the PGx-KB's components look like?
 
-The PGx-KB can be depicted in a diagram showing all of its components like this:
+The PGx-KB can be depicted in a diagram showing its main components like this:
 
 <img width="719" height="488" alt="image" src="https://github.com/user-attachments/assets/3730a817-6156-46a6-8b5d-249a23f1ec1d" />
 
@@ -54,7 +54,7 @@ The PGx-KB can be depicted in a diagram showing all of its components like this:
 
 ### What metadata are provided with the PGx-KB?
 
-The PGx-KB has its own metadata file with linked metadata in JSON.LD format that conform to KOIO 2.1. 
+The PGx-KB has its own [metadata file](https://github.com/kgrid-objects/pgx-knowledge-base/blob/main/pgx-kb/metadata.json) with linked metadata in JSON.LD format that conform to KOIO 2.1.
 
 - - -
 
