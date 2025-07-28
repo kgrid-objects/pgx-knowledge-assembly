@@ -40,7 +40,7 @@ describe('Give correct SLCO1B1 phenotypes', () => {
   it('Should fail if no SLCO1B1 gene in list', () => {
     inputList.CYP2C10 = "*1/*1";
     expect(()=>{phenotype(inputList);})
-      .toThrow(new TypeError("Cannot read property 'split' of undefined"));
+      .toThrow(new TypeError("Cannot read properties of undefined (reading 'split')"));
   });
 
   it('Should ignore other gene fields', () => {

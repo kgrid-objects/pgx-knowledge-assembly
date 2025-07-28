@@ -31,7 +31,7 @@ describe('Give correct carbamazepine recommendations', () => {
     expect(result.recommendation.implication).toEqual(
         "Greater risk of carbamazepine-induced Stevens-Johnson syndrome/toxic epidermal necrolysis");
     expect(result.recommendation.content).toEqual(expect.stringContaining(
-        "Strong: If patient is carbamazepine-naıve, do not use carbamazepine."));
+        "Strong: If patient is carbamazepine-naïve, do not use carbamazepine."));
   });
 
   it('Should return a positive/positive recommendation', () => {
