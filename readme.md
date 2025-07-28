@@ -60,7 +60,13 @@ The PGx-KB has its own [metadata file](https://github.com/kgrid-objects/pgx-know
 
 ### What Services does the PGx-KB include?
 
-The PGx-KB 
+The PGx-KB includes three services:
+
+- The Library Service enables application programmers to handle the KOs from PGx-KB as dependencies while treating the PGx-KB like any other JavaScript npm package.
+- The API Service wraps the PGx-KB into an app that developers can use to engage the PGx-KB's content through a typical Restful API.
+- The Plugin Service enables application programmers to manually load the KOs from the web while treating the PGx-KB like any other JavaScript npm package.
+
+For more details about these three services, including technical instructions, see the [ServiceReadMe](https://github.com/kgrid-objects/pgx-knowledge-base/blob/main/pgx-kb/ServiceReadMe.md) that comes with the PGx-KB.
 
 - - - 
 
