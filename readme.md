@@ -48,6 +48,8 @@ Several more specific goals met when initially creating the PGx-KB are these:
 
 The PGx-KB can be depicted in a diagram showing all of its components like this:
 
+<img width="719" height="488" alt="image" src="https://github.com/user-attachments/assets/3730a817-6156-46a6-8b5d-249a23f1ec1d" />
+
 - - - 
 
 ### What metadata are provided with the PGx-KB?
