@@ -144,10 +144,16 @@
     ],
     "hasDocumentation": [
         {
-            "@id": "README.md",
+            "@id": "https://github.com/kgrid-objects/pgx-knowledge-base/blob/main/readme.md",
             "@type": "InformationArtifact",
             "dc:title": "README.md",
-            "dc:description": "KB readme file."
+            "dc:description": "PGx-KB readme file."
+        },
+        {
+            "@id": "ServiceREADME.md",
+            "@type": "InformationArtifact",
+            "dc:title": "PGx-KB Service Documentation",
+            "dc:description": "PGx-KB Service Documentation"
         },
         {
             "@id": "index.html",
