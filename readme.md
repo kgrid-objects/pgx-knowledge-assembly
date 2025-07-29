@@ -31,6 +31,19 @@ The PGx-KB is experimental work of the Knowledge Systems Lab (KSL) at the Univer
 
 - - - 
 
+### What type of evidence-based computations does the PGx-KB support?
+
+Disclaimer:  The PGx-KB is an experiment in knowledge base construction and NOT intended for production use.  The knowledge in PGx-KB may not be up to date or reliable.
+
+The PGx-KB can be used to compute the following two things in sequence. First, it leverages ____ computable implementations of knowledge to map an individual's genotype information for a group of ____ genes that control the absorption, distribution, metabolism, and excretion of ____ drugs to known pharmacogenomic phenotypes. Second, it leverages computable implementations of knowledge about pharmacogenomic phenotypes to compute drug selection or dosing recommendations based on computed phenotypes. 
+
+For genotype-to-phenotype mapping computations, the Services that come as part of the PGx-KB expect genotype input about an person encoded using diplotypes, like this: 
+
+
+For phenotype-to-recommendation computations, 
+
+- - - 
+
 ### Why was the PGx-KB example KB-KO initially created?
 
 Expanding on its Purposes, the PGx-KB was initially created as an **experiement** in building Knowledge Bases by using and extending formal model for all Knowledge Objects, [KOIO 2.1] (https://github.com/kgrid/koio/releases/tag/2.1).
