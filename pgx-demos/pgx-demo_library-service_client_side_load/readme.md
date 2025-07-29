@@ -35,3 +35,8 @@ To run a built version in dev environment use serve
 npm install -g serve
 serve dist
 ```
+
+To deploy the build on GitHub pages (push the dist folder to gh-pages branch) use the following command:
+```shell
+npm run deploy
+```
