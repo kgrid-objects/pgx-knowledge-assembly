@@ -54,7 +54,7 @@ The PGx-KB can be depicted in a diagram showing its main components like this:
 
 ### What metadata are provided with the PGx-KB?
 
-The PGx-KB has its own [metadata file](https://github.com/kgrid-objects/pgx-knowledge-base/blob/main/pgx-kb/metadata.json) with linked metadata in JSON.LD format that conform to KOIO 2.1.
+The PGx-KB has its own [metadata file](https://github.com/kgrid-objects/pgx-knowledge-base/blob/main/pgx-kb/metadata.json) with linked metadata in JSON.LD format that conform to KOIO 2.1. Information and links to all of the files included in the PGx-KB can be found in that metadata file.
 
 - - -
 
