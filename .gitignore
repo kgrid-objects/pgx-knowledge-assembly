@@ -1,0 +1,10 @@
+.DS_Store
+.idea/
+dist/
+node_modules/
+/kit/activator
+/kit/library
+/activator
+/test-results/
+/build/
+

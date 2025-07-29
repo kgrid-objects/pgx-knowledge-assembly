@@ -1,0 +1,136 @@
+{
+    "@context": [
+        "https://kgrid.org/koio/2.1/context.jsonld",
+        {
+            "@version": 1.1,            
+            "Purpose": "http://purl.obolibrary.org/obo/NCIT_C25634"
+        }
+    ],
+    "@id": "pgx-kb",
+    "KOIOVersion": "2.1",
+    "@type": "koio:KnowledgeBase",
+    "dc:title": "pgx knowledgebase",
+    "dc:identifier": "ark:pgx-kb",
+    "dc:version": "v1.0",
+    "dc:date": "2025-05-06",
+    "dc:description": "A sample knowledgebase that uses CPIC collection (KnowledgeSet).",
+    "ncit:Purpose": "To compute patient specific drug selection and dosing recommendations.",
+    "schema:creator": {
+        "@id": "https://kgrid.org",
+        "@type": "schema:Organization",
+        "schema:name": "Knowledge Systems Lab, University of Michigan",
+        "schema:affiliation": "University of Michigan",
+        "schema:email": "kgrid-developers@umich.edu"
+    },
+    "dc:publisher": "Knowledge Systems Lab, University of Michigan",
+    "dc:license": {
+        "@id": "license.md"
+    },
+    "hasKnowledge": [
+        {
+            "@id": "ks1",
+            "@type": "koio:KnowledgeSet",
+            "dc:description": "Genotype to Phenotype mapping",
+            "koio:hasKnowledgeObject": [
+                {
+                    "@id": "https://github.com/kgrid-objects/cpic-collection/tree/master/collection/CPIC_Phenotype_CYP2C19/"
+                },
+                {
+                    "@id": "https://github.com/kgrid-objects/cpic-collection/tree/master/collection/CPIC_Phenotype_CYP2C9/"
+                },
+                {
+                    "@id": "https://github.com/kgrid-objects/cpic-collection/tree/master/collection/CPIC_Phenotype_CYP2D6-V1/"
+                },
+                {
+                    "@id": "https://github.com/kgrid-objects/cpic-collection/tree/master/collection/CPIC_Phenotype_CYP2D6/"
+                },
+                {
+                    "@id": "https://github.com/kgrid-objects/cpic-collection/tree/master/collection/CPIC_Phenotype_CYP3A5/"
+                },
+                {
+                    "@id": "https://github.com/kgrid-objects/cpic-collection/tree/master/collection/CPIC_Phenotype_SLCO1B1/"
+                },
+                {
+                    "@id": "https://github.com/kgrid-objects/cpic-collection/tree/master/collection/CPIC_Phenotype_TPMT/"
+                },
+                {
+                    "@id": "https://github.com/kgrid-objects/cpic-collection/tree/master/collection/CPIC_Phenotype_UGT1A1/"
+                }
+            ]
+        },
+        {
+            "@id": "ks2",
+            "@type": "koio:KnowledgeSet",
+            "dc:description": "Phenotype to recommendation mapping",
+            "koio:hasKnowledgeObject": [
+                "https://raw.githubusercontent.com/kgrid-objects/cpic-collection/refs/tags/ExternalKSet1.0/collection/external_kset/kset_export1.json"
+            ]
+        },
+        {
+            "@id": "ks3",
+            "@type": "koio:KnowledgeSet",
+            "dc:description": "Phenotype to recommendation mapping",
+            "koio:hasKnowledgeObject": [
+                {
+                    "@id": "https://github.com/kgrid-objects/cpic-collection/tree/master/collection/DPWGRec_amitriptyline_CYP2C19/"
+                },
+                {
+                    "@id": "https://github.com/kgrid-objects/cpic-collection/tree/master/collection/DPWGRec_clomipramine_CYP2C19/"
+                },
+                {
+                    "@id": "https://github.com/kgrid-objects/cpic-collection/tree/master/collection/DPWGRec_escitalopram_CYP2C19/"
+                }
+            ]
+        }
+    ],
+    "hasService": [
+        {
+            "@type": [
+                "Service"
+            ],
+            "dc:description": "An API service that accepts a genetic profile and provide access to patient specific drug selection and dosing recommendations. See sample.profile for example.",
+            "dependsOn": [
+                "ks1",
+                "ks2",
+                "ks3"
+            ],
+            "implementedBy": {
+                "@id": "src/api-service.js",
+                "@type": [
+                    "Implementation"
+                ]
+            }
+        },
+        {
+            "@type": [
+                "Service"
+            ],
+            "dc:description": "A JavaScript library with a function that accepts a genetic profile and provide access to patient specific drug selection and dosing recommendations. See sample.profile for example.",
+            "dependsOn": [
+                "ks1",
+                "ks2",
+                "ks3"
+            ],
+            "implementedBy": {
+                "@id": "src/plugin-service.js",
+                "@type": [
+                    "Implementation"
+                ]
+            }
+        }
+    ],
+    "hasDocumentation": [
+        {
+            "@id": "README.md",
+            "@type": "InformationArtifact",
+            "dc:title": "README.md",
+            "dc:description": "KB readme file."
+        },
+        {
+            "@id": "index.html",
+            "@type": "InformationArtifact",
+            "dc:title": "Knowledge Object Information Page",
+            "dc:description": "Knowledge object information page."
+        }
+    ]
+}
