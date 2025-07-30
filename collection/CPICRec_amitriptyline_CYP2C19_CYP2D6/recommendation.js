@@ -18,6 +18,24 @@ const recommendations = {
     recommendation: 'Initiate therapy with recommended starting dose.',
     classification: 'Strong'
   }
+  ,
+  "cyp2c19normalcyp2d6normal": {
+    implication: 'Normal metabolism of TCAs',
+    recommendation: 'Initiate therapy with recommended starting dose',
+    classification: 'Strong'
+  }
+  ,
+  "cyp2c19poorcyp2d6poor": {
+    implication: 'Greatly reduced metabolism of tertiary amines compared to normal metabolizers. Decreased conversion of tertiary amines to secondary amines may affect response or side effects',
+    recommendation: 'Avoid tricyclic use due to potential for side effects. Consider alternative drug not metabolized by CYP2D6. If a TCA is warranted, consider a 50% reduction of recommended starting dose.f Utilize therapeutic drug monitoring to guide dose adjustments.',
+    classification: 'Moderate'
+  },
+  "cyp2c19normalcyp2d6": {
+    implication: 'Normal metabolism of TCAs',
+    recommendation: 'Initiate therapy with recommended starting dose',
+    classification: 'Strong'
+  }
+  
 };
 
 const keysuffix = {

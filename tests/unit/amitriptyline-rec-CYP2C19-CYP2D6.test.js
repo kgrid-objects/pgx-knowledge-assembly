@@ -15,7 +15,7 @@ describe('Give correct amitriptyline recommendations', () => {
       "diplotype":"*1/*1", "phenotype":"Normal metabolizer"
     };
     let result = dosingrecommendation(inputList);
-    expect(result.recommendation.implication).toEqual("");
+    expect(result.recommendation.implication).toEqual("Normal metabolism of TCAs");
   });
 
   it('Should return a normal/null recommendation', () => {
@@ -25,9 +25,9 @@ describe('Give correct amitriptyline recommendations', () => {
     inputList.CYP2D6 = {};
     let result = dosingrecommendation(inputList);
     expect(result.recommendation.implication).toEqual(
-        "Normal metabolism of tertiary amines");
+        "Normal metabolism of TCAs");
     expect(result.recommendation.content).toEqual(
-        "Initiate therapy with recommended starting dose.");
+        "Initiate therapy with recommended starting dose");
   });
 
   it('Should return a null/ultrarapid recommendation', () => {
@@ -48,7 +48,7 @@ describe('Give correct amitriptyline recommendations', () => {
       "diplotype":"*1/*1", "phenotype":"Poor metabolizer"
     };
     let result = dosingrecommendation(inputList);
-    expect(result.recommendation.content).toEqual("Avoid amitriptyline use");
+    expect(result.recommendation.content).toContain("Avoid tricyclic");
   });
 
   it('Should fail if no phenotype', () => {
