@@ -6,7 +6,7 @@ The PGx-KB is a prototype pharmacogenomics knowledgebase enabling general explor
 
 Its formal architecture is an example Knowledge Object (KO) of the **Knowledge Base (KB) type**.
 
-For this work, a **Knowledge Base** is a **distinct type** of KO that has one or more Knowledge Sets and one or more Purposes.
+For this work, a **Knowledge Base** is a **distinct type** of KO that has one or more Knowledge Sets and one or more Purposes. (Note: A Knowledge Set is just an appropriately typed unordered list of KOs.) 
 
 In keeping with this definition of a KB, the PGx-KB has the following three Knowledge Sets:
 
