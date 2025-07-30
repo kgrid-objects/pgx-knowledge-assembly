@@ -9,7 +9,7 @@
     "@id": "pgx-kb",
     "KOIOVersion": "2.1",
     "@type": "koio:KnowledgeBase",
-    "dc:title": "pgx knowledgebase",
+    "dc:title": "PGx Knowledgebase",
     "dc:identifier": "ark:pgx-kb",
     "dc:version": "v1.0",
     "dc:date": "2025-05-06",
@@ -88,22 +88,42 @@
     ],
     "hasService": [
         {
-            "@id": "API Service",
+            "@id": "Library Service",
             "@type": [
                 "Service"
             ],
-            "dc:description": "An API service that accepts a genetic profile and provide access to patient specific drug selection and dosing recommendations. See sample.profile for example.",
+            "dc:description": "A JavaScript library with a function that accepts a genetic profile and provide access to patient specific drug selection and dosing recommendations. See sample.profile for example.",
             "dependsOn": [
                 "ks1",
                 "ks2",
                 "ks3"
             ],
             "implementedBy": {
-                "@id": "src/api-service.js",
+                "@id": "src/library-service",
                 "@type": [
                     "Implementation"
                 ]
-            }
+            },
+            "hasTest": [
+                {
+                    "@id": "library_tests",
+                    "dc:title": "Tests written for the library service",
+                    "@type": "Test",
+                    "dc:description": "These tests are written to test the functionality and correctness of the library service of pgx-kb.",
+                    "implementedBy": {
+                        "@id": "tests/unit/library-service.test.js",
+                        "@type": "Javascript"
+                    },
+                    "hasDocumentation": [
+                        {
+                            "@id": "tests/library-service.readme.md",
+                            "@type": "InformationArtifact",
+                            "dc:title": "How to run library service tests?",
+                            "dc:description": "This document includes instruction on how to run library service tests."
+                        }
+                    ]
+                }
+            ]
         },
         {
             "@id": "Plugin Service",
@@ -121,26 +141,47 @@
                 "@type": [
                     "Implementation"
                 ]
-            }
+            },
+            "hasTest": [
+                {
+                    "@id": "plugin_tests",
+                    "dc:title": "Tests written for the plugin service",
+                    "@type": "Test",
+                    "dc:description": "These tests are written to test the functionality and correctness of the plugin service of pgx-kb.",
+                    "implementedBy": {
+                        "@id": "tests/unit/plugin-service.test.js",
+                        "@type": "Javascript"
+                    },
+                    "hasDocumentation": [
+                        {
+                            "@id": "tests/plugin-service.readme.md",
+                            "@type": "InformationArtifact",
+                            "dc:title": "How to run plugin service tests?",
+                            "dc:description": "This document includes instruction on how to run plugin service tests."
+                        }
+                    ]
+                }
+            ]
         },
         {
-            "@id": "Library Service",
+            "@id": "API Service",
             "@type": [
                 "Service"
             ],
-            "dc:description": "A JavaScript library with a function that accepts a genetic profile and provide access to patient specific drug selection and dosing recommendations. See sample.profile for example.",
+            "dc:description": "An API service that accepts a genetic profile and provide access to patient specific drug selection and dosing recommendations. See sample.profile for example.",
             "dependsOn": [
                 "ks1",
                 "ks2",
                 "ks3"
             ],
             "implementedBy": {
-                "@id": "src/library-service",
+                "@id": "src/api-service.js",
                 "@type": [
                     "Implementation"
                 ]
             }
         }
+        
     ],
     "hasDocumentation": [
         {
