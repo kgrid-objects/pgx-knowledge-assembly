@@ -44,7 +44,7 @@ async function loadKnowledgeFunctions(knowledgeArray, functionName) {
     for (const [index, ko] of knowledgeArray.entries()) {
         const rawUrl = ko["@id"]
             .replace('github.com', 'raw.githubusercontent.com')
-            .replace('/tree/', '/').replace('master', 'refs/heads/KB-implementation') /// To Do: delete .replace('master','refs/heads/KB-implementation') when loading from master
+            .replace('tree', 'refs/heads')
             + 'metadata.json';
         const response = await fetch(rawUrl);
         const compacted = await response.json();
