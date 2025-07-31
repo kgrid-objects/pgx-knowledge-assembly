@@ -1,5 +1,5 @@
 {
-  "@context": "https://kgrid.org/koio/2.1/context",
+  "@context": "https://kgrid.org/koio/2.1/context.jsonld",
   "@id": "drug_recommendation_collection",
   "@type": "koio:KnowledgeSet",
   "dc:description": "Phenotype to recommendation mapping",
