@@ -25,20 +25,15 @@ async function loadMetadata(filePath) {
 }
 
 async function loadKnowledgeSet(ks) {
-    let knowledgeSet=[];
-    if ('@id' in ks["https://kgrid.org/koio#hasKnowledgeObject"][0] ) {
-                return ks["https://kgrid.org/koio#hasKnowledgeObject"] 
+    if (!("https://kgrid.org/koio#hasKnowledgeObject" in ks)) {
+        const response = await fetch(ks["@id"]);
+        const compacted = await response.json();
+        const expanded = await jsonld.expand(compacted);
+        ks = expanded[0]
     }
-    else{
-        for (let i = 0; i < ks["https://kgrid.org/koio#hasKnowledgeObject"].length; i++) {
-            let response = await fetch(ks["https://kgrid.org/koio#hasKnowledgeObject"][i]["@value"]);
-            const compacted = await response.json();
-            knowledgeSet.push(...compacted)
-        }
-        return knowledgeSet
-    }
-
-
+    
+    let ko = ks["https://kgrid.org/koio#hasKnowledgeObject"] || []
+    return ko
 }
 
 // Load and prepare functions from a knowledge set

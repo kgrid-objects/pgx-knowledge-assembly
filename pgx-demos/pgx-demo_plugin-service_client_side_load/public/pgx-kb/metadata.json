@@ -2,19 +2,22 @@
     "@context": [
         "https://kgrid.org/koio/2.1/context.jsonld",
         {
-            "@version": 1.1,            
+            "@version": 1.1,
             "Purpose": "http://purl.obolibrary.org/obo/NCIT_C25634"
         }
     ],
     "@id": "pgx-kb",
     "KOIOVersion": "2.1",
     "@type": "koio:KnowledgeBase",
-    "dc:title": "pgx knowledgebase",
+    "dc:title": "PGx Knowledgebase",
     "dc:identifier": "ark:pgx-kb",
     "dc:version": "v1.0",
     "dc:date": "2025-05-06",
     "dc:description": "A sample knowledgebase that uses CPIC collection (KnowledgeSet).",
-    "ncit:Purpose": "To compute patient specific drug selection and dosing recommendations.",
+    "ncit:Purpose": [
+        "To compute patient specific drug selection and dosing recommendations.",
+        "To serve as an example of building a Knowledge Base by adopting and extending the properties and relationships defined for Knowledge Objects."
+    ],
     "schema:creator": {
         "@id": "https://kgrid.org",
         "@type": "schema:Organization",
@@ -59,12 +62,9 @@
             ]
         },
         {
-            "@id": "ks2",
+            "@id": "https://raw.githubusercontent.com/kgrid-objects/pgx-knowledge-base/refs/tags/1.0/collection/drug_recommendation_knowledge_set/metadata.json",
             "@type": "koio:KnowledgeSet",
-            "dc:description": "Phenotype to recommendation mapping",
-            "koio:hasKnowledgeObject": [
-                "https://raw.githubusercontent.com/kgrid-objects/cpic-collection/refs/tags/ExternalKSet1.0/collection/external_kset/kset_export1.json"
-            ]
+            "dc:description": "Phenotype to recommendation mapping"
         },
         {
             "@id": "ks3",
@@ -85,6 +85,83 @@
     ],
     "hasService": [
         {
+            "@id": "Library Service",
+            "@type": [
+                "Service"
+            ],
+            "dc:description": "A JavaScript library with a function that accepts a genetic profile and provide access to patient specific drug selection and dosing recommendations. See sample.profile for example.",
+            "dependsOn": [
+                "ks1",
+                "ks2",
+                "ks3"
+            ],
+            "implementedBy": {
+                "@id": "src/library-service",
+                "@type": [
+                    "Implementation"
+                ]
+            },
+            "hasTest": [
+                {
+                    "@id": "library_tests",
+                    "dc:title": "Tests written for the library service",
+                    "@type": "Test",
+                    "dc:description": "These tests are written to test the functionality and correctness of the library service of pgx-kb.",
+                    "implementedBy": {
+                        "@id": "tests/unit/library-service.test.js",
+                        "@type": "Javascript"
+                    },
+                    "hasDocumentation": [
+                        {
+                            "@id": "tests/library-service.readme.md",
+                            "@type": "InformationArtifact",
+                            "dc:title": "How to run library service tests?",
+                            "dc:description": "This document includes instruction on how to run library service tests."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "@id": "Plugin Service",
+            "@type": [
+                "Service"
+            ],
+            "dc:description": "A JavaScript library with a function that accepts a genetic profile and provide access to patient specific drug selection and dosing recommendations. See sample.profile for example.",
+            "dependsOn": [
+                "ks1",
+                "ks2",
+                "ks3"
+            ],
+            "implementedBy": {
+                "@id": "src/plugin-service.js",
+                "@type": [
+                    "Implementation"
+                ]
+            },
+            "hasTest": [
+                {
+                    "@id": "plugin_tests",
+                    "dc:title": "Tests written for the plugin service",
+                    "@type": "Test",
+                    "dc:description": "These tests are written to test the functionality and correctness of the plugin service of pgx-kb.",
+                    "implementedBy": {
+                        "@id": "tests/unit/plugin-service.test.js",
+                        "@type": "Javascript"
+                    },
+                    "hasDocumentation": [
+                        {
+                            "@id": "tests/plugin-service.readme.md",
+                            "@type": "InformationArtifact",
+                            "dc:title": "How to run plugin service tests?",
+                            "dc:description": "This document includes instruction on how to run plugin service tests."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "@id": "API Service",
             "@type": [
                 "Service"
             ],
@@ -100,31 +177,20 @@
                     "Implementation"
                 ]
             }
-        },
-        {
-            "@type": [
-                "Service"
-            ],
-            "dc:description": "A JavaScript library with a function that accepts a genetic profile and provide access to patient specific drug selection and dosing recommendations. See sample.profile for example.",
-            "dependsOn": [
-                "ks1",
-                "ks2",
-                "ks3"
-            ],
-            "implementedBy": {
-                "@id": "src/plugin-service.js",
-                "@type": [
-                    "Implementation"
-                ]
-            }
         }
     ],
     "hasDocumentation": [
         {
-            "@id": "README.md",
+            "@id": "https://github.com/kgrid-objects/pgx-knowledge-base/blob/main/readme.md",
             "@type": "InformationArtifact",
             "dc:title": "README.md",
-            "dc:description": "KB readme file."
+            "dc:description": "PGx-KB readme file."
+        },
+        {
+            "@id": "ServiceReadMe.md",
+            "@type": "InformationArtifact",
+            "dc:title": "PGx-KB Service Documentation",
+            "dc:description": "PGx-KB Service Documentation"
         },
         {
             "@id": "index.html",
