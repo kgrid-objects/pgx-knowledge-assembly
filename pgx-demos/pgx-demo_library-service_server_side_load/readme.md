@@ -15,7 +15,7 @@ npm uninstall pgx-kb
 and then install it from a local place or published version if any, using
 
 ```shell
-npm install /home/path/to/cpic-collection/pgx-kb
+npm install /home/path/to/pgx-knowledge-base/pgx-kb
 ```
 
 If you are installing pgx-kb from a local place, make sure all its dependencies are installed there by running `npm install` in the root of that local place.
