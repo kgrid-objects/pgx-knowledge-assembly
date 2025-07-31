@@ -24,5 +24,35 @@
         "@type": "Function"
       }      
     }
+  ],
+  "hasService": [
+    {
+      "@id": "library_service",
+      "@type": [
+        "Service"
+      ],
+      "dc:description": "A JavaScript library with a function that accepts a phenotype and provide drug dosing recommendations.",
+      "dependsOn": [
+        "SLCO1B1_simvastatin_recommendations"
+      ],
+      "implementedBy": {
+        "@id": "recommendation.js",
+        "@type": [
+          "Implementation"
+        ]
+      },
+      "hasTest": [
+        {
+          "@id": "library_tests",
+          "dc:title": "Tests written for the library service",
+          "@type": "Test",
+          "dc:description": "These tests are written to test the functionality and correctness of the library service of pgx-kb.",
+          "implementedBy": {
+            "@id": "tests/simvastatin-SLCO1B1.test.js",
+            "@type": "Javascript"
+          }
+        }
+      ]
+    }
   ]
 }
