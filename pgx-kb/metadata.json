@@ -62,12 +62,9 @@
             ]
         },
         {
-            "@id": "ks2",
+            "@id": "https://raw.githubusercontent.com/kgrid-objects/pgx-knowledge-base/refs/tags/1.0/collection/drug_recommendation_knowledge_set/metadata.json",
             "@type": "koio:KnowledgeSet",
-            "dc:description": "Phenotype to recommendation mapping",
-            "koio:hasKnowledgeObject": [
-                "https://raw.githubusercontent.com/kgrid-objects/cpic-collection/refs/tags/ExternalKSet1.0/collection/external_kset/kset_export1.json"
-            ]
+            "dc:description": "Phenotype to recommendation mapping"
         },
         {
             "@id": "ks3",
@@ -181,7 +178,6 @@
                 ]
             }
         }
-        
     ],
     "hasDocumentation": [
         {
