@@ -21,7 +21,7 @@ function dosingrecommendation (inputs) {
       genes[genekey].phenotype = lowercaseInput[key].phenotype || ''
       genes[genekey].phenotype = genes[genekey].phenotype.toLowerCase()
       targetfield = reference[genekey].field
-      // searchkeyReady = searchkeyReady && (genes[genekey][targetfield]!='')     // Disabled for TCAs
+      searchkeyReady = searchkeyReady && (genes[genekey][targetfield]!='')     
       if(targetfield=='diplotype'){
         if (genes[genekey].diplotype.indexOf(reference[genekey].value) != -1) {
           searchKey = searchKey+genekey.toLowerCase()+reference[genekey].value+keysuffix[genekey].positive
@@ -30,9 +30,9 @@ function dosingrecommendation (inputs) {
         }
       }
       if(targetfield=='phenotype'){
-        // if (genes[genekey].phenotype != "") {      // Disabled for TCAs
+        if (genes[genekey].phenotype != "") {      
           searchKey = searchKey+genekey.toLowerCase()+genes[genekey].phenotype.replace('metabolizer','').replace(' ','')
-        // }                                          // Disabled for TCAs
+        }                                          
       }
     }
     if (searchkeyReady) {

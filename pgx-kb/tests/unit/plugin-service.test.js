@@ -31,11 +31,11 @@ describe('Library Service should provide correct phenotypes and recommendations'
     expect(result).toBeDefined();
   });
 
-  it('Should include phenotupes as intermediate results', () => {
+  it('Should include phenotypes as intermediate results', () => {
     expect(result).toHaveProperty('intermediate');
   });
 
-  it('Should calculate correct phenotupes in intermediate results', () => {
+  it('Should calculate correct phenotypes in intermediate results', () => {
     expect(result.intermediate).toBeDefined();
     expect(result.intermediate.CYP2C19.phenotype).toEqual("Poor metabolizer");
     expect(result.intermediate.CYP2C9.phenotype).toEqual(undefined);

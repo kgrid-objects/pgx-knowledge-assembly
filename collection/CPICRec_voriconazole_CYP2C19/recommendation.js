@@ -22,6 +22,7 @@ function dosingrecommendation (inputs) {
       genes[genekey].phenotype = genes[genekey].phenotype.toLowerCase()
       targetfield = reference[genekey].field
       searchkeyReady = searchkeyReady && (genes[genekey][targetfield]!='')
+      
       if(targetfield=='diplotype'){
         if (genes[genekey].diplotype.indexOf(reference[genekey].value) != -1) {
           searchKey = searchKey+genekey.toLowerCase()+reference[genekey].value+keysuffix[genekey].positive

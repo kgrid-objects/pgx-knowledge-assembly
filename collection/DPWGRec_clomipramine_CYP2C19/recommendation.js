@@ -18,6 +18,8 @@ function dosingrecommendation (inputs) {
       }
       genes[genekey]={}
       genes[genekey].diplotype = lowercaseInput[key].diplotype || ''
+      
+
       genes[genekey].phenotype = lowercaseInput[key].phenotype || ''
       genes[genekey].phenotype = genes[genekey].phenotype.toLowerCase()
       targetfield = reference[genekey].field
@@ -32,7 +34,8 @@ function dosingrecommendation (inputs) {
       if(targetfield=='phenotype'){
         // if (genes[genekey].phenotype != "") {      // Disabled for TCAs
           searchKey = searchKey+genekey.toLowerCase()+genes[genekey].phenotype.replace('metabolizer','').replace(' ','')
-        // }                                          // Disabled for TCAs
+        // }    
+                                      // Disabled for TCAs
       }
     }
     if (searchkeyReady) {
