@@ -1,28 +1,28 @@
 {
-    "@context": "https://kgrid.org/koio/2.1/context.jsonld",
-    "@id": "99999/fk4bz6hp15/v1.0",
-    "versionInfo": "2.1",
-    "@type": "KnowledgeObject",
-    "dc:title": "CPIC CYP2C19 Clopidogrel recommendations",
-    "dc:identifier": "ark:/99999/fk4bz6hp15/v1.0",
-    "dc:version": "v1.0",
-    "dc:date": "2025-05-22",
-    "dc:description": "CPIC recommendations for Clopidogrel based on CYP2C19 phenotype",
-    "schema:creator": {
-        "@id": "https://kgrid.org",
-        "@type": "schema:Organization",
-        "schema:givenName": "Knowledge Systems Lab",
-        "schema:affiliation": "Knowledge Systems Lab, University of Michigan Medical School",
-        "schema:email": "kgrid-developers@umich.edu"
-    },
-    "koio:hasKnowledge": [
+  "@context": "https://kgrid.org/koio/2.1/context.jsonld",
+  "@id": "99999/fk4bz6hp15/v1.0",
+  "versionInfo": "2.1",
+  "@type": "KnowledgeObject",
+  "dc:title": "CPIC CYP2C19 Clopidogrel recommendations",
+  "dc:identifier": "ark:/99999/fk4bz6hp15/v1.0",
+  "dc:version": "v1.0",
+  "dc:date": "2025-05-22",
+  "dc:description": "CPIC recommendations for Clopidogrel based on CYP2C19 phenotype",
+  "schema:creator": {
+    "@id": "https://kgrid.org",
+    "@type": "schema:Organization",
+    "schema:givenName": "Knowledge Systems Lab",
+    "schema:affiliation": "Knowledge Systems Lab, University of Michigan Medical School",
+    "schema:email": "kgrid-developers@umich.edu"
+  },
+  "koio:hasKnowledge": [
     {
       "@id": "CYP2C19_Clopidogrel_recommendations",
       "@type": "koio:Knowledge",
       "implementedBy": {
         "@id": "recommendation.js",
         "@type": "Function"
-      }      
+      }
     }
   ],
   "hasService": [

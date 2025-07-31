@@ -1,28 +1,28 @@
 {
-    "@context": "https://kgrid.org/koio/2.1/context.jsonld",
-    "@id": "99999/fk4d79nq4z/v1.0",
-    "versionInfo": "2.1",
-    "@type": "KnowledgeObject",
-    "dc:title": "CPIC - Atazanavir Guideline for UGT1A1",
-    "dc:identifier": "ark:/99999/fk4d79nq4z/v1.0",
-    "dc:version": "v1.0",
-    "dc:date": "2025-05-22",
-    "dc:description": "CPIC recommendations for Atazanavir based on UGT1A1 phenotype",
-    "schema:creator": {
-        "@id": "https://kgrid.org",
-        "@type": "schema:Organization",
-        "schema:givenName": "Knowledge Systems Lab",
-        "schema:affiliation": "Knowledge Systems Lab, University of Michigan Medical School",
-        "schema:email": "kgrid-developers@umich.edu"
-    },
-    "koio:hasKnowledge": [
+  "@context": "https://kgrid.org/koio/2.1/context.jsonld",
+  "@id": "99999/fk4d79nq4z/v1.0",
+  "versionInfo": "2.1",
+  "@type": "KnowledgeObject",
+  "dc:title": "CPIC - Atazanavir Guideline for UGT1A1",
+  "dc:identifier": "ark:/99999/fk4d79nq4z/v1.0",
+  "dc:version": "v1.0",
+  "dc:date": "2025-05-22",
+  "dc:description": "CPIC recommendations for Atazanavir based on UGT1A1 phenotype",
+  "schema:creator": {
+    "@id": "https://kgrid.org",
+    "@type": "schema:Organization",
+    "schema:givenName": "Knowledge Systems Lab",
+    "schema:affiliation": "Knowledge Systems Lab, University of Michigan Medical School",
+    "schema:email": "kgrid-developers@umich.edu"
+  },
+  "koio:hasKnowledge": [
     {
       "@id": "UGT1A1_Atazanavir_recommendations",
       "@type": "koio:Knowledge",
       "implementedBy": {
         "@id": "recommendation.js",
         "@type": "Function"
-      }      
+      }
     }
   ],
   "hasService": [

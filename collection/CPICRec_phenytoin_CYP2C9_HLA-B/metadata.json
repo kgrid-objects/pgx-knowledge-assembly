@@ -1,28 +1,28 @@
 {
-    "@context": "https://kgrid.org/koio/2.1/context.jsonld",
-    "@id": "99999/fk4qz3fz89/v1.0",
-    "versionInfo": "2.1",
-    "@type": "KnowledgeObject",
-    "dc:title": "CPIC Phenytoin Recommendations based on CYP2C9 and HLA-B phenotypes",
-    "dc:identifier": "ark:/99999/fk4qz3fz89/v1.0",
-    "dc:version": "v1.0",
-    "dc:date": "2025-05-22",
-    "dc:description": "KGrid CPIC guidelines CYP2C9 and HLA-B Phenotypes to Phenytoin Recommendation",
-    "schema:creator": {
-        "@id": "https://kgrid.org",
-        "@type": "schema:Organization",
-        "schema:givenName": "Knowledge Systems Lab",
-        "schema:affiliation": "Knowledge Systems Lab, University of Michigan Medical School",
-        "schema:email": "kgrid-developers@umich.edu"
-    },
-    "koio:hasKnowledge": [
+  "@context": "https://kgrid.org/koio/2.1/context.jsonld",
+  "@id": "99999/fk4qz3fz89/v1.0",
+  "versionInfo": "2.1",
+  "@type": "KnowledgeObject",
+  "dc:title": "CPIC Phenytoin Recommendations based on CYP2C9 and HLA-B phenotypes",
+  "dc:identifier": "ark:/99999/fk4qz3fz89/v1.0",
+  "dc:version": "v1.0",
+  "dc:date": "2025-05-22",
+  "dc:description": "KGrid CPIC guidelines CYP2C9 and HLA-B Phenotypes to Phenytoin Recommendation",
+  "schema:creator": {
+    "@id": "https://kgrid.org",
+    "@type": "schema:Organization",
+    "schema:givenName": "Knowledge Systems Lab",
+    "schema:affiliation": "Knowledge Systems Lab, University of Michigan Medical School",
+    "schema:email": "kgrid-developers@umich.edu"
+  },
+  "koio:hasKnowledge": [
     {
       "@id": "CYP2C9_HLA-B_Phenytoin_recommendations",
       "@type": "koio:Knowledge",
       "implementedBy": {
         "@id": "recommendation.js",
         "@type": "Function"
-      }      
+      }
     }
   ],
   "hasService": [
