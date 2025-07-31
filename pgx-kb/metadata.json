@@ -32,6 +32,7 @@
     "hasKnowledge": [
         {
             "@id": "ks1",
+            "dc:title": "ks1",
             "@type": "koio:KnowledgeSet",
             "dc:description": "Genotype to Phenotype mapping",
             "koio:hasKnowledgeObject": [
@@ -63,11 +64,13 @@
         },
         {
             "@id": "https://raw.githubusercontent.com/kgrid-objects/pgx-knowledge-base/refs/tags/1.0/collection/drug_recommendation_knowledge_set/metadata.json",
+            "dc:title": "ks2",
             "@type": "koio:KnowledgeSet",
             "dc:description": "Phenotype to recommendation mapping"
         },
         {
             "@id": "ks3",
+            "dc:title": "ks3",
             "@type": "koio:KnowledgeSet",
             "dc:description": "Phenotype to recommendation mapping",
             "koio:hasKnowledgeObject": [
