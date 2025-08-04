@@ -13,7 +13,7 @@
     "dc:identifier": "ark:pgx-kb",
     "dc:version": "v1.0",
     "dc:date": "2025-05-06",
-    "dc:description": "A sample knowledgebase that uses CPIC collection (KnowledgeSet).",
+    "dc:description": "A sample knowledgebase that uses CPIC and DPWG collections (KnowledgeSets).",
     "ncit:Purpose": [
         "To compute patient specific drug selection and dosing recommendations.",
         "To serve as an example of building a Knowledge Base by adopting and extending the properties and relationships defined for Knowledge Objects."
