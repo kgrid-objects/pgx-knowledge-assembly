@@ -11,7 +11,7 @@ For this work, a **Knowledge Base** is a **distinct type** of KO that has one or
 In keeping with this definition of a KB, the PGx-KB has the following three Knowledge Sets:
 
 - Knowledge Set 1 (KS1): A list of KOs with implementations of knowledge for mapping genotypes to pharmacogenomic (PGx) phenotypes based on [CPIC guidelines](https://cpicpgx.org/guidelines/). KS1 can be found in the PGx-KB's [metadata file](https://github.com/kgrid-objects/pgx-knowledge-base/blob/main/pgx-kb/metadata.json). 
-- Knowledge Set 2 (KS2): A list of KOs with implementations of knowledge for mapping PGx phenotypes to drug-specific recommendations based on [CPIC guidelines](https://cpicpgx.org/guidelines/). KS2 can be found as an external release in Github here.
+- Knowledge Set 2 (KS2): A list of KOs with implementations of knowledge for mapping PGx phenotypes to drug-specific recommendations based on [CPIC guidelines](https://cpicpgx.org/guidelines/). KS2 can be found as an external release [here](https://raw.githubusercontent.com/kgrid-objects/pgx-knowledge-base/refs/tags/1.0/collection/drug_recommendation_knowledge_set/metadata.json).
 - Knowledge Set 3 (KS3): A list of KOs with implementations of knowledge for mapping PGx phenotypes to drug-specific recommendations based on [DPWG guidelines](https://www.clinpgx.org/page/dpwg). KS3 can be found in the PGx-KB's [metadata file](https://github.com/kgrid-objects/pgx-knowledge-base/blob/main/pgx-kb/metadata.json). 
 
 The PGx-KB also has the following two quoted Purposes:
