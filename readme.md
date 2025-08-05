@@ -97,7 +97,7 @@ The plugin-service.test.js file tests the PGx-KB's Plugin service. Its documenta
 
 The PGx-KB includes this ReadMe plus the following four other documentation artifacts:
 
-- An Info Page automatically generated from the PGx-KB's own metadata file can be viewed online [here]().
+- An Info Page automatically generated from the PGx-KB's own metadata file can be viewed online [here](https://kgrid-objects.github.io/pgx-knowledge-base/pgx_kb_info_page.html).
 - Docs for describing PGx-KB's two Services are available [here](https://github.com/kgrid-objects/pgx-knowledge-base/blob/main/pgx-kb/ServiceReadMe.md).
 - Docs specifically for the Library Service unit test are [here](https://github.com/kgrid-objects/pgx-knowledge-base/blob/main/pgx-kb/tests/library-service.readme.md).
 - Docs specifically for the Plugin Service unit test are [here](https://github.com/kgrid-objects/pgx-knowledge-base/blob/main/pgx-kb/tests/plugin-service.readme.md). 
