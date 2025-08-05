@@ -85,17 +85,22 @@ For more details about these three services, including technical instructions, s
 
 ### What Tests does the PGx-KB include?
 
-The PGx-KB
-
-- - -
-
-### What Documentation does the PGx-KB include?
-
 The PGx-KB includes two unit tests [here](https://github.com/kgrid-objects/pgx-knowledge-base/tree/main/pgx-kb/tests/unit).
 
 The library-service.test.js file enables a PGx-KB user to test PGx-KB's Library service. The documentation for this test is [here](https://github.com/kgrid-objects/pgx-knowledge-base/blob/main/pgx-kb/tests/library-service.readme.md).
 
 The plugin-service.test.js file tests the PGx-KB's Plugin service. Its documentation is [here](https://github.com/kgrid-objects/pgx-knowledge-base/blob/main/pgx-kb/tests/plugin-service.readme.md).
+
+- - -
+
+### What Documentation does the PGx-KB include?
+
+The PGx-KB includes this ReadMe plus the following four other documentation artifacts:
+
+- An Info Page automatically generated from the PGx-KB's own metadata file can be viewed online [here]().
+- Docs for describing PGx-KB's two Services are available [here](https://github.com/kgrid-objects/pgx-knowledge-base/blob/main/pgx-kb/ServiceReadMe.md).
+- Docs specifically for the Library Service unit test are [here](https://github.com/kgrid-objects/pgx-knowledge-base/blob/main/pgx-kb/tests/library-service.readme.md).
+- Docs specifically for the Plugin Service unit test are [here](https://github.com/kgrid-objects/pgx-knowledge-base/blob/main/pgx-kb/tests/plugin-service.readme.md). 
 
 - - - 
 
