@@ -97,7 +97,18 @@ The PGx-KB
 
 ### What sample Apps are available that make use of the PGx-KB?
 
-The following apps are available
+Four sample apps that integrate the PGx-KB are available for inspection only. Just like the PGx-KB, these sample apps should **never be used to generate medical advice.** These  apps are  technical samples that exist **only** to show how knowledgebases can come with Services for app developers to use.
 
+All four of these sample apps demonstrate how PGx-KB enables apps to compute phenotypes from genotypes first, and then to compute recommendations based on computed phenotypes.
+
+The four sample apps can be found in this repo's [PGx-Demos folder](https://github.com/kgrid-objects/pgx-knowledge-base/tree/main/pgx-demos). What distinguishes these four sample apps is first the PGx-KB Service they use (Library vs. Plugin) and second whether the Knowledge from PGx-KB gets executed by a client or by a server. 
+
+In addition, the first of these four sample apps - the pgx-demo-library-service-client-side-load app - is available for users to view online in a **test-only**, non-production deployment [here](https://kgrid-objects.github.io/pgx-knowledge-base/). 
+
+The deployed sample app's user interface looks like this:
+
+<img width="1415" height="1074" alt="image" src="https://github.com/user-attachments/assets/88231220-1ed6-4fea-b405-36a249bfd943" />
+
+To see computed phenotypes and recommendations in the deployed sample app, click on any of the five simulated patients or enter diplotype information directly. **Never** use this sample app, or the other sample apps, or the PGx-KB to generate real medical advice. These items are only ever intended as technical demonstrations that illuminate how knowledgebases might be built and managed. 
  
 
