@@ -25,9 +25,10 @@ If you are installing pgx-kb from a local place, make sure all its dependencies 
 npx vite   
 ```
 
-For production build the app using
+For production first build the app and then copy the pgx-kb information page to the demo folder using
 ```shell
 npx vite build 
+copy ..\..\pgx-kb\index.html dist\pgx_kb_info_page.html
 ```
 
 To run a built version in dev environment use serve

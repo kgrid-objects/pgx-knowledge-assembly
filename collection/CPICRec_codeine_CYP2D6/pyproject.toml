@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "cpicrec-codeine-cyp2d6"
+version = "1.0"
+description = "KGrid CPIC guidelines CYP2D6 Phenotype to Codeine Recommendation"
+authors = ["Knowledge Systems Lab, University of Michigan Medical School <kgrid-developers@umich.edu>"]
+readme = "README.md"
+
+
+packages = [
+    { include = "cpicrec_codeine_cyp2d6" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

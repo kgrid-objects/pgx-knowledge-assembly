@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "cpic-phenotype-cyp2d6"
+version = "1.1"
+description = "KGrid CPIC guidelines Genotype to Phenotype for CYP2D6"
+authors = ["Knowledge Systems Lab, University of Michigan Medical School <kgrid-developers@umich.edu>"]
+readme = "README.md"
+
+packages = [
+    { include = "cpic_phenotype_cyp2d6" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -8,3 +8,6 @@ node_modules/
 /test-results/
 /build/
 
+__pycache__/
+.vscode/
+poetry.lock

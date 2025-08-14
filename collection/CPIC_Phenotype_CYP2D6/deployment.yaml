@@ -1,5 +1,0 @@
-/phenotype:
-  post:
-    engine: javascript
-    artifact: phenotype.js
-    function: phenotype
