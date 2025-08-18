@@ -1,18 +1,4 @@
-from knowledge_sets import knowledgeSet1Payloads
-
-# def run(inputs):
-#     try:
-        
-#         for f in knowledgeSet1Payloads:
-#             print(f(inputs))
-#     except Exception as error:
-#         return f"Error {error}"
-
-# run({"CYP2D6": "*3/*3"})
-
-
-from knowledge_sets import knowledgeSet1Payloads, knowledgeSet2Payloads
-import asyncio
+from .knowledge_sets import knowledgeSet1Payloads, knowledgeSet2Payloads
 
 def run(input_data):
     try:
@@ -36,4 +22,4 @@ def run(input_data):
     except Exception as e:
         print(f"Error: {e}")
         
-run({"diplotype": {"CYP2D6": "*3/*3"}})
+# run({"diplotype": {"CYP2D6": "*3/*3"}})

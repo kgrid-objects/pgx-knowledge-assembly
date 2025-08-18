@@ -10,6 +10,7 @@ readme = "README.md"
 python = "^3.11"
 cpic-phenotype-cyp2d6 = {path = "/home/faridsei/dev/code/pgx-knowledge-base/collection/CPIC_Phenotype_CYP2D6/dist/cpic_phenotype_cyp2d6-1.1-py3-none-any.whl"}
 cpicrec-codeine-cyp2d6 = {path = "/home/faridsei/dev/code/pgx-knowledge-base/collection/CPICRec_codeine_CYP2D6/dist/cpicrec_codeine_cyp2d6-1.0-py3-none-any.whl"}
+cpicrec-tramadol-cyp2d6 = {path = "/home/faridsei/dev/code/pgx-knowledge-base/collection/CPICRec_tramadol_CYP2D6/dist/cpicrec_tramadol_cyp2d6-1.0-py3-none-any.whl"}
 
 
 [build-system]

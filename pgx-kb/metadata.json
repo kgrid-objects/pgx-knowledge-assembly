@@ -114,10 +114,10 @@
             ],
             "hasTest": [
                 {
-                    "@id": "library_tests",
-                    "dc:title": "Tests written for the library service",
+                    "@id": "javascript_library_tests",
+                    "dc:title": "JavaScript tests written for the library service",
                     "@type": "Test",
-                    "dc:description": "These tests are written to test the functionality and correctness of the library service of pgx-kb.",
+                    "dc:description": "These tests are written to test the functionality and correctness of the Javascript library service of pgx-kb.",
                     "implementedBy": {
                         "@id": "tests/unit/library-service.test.js",
                         "@type": "Javascript"
@@ -130,6 +130,16 @@
                             "dc:description": "This document includes instruction on how to run library service tests."
                         }
                     ]
+                },
+                {
+                    "@id": "python_library_tests",
+                    "dc:title": "Python tests written for the library service",
+                    "@type": "Test",
+                    "dc:description": "These tests are written to test the functionality and correctness of the Python library service of pgx-kb.",
+                    "implementedBy": {
+                        "@id": "tests/test_library_service.py",
+                        "@type": "Python"
+                    }
                 }
             ]
         },

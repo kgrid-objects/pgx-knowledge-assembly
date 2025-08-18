@@ -60,7 +60,7 @@
           "@id": "javascript_library_tests",
           "dc:title": "JavaScript tests written for the library service",
           "@type": "Test",
-          "dc:description": "These tests are written to test the functionality and correctness of the JavaScript library service of pgx-kb.",
+          "dc:description": "These tests are written to test the functionality and correctness of the JavaScript library service.",
           "implementedBy": {
             "@id": "tests/CYP2D6-geno-pheno.test.js",
             "@type": "Javascript"
@@ -70,7 +70,7 @@
           "@id": "python_library_tests",
           "dc:title": "Python tests written for the library service",
           "@type": "Test",
-          "dc:description": "These tests are written to test the functionality and correctness of the Python library service of pgx-kb.",
+          "dc:description": "These tests are written to test the functionality and correctness of the Python library service.",
           "implementedBy": {
             "@id": "tests/test_knowledge.py",
             "@type": "Python"
