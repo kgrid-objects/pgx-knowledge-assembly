@@ -88,6 +88,37 @@
     ],
     "hasService": [
         {
+            "@id": "Pain_Medication_Service",
+            "@type": [
+                "Service"
+            ],
+            "dc:description": "A Python function that accepts a genetic profile and provide access to patient specific pain medication drug selection and dosing recommendations. See sample.profile for example.",
+            "dependsOn": [
+                "ks1",
+                "ks2"
+            ],
+            "implementedBy": [
+                {
+                    "@id": "pgx_kb",
+                    "@type": [
+                        "Implementation"
+                    ]
+                }
+            ],
+            "hasTest": [
+                {
+                    "@id": "python_pain_medication_tests",
+                    "dc:title": "Python pain medication tests written for the pain medication service",
+                    "@type": "Test",
+                    "dc:description": "These tests are written to test the functionality and correctness of the Python pain medication service of pgx-kb.",
+                    "implementedBy": {
+                        "@id": "tests/test_pain_medication_service.py",
+                        "@type": "Python"
+                    }
+                }
+            ]
+        },
+        {
             "@id": "Library Service",
             "@type": [
                 "Service"
@@ -101,12 +132,6 @@
             "implementedBy": [
                 {
                     "@id": "src/library-service",
-                    "@type": [
-                        "Implementation"
-                    ]
-                },
-                {
-                    "@id": "pgx_kb",
                     "@type": [
                         "Implementation"
                     ]
@@ -130,16 +155,6 @@
                             "dc:description": "This document includes instruction on how to run library service tests."
                         }
                     ]
-                },
-                {
-                    "@id": "python_library_tests",
-                    "dc:title": "Python tests written for the library service",
-                    "@type": "Test",
-                    "dc:description": "These tests are written to test the functionality and correctness of the Python library service of pgx-kb.",
-                    "implementedBy": {
-                        "@id": "tests/test_library_service.py",
-                        "@type": "Python"
-                    }
                 }
             ]
         },
