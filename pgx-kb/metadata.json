@@ -98,12 +98,20 @@
                 "ks2",
                 "ks3"
             ],
-            "implementedBy": {
-                "@id": "src/library-service",
-                "@type": [
-                    "Implementation"
-                ]
-            },
+            "implementedBy": [
+                {
+                    "@id": "src/library-service",
+                    "@type": [
+                        "Implementation"
+                    ]
+                },
+                {
+                    "@id": "pgx_kb",
+                    "@type": [
+                        "Implementation"
+                    ]
+                }
+            ],
             "hasTest": [
                 {
                     "@id": "library_tests",

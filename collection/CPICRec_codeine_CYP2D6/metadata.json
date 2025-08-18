@@ -19,10 +19,16 @@
     {
       "@id": "CYP2D6_Codeine_recommendations",
       "@type": "koio:Knowledge",
-      "implementedBy": {
-        "@id": "recommendation.js",
-        "@type": "Function"
-      }
+      "implementedBy": [
+        {
+          "@id": "recommendation.js",
+          "@type": "Function"
+        },
+        {
+          "@id": "cpicrec_codeine_cyp2d6/recommendation.py",
+          "@type": "Function"
+        }
+      ]
     }
   ],
   "hasService": [
@@ -31,25 +37,43 @@
       "@type": [
         "Service"
       ],
-      "dc:description": "A JavaScript library with a function that accepts a phenotype and provide drug dosing recommendations.",
+      "dc:description": "A JavaScript/Python library with a function that accepts a phenotype and provide drug dosing recommendations.",
       "dependsOn": [
         "CYP2D6_Codeine_recommendations"
       ],
-      "implementedBy": {
-        "@id": "recommendation.js",
-        "@type": [
-          "Implementation"
-        ]
-      },
+      "implementedBy": [
+        {
+          "@id": "recommendation.js",
+          "@type": [
+            "Implementation"
+          ]
+        },
+        {
+          "@id": "cpicrec_codeine_cyp2d6/recommendation.py",
+          "@type": [
+            "Implementation"
+          ]
+        }
+      ],
       "hasTest": [
         {
-          "@id": "library_tests",
-          "dc:title": "Tests written for the library service",
+          "@id": "javascript_library_tests",
+          "dc:title": "JavaScript tests written for the library service",
           "@type": "Test",
-          "dc:description": "These tests are written to test the functionality and correctness of the library service of pgx-kb.",
+          "dc:description": "These tests are written to test the functionality and correctness of the JavaScript library service of pgx-kb.",
           "implementedBy": {
             "@id": "tests/codeine-rec-CYP2D6.test.js",
             "@type": "Javascript"
+          }
+        },
+        {
+          "@id": "python_library_tests",
+          "dc:title": "Python tests written for the library service",
+          "@type": "Test",
+          "dc:description": "These tests are written to test the functionality and correctness of the Python library service of pgx-kb.",
+          "implementedBy": {
+            "@id": "tests/test_knowledge.py",
+            "@type": "Python"
           }
         }
       ]
