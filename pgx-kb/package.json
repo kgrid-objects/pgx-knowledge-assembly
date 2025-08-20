@@ -54,6 +54,7 @@
     "cpicrec-simvastatin-slco1b1": "file:../collection/CPICRec_simvastatin_SLCO1B1",
     "cpicrec-tacrolimus-cyp3a5": "file:../collection/CPICRec_tacrolimus_CYP3A5",
     "cpicrec-thioguanine-tpmt": "file:../collection/CPICRec_thioguanine_TPMT",
+    "cpicrec-tramadol-cyp2d6": "file:../collection/CPICRec_tramadol_CYP2D6",
     "cpicrec-trimipramine-cyp2c19-cyp2d6": "file:../collection/CPICRec_trimipramine_CYP2C19_CYP2D6",
     "cpicrec-tropisetron-cyp2d6": "file:../collection/CPICRec_tropisetron_CYP2D6",
     "cpicrec-voriconazole-cyp2c19": "file:../collection/CPICRec_voriconazole_CYP2C19",
