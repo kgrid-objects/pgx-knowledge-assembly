@@ -1,6 +1,6 @@
 import express from 'express';
 import path from 'path';
-import pgx from 'pgx-kb/library-service';
+import pgx from 'pgx-kb/all-recommendation-library';
 import { fileURLToPath } from 'url';
 
 const run = pgx.run;

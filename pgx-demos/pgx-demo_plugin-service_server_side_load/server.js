@@ -1,6 +1,6 @@
 import express from 'express';
 import path from 'path';
-import pgx from 'pgx-kb/plugin-service';
+import pgx from 'pgx-kb/all-recommendation-plugin';
 import { fileURLToPath } from 'url';
 
 const initialize = pgx.initialize;

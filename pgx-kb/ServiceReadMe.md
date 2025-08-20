@@ -120,7 +120,7 @@ See the [demo app](/pgx-demos/pgx-demo_library-service_server_side_load/) that u
 Run the API service using
 
 ```shell
-node src/api-service.js
+node all-recommendation/api-service.js
 ```
 
 from the cpic-kb folder and access the api through swagger editor using `http://localhost:3000/api-docs` or send a post request to `http://localhost:3000/run`.

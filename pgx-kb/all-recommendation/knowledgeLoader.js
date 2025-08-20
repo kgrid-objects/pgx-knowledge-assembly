@@ -58,7 +58,8 @@ async function loadKnowledgeFunctions(knowledgeArray, functionName) {
         for (const knowledge of ko_metadata['https://kgrid.org/koio#hasKnowledge']) {
             for (const implementation of knowledge['http://www.ebi.ac.uk/swo/SWO_0000085']) { //implementedBy
                 let url = implementation['@id']
-
+                if (!(url.endsWith(".js") || url.endsWith(".mjs")))
+                    continue;
                 const response = await fetch(url);
                 if (!response.ok) throw new Error(`Failed to fetch module from ${url}`);
                 const jsCode = await response.text();

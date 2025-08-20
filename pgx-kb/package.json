@@ -6,8 +6,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "exports": {
-    "./plugin-service": "./src/plugin-service.js",
-    "./library-service": "./src/library-service/library-service.js"
+    "./all-recommendation-plugin": "./all-recommendation/plugin-service.js",
+    "./all-recommendation-library": "./all-recommendation/library-service/library-service.js"
   },
   "repository": {
     "type": "git",

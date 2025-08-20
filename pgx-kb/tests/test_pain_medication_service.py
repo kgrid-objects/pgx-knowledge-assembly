@@ -1,4 +1,4 @@
-from pgx_kb import library_service
+from pain_therapy_recommendation import library_service
 input = {
     "patient": {
     "name": "Hank Hill",

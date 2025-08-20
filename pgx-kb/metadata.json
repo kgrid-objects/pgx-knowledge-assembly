@@ -92,14 +92,14 @@
             "@type": [
                 "Service"
             ],
-            "dc:description": "A Python function that accepts a genetic profile and provide access to patient specific pain medication drug selection and dosing recommendations. See sample.profile for example.",
+            "dc:description": "A service interface that accepts a genetic profile and provide access to patient specific pain medication drug selection and dosing recommendations. See sample.profile for example.",
             "dependsOn": [
                 "ks1",
                 "ks2"
             ],
             "implementedBy": [
                 {
-                    "@id": "pgx_kb",
+                    "@id": "pain_therapy_recommendation",
                     "@type": [
                         "Implementation"
                     ]
@@ -119,11 +119,11 @@
             ]
         },
         {
-            "@id": "Library Service",
+            "@id": "all-recommendation",
             "@type": [
                 "Service"
             ],
-            "dc:description": "A JavaScript library with a function that accepts a genetic profile and provide access to patient specific drug selection and dosing recommendations. See sample.profile for example.",
+            "dc:description": "A service interface that accepts a genetic profile and provide access to patient specific drug selection and dosing recommendations. See sample.profile for example.",
             "dependsOn": [
                 "ks1",
                 "ks2",
@@ -131,18 +131,33 @@
             ],
             "implementedBy": [
                 {
-                    "@id": "src/library-service",
+                    "@id": "all-recommendation/library-service",
                     "@type": [
                         "Implementation"
-                    ]
+                    ],
+                    "dc:description": "A JavaScript implementation of all-recommendation service as a library which handles the dependencies at build-time."
+                },
+                {
+                    "@id": "all-recommendation/plugin-service.js",
+                    "@type": [
+                        "Implementation"
+                    ],
+                    "dc:description": "A JavaScript implementation of all-recommendation service as a library which handles the dependencies at run-time."
+                },
+                {
+                    "@id": "all-recommendation/api-service.js",
+                    "@type": [
+                        "Implementation"
+                    ],
+                    "dc:description": "A JavaScript implementation of all-recommendation service as an API"
                 }
             ],
             "hasTest": [
                 {
-                    "@id": "javascript_library_tests",
-                    "dc:title": "JavaScript tests written for the library service",
+                    "@id": "javascript_all_recommendation_library_tests",
+                    "dc:title": "JavaScript tests written for the all recommendation library service",
                     "@type": "Test",
-                    "dc:description": "These tests are written to test the functionality and correctness of the Javascript library service of pgx-kb.",
+                    "dc:description": "These tests are written to test the functionality and correctness of the Javascript allrecommendation library service of pgx-kb.",
                     "implementedBy": {
                         "@id": "tests/unit/library-service.test.js",
                         "@type": "Javascript"
@@ -151,36 +166,16 @@
                         {
                             "@id": "tests/library-service.readme.md",
                             "@type": "InformationArtifact",
-                            "dc:title": "How to run library service tests?",
-                            "dc:description": "This document includes instruction on how to run library service tests."
+                            "dc:title": "How to run all recommendation library service tests?",
+                            "dc:description": "This document includes instruction on how to run all recommendation library service tests."
                         }
                     ]
-                }
-            ]
-        },
-        {
-            "@id": "Plugin Service",
-            "@type": [
-                "Service"
-            ],
-            "dc:description": "A JavaScript library with a function that accepts a genetic profile and provide access to patient specific drug selection and dosing recommendations. See sample.profile for example.",
-            "dependsOn": [
-                "ks1",
-                "ks2",
-                "ks3"
-            ],
-            "implementedBy": {
-                "@id": "src/plugin-service.js",
-                "@type": [
-                    "Implementation"
-                ]
-            },
-            "hasTest": [
+                },
                 {
-                    "@id": "plugin_tests",
-                    "dc:title": "Tests written for the plugin service",
+                    "@id": "javascript_all_recommendation_plugin_tests",
+                    "dc:title": "Tests written for the all recommendation plugin service",
                     "@type": "Test",
-                    "dc:description": "These tests are written to test the functionality and correctness of the plugin service of pgx-kb.",
+                    "dc:description": "These tests are written to test the functionality and correctness of the all recommendation plugin service of pgx-kb.",
                     "implementedBy": {
                         "@id": "tests/unit/plugin-service.test.js",
                         "@type": "Javascript"
@@ -189,30 +184,12 @@
                         {
                             "@id": "tests/plugin-service.readme.md",
                             "@type": "InformationArtifact",
-                            "dc:title": "How to run plugin service tests?",
-                            "dc:description": "This document includes instruction on how to run plugin service tests."
+                            "dc:title": "How to run all recommendation plugin service tests?",
+                            "dc:description": "This document includes instruction on how to run all recommendation plugin service tests."
                         }
                     ]
                 }
             ]
-        },
-        {
-            "@id": "API Service",
-            "@type": [
-                "Service"
-            ],
-            "dc:description": "An API service that accepts a genetic profile and provide access to patient specific drug selection and dosing recommendations. See sample.profile for example.",
-            "dependsOn": [
-                "ks1",
-                "ks2",
-                "ks3"
-            ],
-            "implementedBy": {
-                "@id": "src/api-service.js",
-                "@type": [
-                    "Implementation"
-                ]
-            }
         }
     ],
     "hasDocumentation": [

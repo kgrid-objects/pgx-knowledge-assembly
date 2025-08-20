@@ -44,7 +44,7 @@ const swaggerOptions = {
       description: 'API to run knowledge functions on input and return results',
     },
   },
-  apis: ['./src/api-service.js'], // or wherever your routes are documented
+  apis: ['./all-recommendation/api-service.js'], // or wherever your routes are documented
 };
 
 const swaggerSpec = swaggerJSDoc(swaggerOptions);

@@ -1,4 +1,4 @@
-import  pgx_kb_plugin_service  from '../../src/plugin-service.js';
+import  pgx_kb_plugin_service  from '../../all-recommendation/plugin-service.js';
 import expect from 'expect';
 
 describe('Library Service should provide correct phenotypes and recommendations', function () {

@@ -1,4 +1,4 @@
-import  pgx_kb_library_service  from '../../src/library-service/library-service.js';
+import  pgx_kb_library_service  from '../../all-recommendation/library-service/library-service.js';
 import expect from 'expect';
 
 describe('Library Service should provide correct phenotypes and recommendations', async () => {
