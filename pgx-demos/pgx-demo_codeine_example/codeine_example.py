@@ -7900,7 +7900,7 @@ def phenotype(inputs):
 def main():
     try:
         print("Find out whether someone should AVOID codeine.")
-        diplotype = input("Enter an indivudual's diplotype for CYP2D6 (EX *7/*8): ")
+        diplotype = input("Enter an individual's diplotype for CYP2D6 (EX *7/*8): ")
         recommendation = dosingrecommendation(phenotype({"CYP2D6": diplotype}))
 
         print("****************Answer**********************")
