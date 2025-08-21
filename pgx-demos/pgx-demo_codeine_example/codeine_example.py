@@ -1,5 +1,4 @@
 import copy
-import json
 drug = "Codeine"
 reference = {"CYP2D6": {"field": "phenotype", "value": ""}}
 keysuffix = {"CYP2D6": {"positive": "", "negative": ""}}  # adjust if needed
@@ -28,6 +27,20 @@ recommendations = {
 
 
 def dosingrecommendation(inputs):
+    """
+    Receives phenotype and returns the recommendation.
+
+    Parameters:
+    ----------
+    inputs : dict
+        A dictionary containing gene information, where keys are gene names (EX {'CYP2D6': {'phenotype': 'Normal metabolizer'}})
+    
+
+    Returns:
+    -------
+        Codeine recommendation based on phenotype.
+    
+    """
     try:
         genes = {}
         output = {}
@@ -7854,6 +7867,20 @@ diplotype_map = {
 
 
 def phenotype(inputs):
+    """
+    Receives diplotype and returns the phenotype.
+
+    Parameters:
+    ----------
+    inputs : dict
+        A dictionary containing diplotype (EX {'CYP2D6': '*12/*45'})
+    
+
+    Returns:
+    -------
+        Phenotype based on diplotype.
+    
+    """
     output = {gene: {}}
     diplotype = inputs.get(gene)
     try:
@@ -7871,8 +7898,19 @@ def phenotype(inputs):
 
 
 def main():
-    diplotype = input("Please enter an indivudual's diplotype for CYP2D6 (EX *7/*8): ")
-    print(json.dumps(dosingrecommendation(phenotype({"CYP2D6": diplotype})), indent=4))
+    print("Find out whether someone should AVOID codeine.")
+    diplotype = input("Enter an indivudual's diplotype for CYP2D6 (EX *7/*8): ")
+    recommendation = dosingrecommendation(phenotype({"CYP2D6": diplotype}))
+
+    print("****************Answer**********************")
+    if "avoid" in recommendation["recommendation"]["content"].lower():
+        print("AVOID codeine.")
+    else:
+        print("Codeine OK.")
+    print(f"Why? This person is a '{recommendation['genes']['CYP2D6']['phenotype']}'.")    
+    print("********************************************")
     
 if __name__ == "__main__":
     main()
+
+
