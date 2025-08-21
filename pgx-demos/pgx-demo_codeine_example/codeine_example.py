@@ -7898,18 +7898,20 @@ def phenotype(inputs):
 
 
 def main():
-    print("Find out whether someone should AVOID codeine.")
-    diplotype = input("Enter an indivudual's diplotype for CYP2D6 (EX *7/*8): ")
-    recommendation = dosingrecommendation(phenotype({"CYP2D6": diplotype}))
+    try:
+        print("Find out whether someone should AVOID codeine.")
+        diplotype = input("Enter an indivudual's diplotype for CYP2D6 (EX *7/*8): ")
+        recommendation = dosingrecommendation(phenotype({"CYP2D6": diplotype}))
 
-    print("****************Answer**********************")
-    if "avoid" in recommendation["recommendation"]["content"].lower():
-        print("AVOID codeine.")
-    else:
-        print("Codeine OK.")
-    print(f"Why? This person is a '{recommendation['genes']['CYP2D6']['phenotype']}'.")    
-    print("********************************************")
-    
+        print("****************Answer**********************")
+        if "avoid" in recommendation["recommendation"]["content"].lower():
+            print("AVOID codeine.")
+        else:
+            print("Codeine OK.")
+        print(f"Why? This person is a '{recommendation['genes']['CYP2D6']['phenotype']}'.")    
+        print("********************************************")
+    except KeyboardInterrupt:
+        print("App was stopped by the user.")
 if __name__ == "__main__":
     main()
 
