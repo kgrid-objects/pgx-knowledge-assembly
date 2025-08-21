@@ -7910,8 +7910,8 @@ def main():
             print("Codeine OK.")
         print(f"Why? This person is a '{recommendation['genes']['CYP2D6']['phenotype']}'.")    
         print("********************************************")
-    except KeyboardInterrupt:
-        print("App was stopped by the user.")
+    except Exception as e:
+        print(f"App was stopped. Error: {e}")
 if __name__ == "__main__":
     main()
 
