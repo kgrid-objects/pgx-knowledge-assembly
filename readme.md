@@ -1,4 +1,4 @@
-# PGx Knowledgebase (PGx-KB)
+# PGx Knowledge Assembly (PGx-KA)
 
 ### What is the PGx-KB?
 
