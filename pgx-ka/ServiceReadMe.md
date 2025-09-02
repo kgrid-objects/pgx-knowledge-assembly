@@ -1,18 +1,18 @@
-# PGx-KB Service Documentation
+# PGx-KA Service Documentation
 
 ## Library Service
 Library service could be used both on client side or server side. This service will load the knwoledge objects at build time.
 ### Client Side at Build time
-To import and use library service of pgx-kb on the client side js files that execute on the beroswer without any need for server side processing install the pgx-kb package as a dependency in your node.js app using
+To import and use library service of pgx-ka on the client side js files that execute on the beroswer without any need for server side processing install the pgx-ka package as a dependency in your node.js app using
 
 ```batch
-npm install /path/to/pgx-kb
+npm install /path/to/pgx-ka
 ```
 
-In your client side js import the pgx-kb package using
+In your client side js import the pgx-ka package using
 
 ```javascript
-import pgx from 'pgx-kb/library-service';
+import pgx from 'pgx-ka/library-service';
 
 
 ```
@@ -74,19 +74,19 @@ npm install -g serve
 serve dist
 ```
 
-See the [demo app](/pgx-demos/pgx-demo_library-service_client_side_load/) that uses library service from [pgx-kb](/pgx-kb/) on the client side, for a complete demo example.
+See the [demo app](/pgx-demos/pgx-demo_library-service_client_side_load/) that uses library service from [pgx-ka](/pgx-ka/) on the client side, for a complete demo example.
 
 ### Server Side at Build Time
-To use library service on server side, install the pgx-kb package as a dependency in your node.js app using
+To use library service on server side, install the pgx-ka package as a dependency in your node.js app using
 
 ```batch
-npm install /path/to/pgx-kb
+npm install /path/to/pgx-ka
 ```
 
-Then import and use the run method from the library service of the pgx-kb package in your serverside code (node.js) using
+Then import and use the run method from the library service of the pgx-ka package in your serverside code (node.js) using
 
 ```javascript
-import pgx from 'pgx-kb/library-service';
+import pgx from 'pgx-ka/library-service';
 const run = pgx.run;
 ```
 
@@ -113,7 +113,7 @@ let result = await run({
 );
 ```
 
-See the [demo app](/pgx-demos/pgx-demo_library-service_server_side_load/) that uses library service from [pgx-kb](/pgx-kb/) on the server side, for a complete demo example.
+See the [demo app](/pgx-demos/pgx-demo_library-service_server_side_load/) that uses library service from [pgx-ka](/pgx-ka/) on the server side, for a complete demo example.
 
 
 ## API Service
@@ -150,16 +150,16 @@ Here is a sample input
 ## Plugin Service
 Plugin service could be used both on client side or server side. This service will load the knwoledge objects at runtime.
 ### Client Side at Runtime
-To import and use plugin service of pgx-kb on the client side js files that execute on the beroswer without any need for server side processing install the pgx-kb package as a dependency in your node.js app using
+To import and use plugin service of pgx-ka on the client side js files that execute on the beroswer without any need for server side processing install the pgx-ka package as a dependency in your node.js app using
 
 ```batch
-npm install /path/to/pgx-kb
+npm install /path/to/pgx-ka
 ```
 
-To be able to load pgx-kb metadata in the browser of the app, copy it to the public folder by adding the following script to the package.json
+To be able to load pgx-ka metadata in the browser of the app, copy it to the public folder by adding the following script to the package.json
 ```json
   "scripts": {
-    "prebuild": "mkdir -p public/pgx-kb && cp node_modules/pgx-kb/metadata.json public/pgx-kb/metadata.json",
+    "prebuild": "mkdir -p public/pgx-ka && cp node_modules/pgx-ka/metadata.json public/pgx-ka/metadata.json",
     "build": "npm run prebuild && vite build"
   }
 ```
@@ -169,10 +169,10 @@ and running the following command in the shell
 npm run build  
 ```
 
-In your client side js import the pgx-kb package using
+In your client side js import the pgx-ka package using
 
 ```javascript
-import pgx from 'pgx-kb/plugin-service';
+import pgx from 'pgx-ka/plugin-service';
 
 
 ```
@@ -241,19 +241,19 @@ npm install -g serve
 serve dist
 ```
 
-See the [demo app](/pgx-demos/pgx-demo_plugin-service_client_side_load/) that uses plugin service from [pgx-kb](/pgx-kb/) on the client side, for a complete demo example.
+See the [demo app](/pgx-demos/pgx-demo_plugin-service_client_side_load/) that uses plugin service from [pgx-ka](/pgx-ka/) on the client side, for a complete demo example.
 
 ### Server Side at Runtime
-To use plugin service on server side, install the pgx-kb package as a dependency in your node.js app using
+To use plugin service on server side, install the pgx-ka package as a dependency in your node.js app using
 
 ```batch
-npm install /path/to/pgx-kb
+npm install /path/to/pgx-ka
 ```
 
-Then import and use the initialize and run methods from plugin service of the pgx-kb package in your serverside code (node.js) using
+Then import and use the initialize and run methods from plugin service of the pgx-ka package in your serverside code (node.js) using
 
 ```javascript
-import pgx from 'pgx-kb/plugin-service';
+import pgx from 'pgx-ka/plugin-service';
 const initialize = pgx.initialize;
 const run = pgx.run;
 ```
@@ -282,4 +282,4 @@ let result = await run({
 );
 ```
 
-See the [demo app](/pgx-demos/pgx-demo_plugin-service_server_side_load/) that uses plugin service from [pgx-kb](/pgx-kb/) on the server side, for a complete demo example.
+See the [demo app](/pgx-demos/pgx-demo_plugin-service_server_side_load/) that uses plugin service from [pgx-ka](/pgx-ka/) on the server side, for a complete demo example.

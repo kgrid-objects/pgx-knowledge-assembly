@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 
 export default defineConfig({
   root: '.',
-  base: '/pgx-knowledge-base/', // for GitHub Pages
+  base: '/pgx-knowledge-assembly/', // for GitHub Pages
   build: {
     outDir: 'dist',
     rollupOptions: {

@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prebuild": "mkdir -p public/pgx-kb && cp node_modules/pgx-kb/metadata.json public/pgx-kb/metadata.json",
+    "prebuild": "mkdir -p public/pgx-ka && cp node_modules/pgx-ka/metadata.json public/pgx-ka/metadata.json",
     "build": "npm run prebuild && vite build"
   },
   "keywords": [],
@@ -13,7 +13,7 @@
   "description": "",
   "dependencies": {
     "express": "^5.1.0",
-    "pgx-kb": "file:../../pgx-kb"
+    "pgx-ka": "file:../../pgx-ka"
   },
   "type": "module",
   "devDependencies": {

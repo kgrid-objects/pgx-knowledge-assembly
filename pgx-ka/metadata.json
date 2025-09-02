@@ -6,17 +6,17 @@
             "Purpose": "http://purl.obolibrary.org/obo/NCIT_C25634"
         }
     ],
-    "@id": "pgx-kb",
+    "@id": "pgx-ka",
     "KOIOVersion": "2.1",
-    "@type": "koio:KnowledgeBase",
-    "dc:title": "PGx Knowledgebase",
-    "dc:identifier": "ark:pgx-kb",
+    "@type": "koio:KnowledgeAssembly",
+    "dc:title": "PGx Knowledge Assembly",
+    "dc:identifier": "ark:pgx-ka",
     "dc:version": "v1.0",
     "dc:date": "2025-05-06",
-    "dc:description": "A sample knowledgebase that uses CPIC and DPWG collections (KnowledgeSets).",
+    "dc:description": "A sample knowledge assembly that uses CPIC and DPWG collections (KnowledgeSets).",
     "ncit:Purpose": [
         "To compute patient specific drug selection and dosing recommendations.",
-        "To serve as an example of building a Knowledge Base by adopting and extending the properties and relationships defined for Knowledge Objects."
+        "To serve as an example of building a Knowledge Assembly by adopting and extending the properties and relationships defined for Knowledge Objects."
     ],
     "schema:creator": {
         "@id": "https://kgrid.org",
@@ -37,33 +37,33 @@
             "dc:description": "Genotype to Phenotype mapping",
             "koio:hasKnowledgeObject": [
                 {
-                    "@id": "https://github.com/kgrid-objects/pgx-knowledge-base/tree/main/collection/CPIC_Phenotype_CYP2C19/"
+                    "@id": "https://github.com/kgrid-objects/pgx-knowledge-assembly/tree/main/collection/CPIC_Phenotype_CYP2C19/"
                 },
                 {
-                    "@id": "https://github.com/kgrid-objects/pgx-knowledge-base/tree/main/collection/CPIC_Phenotype_CYP2C9/"
+                    "@id": "https://github.com/kgrid-objects/pgx-knowledge-assembly/tree/main/collection/CPIC_Phenotype_CYP2C9/"
                 },
                 {
-                    "@id": "https://github.com/kgrid-objects/pgx-knowledge-base/tree/main/collection/CPIC_Phenotype_CYP2D6-V1/"
+                    "@id": "https://github.com/kgrid-objects/pgx-knowledge-assembly/tree/main/collection/CPIC_Phenotype_CYP2D6-V1/"
                 },
                 {
-                    "@id": "https://github.com/kgrid-objects/pgx-knowledge-base/tree/main/collection/CPIC_Phenotype_CYP2D6/"
+                    "@id": "https://github.com/kgrid-objects/pgx-knowledge-assembly/tree/main/collection/CPIC_Phenotype_CYP2D6/"
                 },
                 {
-                    "@id": "https://github.com/kgrid-objects/pgx-knowledge-base/tree/main/collection/CPIC_Phenotype_CYP3A5/"
+                    "@id": "https://github.com/kgrid-objects/pgx-knowledge-assembly/tree/main/collection/CPIC_Phenotype_CYP3A5/"
                 },
                 {
-                    "@id": "https://github.com/kgrid-objects/pgx-knowledge-base/tree/main/collection/CPIC_Phenotype_SLCO1B1/"
+                    "@id": "https://github.com/kgrid-objects/pgx-knowledge-assembly/tree/main/collection/CPIC_Phenotype_SLCO1B1/"
                 },
                 {
-                    "@id": "https://github.com/kgrid-objects/pgx-knowledge-base/tree/main/collection/CPIC_Phenotype_TPMT/"
+                    "@id": "https://github.com/kgrid-objects/pgx-knowledge-assembly/tree/main/collection/CPIC_Phenotype_TPMT/"
                 },
                 {
-                    "@id": "https://github.com/kgrid-objects/pgx-knowledge-base/tree/main/collection/CPIC_Phenotype_UGT1A1/"
+                    "@id": "https://github.com/kgrid-objects/pgx-knowledge-assembly/tree/main/collection/CPIC_Phenotype_UGT1A1/"
                 }
             ]
         },
         {
-            "@id": "https://raw.githubusercontent.com/kgrid-objects/pgx-knowledge-base/refs/tags/1.0/collection/drug_recommendation_knowledge_set/metadata.json",
+            "@id": "https://raw.githubusercontent.com/kgrid-objects/pgx-knowledge-assembly/refs/tags/1.0/collection/drug_recommendation_knowledge_set/metadata.json",
             "dc:title": "ks2",
             "@type": "koio:KnowledgeSet",
             "dc:description": "Phenotype to recommendation mapping"
@@ -75,13 +75,13 @@
             "dc:description": "Phenotype to recommendation mapping",
             "koio:hasKnowledgeObject": [
                 {
-                    "@id": "https://github.com/kgrid-objects/pgx-knowledge-base/tree/main/collection/DPWGRec_amitriptyline_CYP2C19/"
+                    "@id": "https://github.com/kgrid-objects/pgx-knowledge-assembly/tree/main/collection/DPWGRec_amitriptyline_CYP2C19/"
                 },
                 {
-                    "@id": "https://github.com/kgrid-objects/pgx-knowledge-base/tree/main/collection/DPWGRec_clomipramine_CYP2C19/"
+                    "@id": "https://github.com/kgrid-objects/pgx-knowledge-assembly/tree/main/collection/DPWGRec_clomipramine_CYP2C19/"
                 },
                 {
-                    "@id": "https://github.com/kgrid-objects/pgx-knowledge-base/tree/main/collection/DPWGRec_escitalopram_CYP2C19/"
+                    "@id": "https://github.com/kgrid-objects/pgx-knowledge-assembly/tree/main/collection/DPWGRec_escitalopram_CYP2C19/"
                 }
             ]
         }
@@ -110,7 +110,7 @@
                     "@id": "python_pain_medication_tests",
                     "dc:title": "Python pain medication tests written for the pain medication service",
                     "@type": "Test",
-                    "dc:description": "These tests are written to test the functionality and correctness of the Python pain medication service of pgx-kb.",
+                    "dc:description": "These tests are written to test the functionality and correctness of the Python pain medication service of pgx-ka.",
                     "implementedBy": {
                         "@id": "tests/test_pain_medication_service.py",
                         "@type": "Python"
@@ -157,7 +157,7 @@
                     "@id": "javascript_all_recommendation_library_tests",
                     "dc:title": "JavaScript tests written for the all recommendation library service",
                     "@type": "Test",
-                    "dc:description": "These tests are written to test the functionality and correctness of the Javascript allrecommendation library service of pgx-kb.",
+                    "dc:description": "These tests are written to test the functionality and correctness of the Javascript allrecommendation library service of pgx-ka.",
                     "implementedBy": {
                         "@id": "tests/unit/library-service.test.js",
                         "@type": "Javascript"
@@ -175,7 +175,7 @@
                     "@id": "javascript_all_recommendation_plugin_tests",
                     "dc:title": "Tests written for the all recommendation plugin service",
                     "@type": "Test",
-                    "dc:description": "These tests are written to test the functionality and correctness of the all recommendation plugin service of pgx-kb.",
+                    "dc:description": "These tests are written to test the functionality and correctness of the all recommendation plugin service of pgx-ka.",
                     "implementedBy": {
                         "@id": "tests/unit/plugin-service.test.js",
                         "@type": "Javascript"
@@ -194,16 +194,16 @@
     ],
     "hasDocumentation": [
         {
-            "@id": "https://github.com/kgrid-objects/pgx-knowledge-base/blob/main/readme.md",
+            "@id": "https://github.com/kgrid-objects/pgx-knowledge-assembly/blob/main/readme.md",
             "@type": "InformationArtifact",
             "dc:title": "README.md",
-            "dc:description": "PGx-KB readme file."
+            "dc:description": "PGx-KA readme file."
         },
         {
             "@id": "ServiceReadMe.md",
             "@type": "InformationArtifact",
-            "dc:title": "PGx-KB Service Documentation",
-            "dc:description": "PGx-KB Service Documentation"
+            "dc:title": "PGx-KA Service Documentation",
+            "dc:description": "PGx-KA Service Documentation"
         },
         {
             "@id": "index.html",

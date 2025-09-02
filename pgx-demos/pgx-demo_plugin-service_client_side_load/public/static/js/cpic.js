@@ -1,4 +1,4 @@
-import pgx from 'pgx-kb/all-recommendation-plugin';
+import pgx from 'pgx-ka/all-recommendation-plugin';
 
 async function initialize() {
   await pgx.initialize();

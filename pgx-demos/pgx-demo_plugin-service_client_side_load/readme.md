@@ -6,21 +6,21 @@ To run this demo app
 npm install
 ```
 
-You may need to uninstall `pgx-kb` using
+You may need to uninstall `pgx-ka` using
 
 ```shell
-npm uninstall pgx-kb
+npm uninstall pgx-ka
 ```
 
 and then install it from a local place or published version if any, using
 
 ```shell
-npm install /home/path/to/pgx-knowledge-base/pgx-kb
+npm install /home/path/to/pgx-knowledge-assembly/pgx-ka
 ```
 
-If you are installing pgx-kb from a local place, make sure all its dependencies are installed there by running `npm install` in the root of that local place.
+If you are installing pgx-ka from a local place, make sure all its dependencies are installed there by running `npm install` in the root of that local place.
 
-Then run the following command to copy the pgx-kb locally to the public folder of this app so that it could be accessed by the knowledge base code in the browser 
+Then run the following command to copy the pgx-ka locally to the public folder of this app so that it could be accessed by the knowledge assembly code in the browser 
 ```shell
 npm run build  
 ```

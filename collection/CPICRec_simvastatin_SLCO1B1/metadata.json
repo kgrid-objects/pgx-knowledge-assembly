@@ -46,7 +46,7 @@
           "@id": "library_tests",
           "dc:title": "Tests written for the library service",
           "@type": "Test",
-          "dc:description": "These tests are written to test the functionality and correctness of the library service of pgx-kb.",
+          "dc:description": "These tests are written to test the functionality and correctness of the library service.",
           "implementedBy": {
             "@id": "tests/simvastatin-SLCO1B1.test.js",
             "@type": "Javascript"

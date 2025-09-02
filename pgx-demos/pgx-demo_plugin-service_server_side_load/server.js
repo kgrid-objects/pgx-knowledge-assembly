@@ -1,6 +1,6 @@
 import express from 'express';
 import path from 'path';
-import pgx from 'pgx-kb/all-recommendation-plugin';
+import pgx from 'pgx-ka/all-recommendation-plugin';
 import { fileURLToPath } from 'url';
 
 const initialize = pgx.initialize;
@@ -16,7 +16,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 async function startServer() {
   try {
     await initialize();
-    console.log('PGX Knowledge Base initialized');
+    console.log('PGX Knowledge Assembly initialized');
 
     app.post('/api/recommend', async (req, res) => {
       try {

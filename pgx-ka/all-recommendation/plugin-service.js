@@ -5,7 +5,7 @@ let knowledgeSet2 = [];
 let knowledgeSet3 = [];
 
 async function initialize() {
-  const mainMeta = await loadMetadata('/pgx-kb/metadata.json');
+  const mainMeta = await loadMetadata('/pgx-ka/metadata.json');
   const knowledgeSets = mainMeta['https://kgrid.org/koio#hasKnowledge']
 
   console.log("loading knowledgeSet 1")

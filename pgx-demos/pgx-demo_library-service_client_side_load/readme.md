@@ -6,29 +6,29 @@ To run this demo app
 npm install
 ```
 
-You may need to uninstall `pgx-kb` using
+You may need to uninstall `pgx-ka` using
 
 ```shell
-npm uninstall pgx-kb
+npm uninstall pgx-ka
 ```
 
 and then install it from a local place or published version if any, using
 
 ```shell
-npm install /home/path/to/pgx-knowledge-base/pgx-kb
+npm install /home/path/to/pgx-knowledge-assembly/pgx-ka
 ```
 
-If you are installing pgx-kb from a local place, make sure all its dependencies are installed there by running `npm install` in the root of that local place.
+If you are installing pgx-ka from a local place, make sure all its dependencies are installed there by running `npm install` in the root of that local place.
 
 3. Then run the application using the following command
 ```shell
 npx vite   
 ```
 
-For production first build the app and then copy the pgx-kb information page to the demo folder using
+For production first build the app and then copy the pgx-ka information page to the demo folder using
 ```shell
 npx vite build 
-copy ..\..\pgx-kb\index.html dist\pgx_kb_info_page.html
+copy ..\..\pgx-ka\index.html dist\pgx_kb_info_page.html
 ```
 
 To run a built version in dev environment use serve

@@ -39,7 +39,7 @@ const swaggerOptions = {
   definition: {
     openapi: '3.0.0',
     info: {
-      title: 'KnowledgeBase API',
+      title: 'Knowledge Assembly API',
       version: '1.0.0',
       description: 'API to run knowledge functions on input and return results',
     },
@@ -138,6 +138,6 @@ app.post('/run', async (req, res) => {
 
 initialize().then(() => {
   app.listen(3000, () => {
-    console.log('Knowledge base API running on http://localhost:3000');
+    console.log('Knowledge assembly API running on http://localhost:3000');
   });
 });

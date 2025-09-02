@@ -1,7 +1,7 @@
 {
-  "name": "pgx-kb",
+  "name": "pgx-ka",
   "version": "1.0.0",
-  "description": "A sample knowledgebase that uses CPIC collection (KnowledgeSet).",
+  "description": "A sample knowledge assembly that uses CPIC collection (KnowledgeSet).",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kgrid-objects/pgx-knowledge-base.git#main"
+    "url": "git+https://github.com/kgrid-objects/pgx-knowledge-assembly.git#main"
   },
   "author": "",
   "license": "SEE LICENSE IN license.js",
   "bugs": {
-    "url": "https://github.com/kgrid-objects/pgx-knowledge-base/issues"
+    "url": "https://github.com/kgrid-objects/pgx-knowledge-assembly/issues"
   },
-  "homepage": "https://github.com/kgrid-objects/pgx-knowledge-base/tree/main#readme",
+  "homepage": "https://github.com/kgrid-objects/pgx-knowledge-assembly/tree/main#readme",
   "type": "module",
   "dependencies": {
     "cpic-phenotype-cyp2c19": "file:../collection/CPIC_Phenotype_CYP2C19",

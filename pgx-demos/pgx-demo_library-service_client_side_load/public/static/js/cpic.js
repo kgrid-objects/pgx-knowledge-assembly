@@ -1,4 +1,4 @@
-import pgx from 'pgx-kb/all-recommendation-library';
+import pgx from 'pgx-ka/all-recommendation-library';
 
 // define the item component
 Vue.component('recomtile', {
