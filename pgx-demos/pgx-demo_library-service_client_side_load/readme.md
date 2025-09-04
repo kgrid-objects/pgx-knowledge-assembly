@@ -28,7 +28,9 @@ npx vite
 For production first build the app and then copy the pgx-ka information page to the demo folder using
 ```shell
 npx vite build 
-copy ..\..\pgx-ka\index.html dist\pgx_kb_info_page.html
+cp ../../pgx-ka/index.html dist/pgx_ka_info_page.html
+cp ../../collection/CPIC_Phenotype_CYP2D6/index.html dist/CPIC_Phenotype_CYP2D6.html
+cp ../../collection/CPICRec_codeine_CYP2D6/index.html dist/CPICRec_Codeine_CYP2D6.html
 ```
 
 To run a built version in dev environment use serve
