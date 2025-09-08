@@ -28,6 +28,18 @@
           "@id": "cpicrec_codeine_cyp2d6/recommendation.py",
           "@type": "Function"
         }
+      ],
+      "hasTest": [        
+        {
+          "@id": "codeine_recommendation_knowledge_tests",
+          "dc:title": "Tests written for the CYP2D6 Codeine Recommendation knowledge",
+          "@type": "Test",
+          "dc:description": "These tests are written to test knowledge function for CYP2D6 Codeine Recommendation.",
+          "implementedBy": {
+            "@id": "tests/test_knowledge.py",
+            "@type": "Python"
+          }
+        }
       ]
     }
   ],
@@ -72,7 +84,7 @@
           "@type": "Test",
           "dc:description": "These tests are written to test the functionality and correctness of the Python library service.",
           "implementedBy": {
-            "@id": "tests/test_knowledge.py",
+            "@id": "tests/test_service.py",
             "@type": "Python"
           }
         }
