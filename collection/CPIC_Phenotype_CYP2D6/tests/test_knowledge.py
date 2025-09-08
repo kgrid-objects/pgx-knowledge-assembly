@@ -1,7 +1,7 @@
 from cpic_phenotype_cyp2d6 import phenotype
 
 
-def test_phenotype_Intermediate_Metabolizer():
+def test_532_Intermediate_Metabolizer_mappings():
     genotypes = [
         "*3/*9",
         "*3/*10",
@@ -539,10 +539,9 @@ def test_phenotype_Intermediate_Metabolizer():
     for genotype in genotypes:
         result = phenotype({"CYP2D6": genotype})
         assert result["CYP2D6"]["phenotype"] == "Intermediate metabolizer"
+    
 
-    print("Testing `Intermediate Metabolizer` phenotypes.")
-
-def test_phenotype_Normal_Metabolizer():
+def test_1157_Normal_mappings():
     genotypes = [
         "*1/*3",
         "*1/*3xN",
@@ -1706,9 +1705,8 @@ def test_phenotype_Normal_Metabolizer():
         result = phenotype({"CYP2D6": genotype})
         assert result["CYP2D6"]["phenotype"] == "Normal metabolizer"
 
-    print("Testing `Normal Metabolizer` phenotypes.")
 
-def test_phenotype_Poor_Metabolizer():
+def test_741_Poor_mappings():
     genotypes = [
         "*3/*3",
         "*3/*3xN",
@@ -2456,9 +2454,8 @@ def test_phenotype_Poor_Metabolizer():
         result = phenotype({"CYP2D6": genotype})
         assert result["CYP2D6"]["phenotype"] == "Poor metabolizer"
 
-    print("Testing `Poor Metabolizer` phenotypes.")
 
-def test_phenotype_TBD():
+def test_4904_TBD_mappings():
     genotypes = [
         "*1/*22",
         "*1/*23",
@@ -7369,9 +7366,8 @@ def test_phenotype_TBD():
         result = phenotype({"CYP2D6": genotype})
         assert result["CYP2D6"]["phenotype"] == "TBD"
 
-    print("Testing `TBD` phenotypes.")
 
-def test_phenotype_Ultrarapid_Metabolizder():
+def test_418_Ultrarapid_mappings():
     genotypes = [
         "*1x2/*9",
         "*1x2/*10",
@@ -7796,4 +7792,3 @@ def test_phenotype_Ultrarapid_Metabolizder():
         result = phenotype({"CYP2D6": genotype})
         assert result["CYP2D6"]["phenotype"] == "Ultrarapid metabolizer"
 
-    print("Testing `Ultrarapid Metabolizer` phenotypes.")

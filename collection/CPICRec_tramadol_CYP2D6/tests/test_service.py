@@ -1,6 +1,6 @@
 from cpicrec_tramadol_cyp2d6 import dosingrecommendation
 
-def test_knowledge():
+def test_service_for_IO_format_and_content():
     result = dosingrecommendation({'CYP2D6': {'phenotype': 'Poor metabolizer'}})
     assert type(result) is dict
     assert result.keys() == {'type', 'drug', 'genes', 'recommendation'}
