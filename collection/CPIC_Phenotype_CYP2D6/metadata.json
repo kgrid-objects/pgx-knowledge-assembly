@@ -28,6 +28,18 @@
           "@id": "cpic_phenotype_cyp2d6/phenotype.py",
           "@type": "Function"
         }
+      ],
+      "hasTest": [        
+        {
+          "@id": "cyp2d6_phenotype_knowledge_tests",
+          "dc:title": "Knowledge tests for the CYP2D6 genotype to phenotype.",
+          "@type": "Test",
+          "dc:description": "These tests are written to test the knowledge for CYP2D6 genotype to phenotype conversion.",
+          "implementedBy": {
+            "@id": "tests/test_knowledge.py",
+            "@type": "Python"
+          }
+        }
       ]
     }
   ],
@@ -72,7 +84,7 @@
           "@type": "Test",
           "dc:description": "These tests are written to test the functionality and correctness of the Python library service.",
           "implementedBy": {
-            "@id": "tests/test_knowledge.py",
+            "@id": "tests/test_service.py",
             "@type": "Python"
           }
         }
