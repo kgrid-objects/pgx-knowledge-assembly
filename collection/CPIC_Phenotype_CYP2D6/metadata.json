@@ -32,7 +32,7 @@
       "hasTest": [        
         {
           "@id": "cyp2d6_phenotype_knowledge_tests",
-          "dc:title": "Knowledge tests for the CYP2D6 genotype to phenotype.",
+          "dc:title": "Knowledge Tests (Python)",
           "@type": "Test",
           "dc:description": "These tests are written to test the knowledge for CYP2D6 genotype to phenotype conversion.",
           "implementedBy": {
@@ -70,7 +70,7 @@
       "hasTest": [
         {
           "@id": "javascript_library_tests",
-          "dc:title": "JavaScript tests written for the library service",
+          "dc:title": "Service Tests (JavaScript)",
           "@type": "Test",
           "dc:description": "These tests are written to test the functionality and correctness of the JavaScript library service.",
           "implementedBy": {
@@ -80,7 +80,7 @@
         },
         {
           "@id": "python_library_tests",
-          "dc:title": "Python tests written for the library service",
+          "dc:title": "Service Tests (Python)",
           "@type": "Test",
           "dc:description": "These tests are written to test the functionality and correctness of the Python library service.",
           "implementedBy": {

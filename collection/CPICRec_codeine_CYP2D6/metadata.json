@@ -32,7 +32,7 @@
       "hasTest": [        
         {
           "@id": "codeine_recommendation_knowledge_tests",
-          "dc:title": "Tests written for the CYP2D6 Codeine Recommendation knowledge",
+          "dc:title": "Knowledge Tests (Python)",
           "@type": "Test",
           "dc:description": "These tests are written to test knowledge function for CYP2D6 Codeine Recommendation.",
           "implementedBy": {
@@ -70,7 +70,7 @@
       "hasTest": [
         {
           "@id": "javascript_library_tests",
-          "dc:title": "JavaScript tests written for the library service",
+          "dc:title": "Service Tests (JavaScript)",
           "@type": "Test",
           "dc:description": "These tests are written to test the functionality and correctness of the JavaScript library service.",
           "implementedBy": {
@@ -80,7 +80,7 @@
         },
         {
           "@id": "python_library_tests",
-          "dc:title": "Python tests written for the library service",
+          "dc:title": "Service Tests (Python)",
           "@type": "Test",
           "dc:description": "These tests are written to test the functionality and correctness of the Python library service.",
           "implementedBy": {

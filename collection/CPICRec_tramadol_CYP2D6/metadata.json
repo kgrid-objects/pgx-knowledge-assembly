@@ -28,6 +28,18 @@
           "@id": "cpicrec_tramadol_cyp2d6/recommendation.py",
           "@type": "Function"
         }
+      ],
+      "hasTest": [
+        {
+          "@id": "tramadol_recommendation_knowledge_tests",
+          "dc:title": "Knowledge Tests (Python)",
+          "@type": "Test",
+          "dc:description": "These tests are written to test the knowledge function for CYP2D6 Tramadol Recommendation.",
+          "implementedBy": {
+            "@id": "tests/test_service.py",
+            "@type": "Python"
+          }
+        }
       ]
     }
   ],
@@ -58,7 +70,7 @@
       "hasTest": [
         {
           "@id": "javascript_library_tests",
-          "dc:title": "JavaScript tests written for the library service",
+          "dc:title": "Service Tests (Javascript)",
           "@type": "Test",
           "dc:description": "These tests are written to test the functionality and correctness of the JavaScript library service.",
           "implementedBy": {
@@ -68,11 +80,11 @@
         },
         {
           "@id": "python_library_tests",
-          "dc:title": "Python tests written for the library service",
+          "dc:title": "Service Tests (Python)",
           "@type": "Test",
           "dc:description": "These tests are written to test the functionality and correctness of the Python library service.",
           "implementedBy": {
-            "@id": "tests/test_knowledge.py",
+            "@id": "tests/test_service.py",
             "@type": "Python"
           }
         }
