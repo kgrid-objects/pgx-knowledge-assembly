@@ -1,72 +1,76 @@
-# pip install docarray
 import os
+import threading
+import uuid
+import logging
+from logging.handlers import RotatingFileHandler
+from flask import Flask, jsonify, render_template, request
+from flask_caching import Cache
+from openai_chatbot_with_assistant_api import process
 
-from dotenv import load_dotenv
-from langchain.prompts import ChatPromptTemplate
-from langchain_community.document_loaders import TextLoader
-from langchain_community.vectorstores import DocArrayInMemorySearch
-from langchain_core.output_parsers import StrOutputParser
-from langchain_core.runnables import RunnablePassthrough
-from langchain_openai.chat_models import ChatOpenAI
-from langchain_openai.embeddings import OpenAIEmbeddings
-import warnings
-from importlib import resources
+# Configure logging to include date and time
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
 
-def main():
-    # Disable only the "ValidationError has been moved" warning
-    warnings.filterwarnings(
-        "ignore",
-        message=r"`pydantic.error_wrappers:ValidationError` has been moved to `pydantic:ValidationError`",
-        category=UserWarning,
+# Define format for logs
+formatter = logging.Formatter(
+    "%(asctime)s - %(levelname)s - %(message)s", datefmt="%Y-%m-%d %H:%M:%S"
+)
+
+# File handler
+file_handler = RotatingFileHandler("chatbot_logs.log", maxBytes=10000, backupCount=5)
+file_handler.setFormatter(formatter)
+logger.addHandler(file_handler)
+
+# Console handler for Heroku logs
+console_handler = logging.StreamHandler()
+console_handler.setFormatter(formatter)
+logger.addHandler(console_handler)
+
+app = Flask(__name__)
+cache = Cache(app, config={"CACHE_TYPE": "simple"})
+
+
+@app.route("/")
+def home():
+    return render_template("index.html")
+
+
+def background_task(task_id, user_question, chat_history_tuples):
+    response = process(user_question, chat_history_tuples)
+    # Log the question and response with date and time
+    logger.info("Question: %s", user_question)
+    logger.info("Response: %s", response)
+    cache.set(task_id, response)
+
+
+@app.route("/get_response", methods=["POST"])
+def get_response():
+    data = request.get_json()
+    user_question = data["question"]
+    chat_history = data["history"]
+    chat_history = chat_history[-5:]
+    chat_history_tuples = [
+        (item["question"], item["response"]) for item in chat_history
+    ]
+
+    task_id = str(uuid.uuid4())
+    thread = threading.Thread(
+        target=background_task, args=(task_id, user_question, chat_history_tuples)
     )
-    load_dotenv()
-    
-    OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+    thread.start()
 
-    model = ChatOpenAI(openai_api_key=OPENAI_API_KEY, model=os.getenv("MODEL"))
+    return jsonify(task_id=task_id)
 
 
-    embeddings = OpenAIEmbeddings()
-
-    splits = []
-    knowledge_base =  resources.files("chatbot") / "metadata" #os.environ["KNOWLEDGE_BASE"]
-
-    files = os.listdir(knowledge_base)
-    for file in files:
-        loader = TextLoader(os.path.join(knowledge_base, file))
-        ko = loader.load()
-        splits.extend(ko)
-
-    vectorstore2 = DocArrayInMemorySearch.from_documents(splits, embeddings)
-    template = """
-    You have access to metadata for CPIC pharmacogenomic Knowledge Objects (KOs) which are gathered in a Knowledge Assembly (KA). These KOs are organized into two sets (knwoledge sets) in the KA , one can help mapping a patient's Genotype to Phenotype and the other one can help with mapping Phenotype to Recommendations. KA links these KOs and provides some services thet make it possible to produce patient specific drug selection and dosing recommendations.  \
-    Answer any question about these KOs and the KA based on the context available which is the metadata of KOs and KA. \
-    You do not have access to the knowledge representations for these KOs but you can provide information about these KOs and KA using their metadata. For using the KS or KOs and accessing actual recommendations refer to use the KA. \
-    If you don't know the answer, just say that you don't know. \
-
-    Context: {context}
-
-    Question: {question}
-    """
-    # Do not include code or logic of the function in the responses. Instead, use your python interpreter tool to execute code functions and only use the final calculated value by the function to answer the questions. \
-
-    prompt = ChatPromptTemplate.from_template(template)
-    parser = StrOutputParser()
-    chain = (
-        {"context": vectorstore2.as_retriever(), "question": RunnablePassthrough()}
-        | prompt
-        | model
-        | parser
-    )
-    while True:
-        try:
-            text = input("Ask anything: --> ")
-        except (KeyboardInterrupt, EOFError):
-            print("\nExiting...")
-            break
-        response = chain.invoke(text)
-        print(response)
+@app.route("/check_response/<task_id>", methods=["GET"])
+def check_response(task_id):
+    response = cache.get(task_id)
+    if response:
+        return jsonify(response=response)
+    else:
+        return jsonify(status="processing")
 
 
 if __name__ == "__main__":
-    main()
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
