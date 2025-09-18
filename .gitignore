@@ -13,4 +13,4 @@ __pycache__/
 .vscode/
 poetry.lock
 .pytest_cache/
-
+.env
