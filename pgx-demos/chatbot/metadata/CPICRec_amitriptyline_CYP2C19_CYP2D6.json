@@ -1,0 +1,58 @@
+{
+  "@context": "https://kgrid.org/koio/2.1/context.jsonld",
+  "@id": "99999/fk4t167482/v1.0",
+  "versionInfo": "2.1",
+  "@type": "KnowledgeObject",
+  "dc:title": "CPIC amitriptyline Recommendations based on CYP2C19 and CYP2D6 phenotypes",
+  "dc:identifier": "ark:/99999/fk4t167482/v1.0",
+  "dc:version": "v1.0",
+  "dc:date": "2025-05-22",
+  "dc:description": "KGrid CPIC guidelines CYP2C19 and CYP2D6 Phenotypes to amitriptyline Recommendation",
+  "schema:creator": {
+    "@id": "https://kgrid.org",
+    "@type": "schema:Organization",
+    "schema:givenName": "Knowledge Systems Lab",
+    "schema:affiliation": "Knowledge Systems Lab, University of Michigan Medical School",
+    "schema:email": "kgrid-developers@umich.edu"
+  },
+  "koio:hasKnowledge": [
+    {
+      "@id": "CYP2C19_CYP2D6_amitriptyline_recommendations",
+      "@type": "koio:Knowledge",
+      "implementedBy": {
+        "@id": "recommendation.js",
+        "@type": "Function"
+      }
+    }
+  ],
+  "hasService": [
+    {
+      "@id": "library_service",
+      "@type": [
+        "Service"
+      ],
+      "dc:description": "A JavaScript library with a function that accepts a phenotype and provide drug dosing recommendations.",
+      "dependsOn": [
+        "CYP2C19_CYP2D6_amitriptyline_recommendations"
+      ],
+      "implementedBy": {
+        "@id": "recommendation.js",
+        "@type": [
+          "Implementation"
+        ]
+      },
+      "hasTest": [
+        {
+          "@id": "library_tests",
+          "dc:title": "Tests written for the library service",
+          "@type": "Test",
+          "dc:description": "These tests are written to test the functionality and correctness of the library service.",
+          "implementedBy": {
+            "@id": "tests/amitriptyline-rec-CYP2C19-CYP2D6.test.js",
+            "@type": "Javascript"
+          }
+        }
+      ]
+    }
+  ]
+}

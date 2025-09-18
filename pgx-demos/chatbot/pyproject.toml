@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "chatbot"
+version = "0.1.0"
+description = ""
+authors = ["Farid Seifi <farid.seifi@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+langchain = "^0.3.27"
+langchain-community = "^0.3.29"
+langchain-openai = "^0.3.33"
+docarray = "^0.41.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+chatbot = "chatbot.chatbot:main"
