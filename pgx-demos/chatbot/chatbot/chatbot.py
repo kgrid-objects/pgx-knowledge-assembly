@@ -22,13 +22,13 @@ def main():
 
     OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
-    model = ChatOpenAI(openai_api_key=OPENAI_API_KEY, model=os.getenv("MODEL"))
+    model = ChatOpenAI(openai_api_key=OPENAI_API_KEY, model=os.getenv("MODEL")) 
 
 
     embeddings = OpenAIEmbeddings()
 
     splits = []
-    knowledge_base = os.environ["KNOWLEDGE_BASE"]
+    knowledge_base = os.environ["KNOWLEDGE_BASE"] 
 
     files = os.listdir(knowledge_base)
     for file in files:
