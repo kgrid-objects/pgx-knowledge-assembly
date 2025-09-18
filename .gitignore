@@ -1,6 +1,7 @@
 .DS_Store
 .idea/
 dist/
+!pgx-demos/chatbot/dist
 node_modules/
 /kit/activator
 /kit/library
