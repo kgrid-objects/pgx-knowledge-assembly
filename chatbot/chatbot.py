@@ -10,6 +10,7 @@ from langchain_core.runnables import RunnablePassthrough
 from langchain_openai.chat_models import ChatOpenAI
 from langchain_openai.embeddings import OpenAIEmbeddings
 import warnings
+from importlib import resources
 
 def main():
     # Disable only the "ValidationError has been moved" warning
@@ -19,16 +20,16 @@ def main():
         category=UserWarning,
     )
     load_dotenv()
-
+    
     OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
-    model = ChatOpenAI(openai_api_key=OPENAI_API_KEY, model=os.getenv("MODEL")) 
+    model = ChatOpenAI(openai_api_key=OPENAI_API_KEY, model=os.getenv("MODEL"))
 
 
     embeddings = OpenAIEmbeddings()
 
     splits = []
-    knowledge_base = os.environ["KNOWLEDGE_BASE"] 
+    knowledge_base =  resources.files("chatbot") / "metadata" #os.environ["KNOWLEDGE_BASE"]
 
     files = os.listdir(knowledge_base)
     for file in files:
