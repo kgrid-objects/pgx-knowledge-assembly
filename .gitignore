@@ -14,3 +14,4 @@ __pycache__/
 poetry.lock
 .pytest_cache/
 .env
+chatbot_logs.log
