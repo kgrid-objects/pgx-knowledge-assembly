@@ -11,10 +11,10 @@ def run(input_data):
 
         # Run all functions in knowledgeSet2Payloads concurrently
         final_results_ks2 = [f(merged_results) for f in knowledgeSet2Payloads]
-        print({
-            "intermediate": merged_results,
-            "finalKS2": final_results_ks2,
-        })
+        # print({
+        #     "intermediate": merged_results,
+        #     "finalKS2": final_results_ks2,
+        # })
         return {
             "intermediate": merged_results,
             "finalKS2": final_results_ks2,
