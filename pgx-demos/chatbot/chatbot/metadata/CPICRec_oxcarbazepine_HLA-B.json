@@ -1,0 +1,58 @@
+{
+  "@context": "https://kgrid.org/koio/2.1/context.jsonld",
+  "@id": "99999/fk4qc17m5z/v1.0",
+  "versionInfo": "2.1",
+  "@type": "KnowledgeObject",
+  "dc:title": "CPIC HLA-B oxcarbazepine recommendations",
+  "dc:identifier": "ark:/99999/fk4qc17m5z/v1.0",
+  "dc:version": "v1.0",
+  "dc:date": "2025-05-22",
+  "dc:description": "CPIC recommendations for oxcarbazepine based on HLA-B genotype",
+  "schema:creator": {
+    "@id": "https://kgrid.org",
+    "@type": "schema:Organization",
+    "schema:givenName": "Knowledge Systems Lab",
+    "schema:affiliation": "Knowledge Systems Lab, University of Michigan Medical School",
+    "schema:email": "kgrid-developers@umich.edu"
+  },
+  "koio:hasKnowledge": [
+    {
+      "@id": "HLA-B_oxcarbazepine_recommendations",
+      "@type": "koio:Knowledge",
+      "implementedBy": {
+        "@id": "recommendation.js",
+        "@type": "Function"
+      }
+    }
+  ],
+  "hasService": [
+    {
+      "@id": "library_service",
+      "@type": [
+        "Service"
+      ],
+      "dc:description": "A JavaScript library with a function that accepts a phenotype and provide drug dosing recommendations.",
+      "dependsOn": [
+        "B_oxcarbazepine_recommendations"
+      ],
+      "implementedBy": {
+        "@id": "recommendation.js",
+        "@type": [
+          "Implementation"
+        ]
+      },
+      "hasTest": [
+        {
+          "@id": "library_tests",
+          "dc:title": "Tests written for the library service",
+          "@type": "Test",
+          "dc:description": "These tests are written to test the functionality and correctness of the library service.",
+          "implementedBy": {
+            "@id": "tests/oxcarbazepine-rec-HLA-B.test.js",
+            "@type": "Javascript"
+          }
+        }
+      ]
+    }
+  ]
+}
