@@ -1,2 +1,4 @@
 chatbot/__pycache__/openai_chatbot_with_assistant_api.cpython-311.pyc
 .env
+
+chatbot_logs.*
