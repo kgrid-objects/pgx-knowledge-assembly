@@ -44,8 +44,8 @@ vectorstore2 = DocArrayInMemorySearch.from_documents(splits, embeddings)
 
 # Create the Chain
 template = """
-You have access to metadata for CPIC pharmacogenomic Knowledge Objects (KOs) which are gathered in a Knowledge Assembly (KA). These KOs are organized into two sets (knwoledge sets) in the KA , one can help mapping a patient's Genotype to Phenotype and the other one can help with mapping Phenotype to Recommendations. KA links these KOs and provides some services thet make it possible to produce patient specific drug selection and dosing recommendations.  
-Answer any question about these KOs and the KA based on the context available which is the metadata of KOs and KA. 
+You have access to metadata for CPIC pharmacogenomic Knowledge Objects (KOs) which are gathered in a Knowledge Assembly (KA). These KOs are organized into three sets (knwoledge sets) in the KA , one can help mapping a patient's Genotype to Phenotype and the other two can help with mapping Phenotype to Recommendations. KA links these KOs and provides some services thet make it possible to produce patient specific drug selection and dosing recommendations.  
+Answer any question about these KOs and the KA based on the context available which is the metadata of KOs and KA. For questions about KA, knwoledge sets and list of KOs used in the KA and how these KOs are linked in the KA you can use the KS metadata 'knowledge assembly metadata.json'.
 You do not have access to the knowledge representations for these KOs but you can provide information about these KOs and KA using their metadata. For using the KS or KOs and accessing actual recommendations refer to use the KA. 
 If you don't know the answer, just say that you don't know. 
 Context: {context}
