@@ -169,11 +169,11 @@
             .then(data => {
                 const taskId = data.task_id;
                 // Show delayed message if response is not ready after 5 seconds
-                setTimeout(() => {
-                    if (document.getElementById('submitButton').style.display === 'none') {
-                        document.getElementById('delayedMessage').style.display = 'block';
-                    }
-                }, 8000);
+                //setTimeout(() => {
+                //    if (document.getElementById('submitButton').style.display === 'none') {
+                //        document.getElementById('delayedMessage').style.display = 'block';
+                //    }
+                //}, 8000);
                 checkResponse(taskId, history, question);
             })
             .catch(error => console.error('Error:', error));
