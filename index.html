@@ -62,7 +62,13 @@
                   <th>Phenotype</th>
                 </tr>
                 <tr class=" " v-for='(value, key) in diplotypePanel'>
-                    <td class='noselect' :class="{active:value!=''}" :id='key' style='width:20%;'>{{key}}</td>
+                    <td class='noselect' :class="{active:value!=''}" :id='key' style='width:20%;'>
+                      <a :href="'https://kgrid-objects.github.io/pgx-knowledge-assembly/CPIC_Phenotype_' + key" target="_blank" rel="noopener" class="info-link" style='margin-left:8px;color:inherit;text-decoration:none;'>
+                          <i class="fas fa-info-circle" aria-hidden="true"></i>
+                          <span class="sr-only">More info about {{key}}</span>
+                        </a>
+                        {{key}}
+                    </td>
                     <td :class="{active:value!=''}" style='width:30%;'> <b-form-input  type="text"  v-model='diplotypePanel[key]' ></b-form-input>  </td>
                     <td  class='pheno noselect' style='width:50%;font-size:85%;text-align:center;' :class="{active:value!=''}"><span v-if='phenotypePanel[key].phenotype!=""'>{{phenotypePanel[key].phenotype}}</span><span v-else>---</span></td>
                 </tr>

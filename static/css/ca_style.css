@@ -178,7 +178,7 @@ header  {
 	}
 	.gene-table td.pheno {
 		width:50%;
-		font-size:85%;
+		font-size:1%;
 		text-align:center;
 	}
 	.gene-table td.active.selected {
