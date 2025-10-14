@@ -10,15 +10,6 @@
         "TPMT" : "",
         "UGT1A1": ""
       },
-      "links": {
-        "CYP2C19":"https://kgrid-objects.github.io/pgx-knowledge-assembly/CPIC_Phenotype_CYP2C19.html",
-        "CYP2C9" :"https://kgrid-objects.github.io/pgx-knowledge-assembly/CPIC_Phenotype_CYP2C9.html",
-        "CYP2D6": "https://kgrid-objects.github.io/pgx-knowledge-assembly/CPIC_Phenotype_CYP2D6.html",
-        "CYP3A5": "https://kgrid-objects.github.io/pgx-knowledge-assembly/CPIC_Phenotype_CYP3A5.html",
-        "SLCO1B1" : "https://kgrid-objects.github.io/pgx-knowledge-assembly/CPIC_Phenotype_SLCO1B1.html",
-        "TPMT" : "https://kgrid-objects.github.io/pgx-knowledge-assembly/CPIC_Phenotype_TPMT.html",
-        "UGT1A1": "https://kgrid-objects.github.io/pgx-knowledge-assembly/CPIC_Phenotype_UGT1A1.html"
-      },
     "prescriptions": {}
   },
 "patientsamples":[

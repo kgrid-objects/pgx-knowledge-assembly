@@ -28,7 +28,7 @@
   <div id='app' style='position:relative;height:100%;'>
     <header>
       <div class="container color-scheme pad-l-30 header-title noselect">
-        <h1>PGX Demo App
+        <h1>Pharmacogenomics Demo App
           <!-- <div class='float-r'>
             <i class="fas fa-cog" id='settingicon' @click='showsetting'></i>
             <a href='https://demo.kgrid.org/cpic-demo#web-demo' target="_blank" style='color:#666;'><i class="fas fa-info-circle" ></i></a>
@@ -69,8 +69,8 @@
                         </a>
                         {{key}}
                     </td>
-                    <td :class="{active:value!=''}" style='width:30%;'> <b-form-input  type="text"  v-model='diplotypePanel[key]' ></b-form-input>  </td>
-                    <td  class='pheno noselect' style='width:50%;font-size:85%;text-align:center;' :class="{active:value!=''}"><span v-if='phenotypePanel[key].phenotype!=""'>{{phenotypePanel[key].phenotype}}</span><span v-else>---</span></td>
+                    <td :class="{active:value!=''}" style='width:25%;'> <b-form-input  type="text"  v-model='diplotypePanel[key]' ></b-form-input>  </td>
+                    <td  class='pheno noselect' style='width:30%;font-size:85%;text-align:center;' :class="{active:value!=''}"><span v-if='phenotypePanel[key].phenotype!=""'>{{phenotypePanel[key].phenotype}}</span><span v-else>---</span></td>
                 </tr>
               </tbody>
             </table>
@@ -131,7 +131,11 @@
 		<div v-bind:id="recindex">
 				<div class="row kg-sub">
 					<div class="col-md-11 col-sm-11 col-xs-11 kgl-title kg-fg-color" data-toggle="tooltip"
-							data-placement="top" v-bind:title="recmodel.status"><span>{{reckey}}</span>
+							data-placement="top" v-bind:title="recmodel.status"><span>{{reckey}} </span>
+              <a :href="'https://kgrid-objects.github.io/pgx-knowledge-assembly/CPIC_' + key+'.html'" target="_blank" rel="noopener" class="info-link" style='margin-left:8px;color:inherit;text-decoration:none;'>
+                          <i class="fas fa-info-circle" aria-hidden="true"></i>
+                          <span class="sr-only">More info about {{key}}</span>
+                        </a>
 					</div>
           <!-- <a :href='objlink' target="_blank" style='color:#fff;float:right;font-size:80%;'><i class="fas fa-info-circle" ></i></a> -->
 				</div>
