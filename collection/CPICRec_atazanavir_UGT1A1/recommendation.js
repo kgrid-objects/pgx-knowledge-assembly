@@ -1,6 +1,6 @@
 // KGrid CPIC guidelines UGT1A1 Phenotype to Atazanavir Recommendation
 
-const drug = 'Atazanavir';
+const drug = 'atazanavir';
 const reference = {
   'UGT1A1': { field: 'phenotype', value: '' }
 };

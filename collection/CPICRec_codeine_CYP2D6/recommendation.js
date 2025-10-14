@@ -56,7 +56,7 @@ function dosingrecommendation (inputs) {
   }
 }
 // KGrid CPIC guidelines CYP2D6 Phenotype to Codeine Recommendation
-var drug = 'Codeine'
+var drug = 'codeine'
 var reference = {'CYP2D6':{field:'phenotype', value:''}}
 var recommendations = {
   'cyp2d6ultrarapid': {'implication': 'Increased formation of morphine following codeine administration, leading to higher risk of toxicity',

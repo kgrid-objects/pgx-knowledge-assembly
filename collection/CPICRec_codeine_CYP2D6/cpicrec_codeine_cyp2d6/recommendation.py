@@ -1,6 +1,6 @@
 import copy
 
-drug = "Codeine"
+drug = "codeine"
 reference = {"CYP2D6": {"field": "phenotype", "value": ""}}
 keysuffix = {"CYP2D6": {"positive": "", "negative": ""}}  # adjust if needed
 recommendations = {

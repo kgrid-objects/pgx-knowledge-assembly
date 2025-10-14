@@ -57,7 +57,7 @@ function dosingrecommendation (inputs) {
 }
 
 // KGrid CPIC guidelines CYP2C19 and CYP2D6 Phenotypes to amitriptyline Recommendation
-var drug = 'Phenytoin'
+var drug = 'phenytoin'
 var reference = {'CYP2C9':{field:'phenotype', value:''},'HLA-B':{field:'diplotype', value:'15:02'}}
 var keysuffix= {'HLA-B':{negative:'noncarrier', positive:'carrier'}}   //dipltotype only
 // # Dictionary containing Phenotype to Recommendation Information

@@ -56,7 +56,7 @@ function dosingrecommendation (inputs) {
   }
 }
 // KGrid CPIC guidelines CYP2D6 Phenotype to Tramadol Recommendation
-var drug = 'Tramadol'
+var drug = 'tramadol'
 var reference = {'CYP2D6':{field:'phenotype', value:''}}
 var recommendations = {
   'cyp2d6ultrarapid': {'implication': 'Increased formation of O-desmethyltramadol (active metabolite) leading to higher risk of toxicity',
