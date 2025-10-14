@@ -22,7 +22,7 @@
   <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
   <script src="./static/js/axios.min.js"></script>
   <title>CPIC Demo App</title>
-  <script type="module" crossorigin src="/pgx-knowledge-assembly/assets/index-STTmCYP6.js"></script>
+  <script type="module" crossorigin src="/pgx-knowledge-assembly/assets/index-BJ4DL3ir.js"></script>
 </head>
 <body>
   <div id='app' style='position:relative;height:100%;'>
@@ -87,7 +87,7 @@
             :recmodel="rec"            
             :reckey="rec.result.drug"
             :recindex="index"
-            :recsource="CPIC">
+            :recsource="'CPIC'">
           </recomtile>
         </li>
       </ul>
@@ -104,7 +104,7 @@
             :recmodel="rec"
             :reckey="rec.result.drug"
             :recindex="index"
-            :recsource="DPWG">
+            :recsource="'DPWG'">
           </recomtile>
         </li>
       </ul>
@@ -134,7 +134,7 @@
 				<div class="row kg-sub">
 					<div class="col-md-11 col-sm-11 col-xs-11 kgl-title kg-fg-color" data-toggle="tooltip"
 							data-placement="top" v-bind:title="recmodel.status"><span>{{reckey}} </span>
-              <a :href="'https://kgrid-objects.github.io/pgx-knowledge-assembly/'+ recsource +'_' + reckey+'.html'" target="_blank" rel="noopener" class="info-link" style='margin-left:8px;color:inherit;text-decoration:none;'>
+              <a :href="objlink" target="_blank" rel="noopener" class="info-link" style='margin-left:8px;color:inherit;text-decoration:none;'>
                           <i class="fas fa-info-circle" aria-hidden="true"></i>
                           <span class="sr-only">More info about {{reckey}}</span>
                         </a>

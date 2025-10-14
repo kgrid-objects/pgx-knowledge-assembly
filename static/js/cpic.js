@@ -7,7 +7,8 @@ Vue.component('recomtile', {
     'recmodel',
     'reckey',
     'recindex',
-    'library_url'
+    'library_url', 
+    'recsource'
   ],
   data: function () {
     return {
@@ -39,7 +40,7 @@ Vue.component('recomtile', {
       return obj
     },
     objlink: function () {
-      return ""
+      return `https://kgrid-objects.github.io/pgx-knowledge-assembly/${this.recsource}_${this.reckey}.html`;
     }
   }
 })
