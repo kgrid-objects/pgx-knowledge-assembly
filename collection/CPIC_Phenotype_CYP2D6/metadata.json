@@ -50,6 +50,7 @@
         "Service"
       ],
       "dc:description": "A JavaScript/Python library with a function that accepts a genetic profile and provide corresponding phenotypes.",
+      "hasInterface": "library_service_specification.md",
       "dependsOn": [
         "genotype_to_Phenotype_for_CYP2D6"
       ],

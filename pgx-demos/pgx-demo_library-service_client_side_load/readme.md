@@ -29,8 +29,16 @@ For production first build the app and then copy the pgx-ka information page to 
 ```shell
 npx vite build 
 cp ../../pgx-ka/index.html dist/pgx_ka_info_page.html
-cp ../../collection/CPIC_Phenotype_CYP2D6/index.html dist/CPIC_Phenotype_CYP2D6.html
 cp ../../collection/CPICRec_codeine_CYP2D6/index.html dist/CPICRec_Codeine_CYP2D6.html
+cp ../../collection/CPIC_Phenotype_CYP2D6/index.html dist/CPIC_Phenotype_CYP2D6.html
+cp ../../collection/CPIC_Phenotype_CYP2C9/index.html dist/CPIC_Phenotype_CYP2C9.html
+cp ../../collection/CPIC_Phenotype_CYP2C19/index.html dist/CPIC_Phenotype_CYP2C19.html
+cp ../../collection/CPIC_Phenotype_CYP3A5/index.html dist/CPIC_Phenotype_CYP3A5.html
+cp ../../collection/CPIC_Phenotype_SLCO1B1/index.html dist/CPIC_Phenotype_SLCO1B1.html
+cp ../../collection/CPIC_Phenotype_TPMT/index.html dist/CPIC_Phenotype_TPMT.html
+cp ../../collection/CPIC_Phenotype_UGT1A1/index.html dist/CPIC_Phenotype_UGT1A1.html
+
+
 ```
 
 To run a built version in dev environment use serve

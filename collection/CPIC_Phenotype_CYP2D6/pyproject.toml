@@ -6,7 +6,13 @@ authors = ["Knowledge Systems Lab, University of Michigan Medical School <kgrid-
 readme = "README.md"
 
 packages = [
-    { include = "cpic_phenotype_cyp2d6" }
+    { include = "cpic_phenotype_cyp2d6" },
+    { include = "tests" }
+]
+
+include = [
+    "metadata.json",
+    "index.html"
 ]
 
 [tool.poetry.dependencies]
