@@ -25,7 +25,7 @@ If you are installing pgx-ka from a local place, make sure all its dependencies 
 npx vite   
 ```
 
-For production first build the app and then copy the pgx-ka information page to the demo folder using
+For production first build the app and then copy the information pages to the demo folder using
 ```shell
 npx vite build 
 cp ../../pgx-ka/index.html dist/pgx_ka_info_page.html
@@ -37,7 +37,6 @@ cp ../../collection/CPIC_Phenotype_SLCO1B1/index.html dist/CPIC_Phenotype_SLCO1B
 cp ../../collection/CPIC_Phenotype_TPMT/index.html dist/CPIC_Phenotype_TPMT.html
 cp ../../collection/CPIC_Phenotype_UGT1A1/index.html dist/CPIC_Phenotype_UGT1A1.html
 cp ../../collection/CPICRec_codeine_CYP2D6/index.html dist/CPICRec_Codeine_CYP2D6.html
-
 cp ../../collection/CPICRec_abacavir_HLA-B/index.html dist/CPIC_abacavir.html
 cp ../../collection/CPICRec_allopurinol_HLA-B/index.html dist/CPIC_allopurinol.html
 cp ../../collection/CPICRec_amitriptyline_CYP2C19_CYP2D6/index.html dist/CPIC_amitriptyline.html
@@ -70,9 +69,6 @@ cp ../../collection/CPICRec_voriconazole_CYP2C19/index.html dist/CPIC_voriconazo
 cp ../../collection/DPWGRec_amitriptyline_CYP2C19/index.html dist/DPWG_amitriptyline.html
 cp ../../collection/DPWGRec_clomipramine_CYP2C19/index.html dist/DPWG_clomipramine.html
 cp ../../collection/DPWGRec_escitalopram_CYP2C19/index.html dist/CPIC_DPWG_escitalopram.html
-
-
-
 ```
 
 To run a built version in dev environment use serve
