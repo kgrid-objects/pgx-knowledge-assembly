@@ -94,12 +94,13 @@
                 </tr>
                 <tr class=" " v-for='(value, key) in diplotypePanel'>
                   <td class='noselect' :class="{active:value!=''}" :id='key' style='width:20%;'>
-                    <a :href="'https://kgrid-objects.github.io/pgx-knowledge-assembly/CPIC_Phenotype_' + key"
+                    <a v-if="key !== 'HLA-A' && key !== 'HLA-B'" :href="'https://kgrid-objects.github.io/pgx-knowledge-assembly/CPIC_Phenotype_' + key"
                       target="_blank" rel="noopener" class="info-link"
                       style='margin-left:8px;color:inherit;text-decoration:none;'>
                       <i class="fas fa-info-circle" aria-hidden="true"></i>
                       <span class="sr-only">More info about {{key}}</span>
                     </a>
+                    <span v-else style="display:inline-block; width:18px;"></span>
                     {{key}}
                   </td>
                   <td :class="{active:value!=''}" style='width:25%;'> <b-form-input type="text"

@@ -46,7 +46,7 @@ cp ../../collection/CPICRec_carbamazepine_HLA-A_HLA-B/index.html dist/CPIC_carba
 cp ../../collection/CPICRec_citalopram_CYP2C19/index.html dist/CPIC_citalopram.html
 cp ../../collection/CPICRec_clomipramine_CYP2C19_CYP2D6/index.html dist/CPIC_clomipramine.html
 cp ../../collection/CPICRec_clopidogrel_CYP2C19/index.html dist/CPIC_clopidogrel.html
-cp ../../collection/CPICRec_codeine_CYP2D6/index.html dist/CPIC_codeine_.html
+cp ../../collection/CPICRec_codeine_CYP2D6/index.html dist/CPIC_codeine.html
 cp ../../collection/CPICRec_desipramine_CYP2C19_CYP2D6/index.html dist/CPIC_desipramine.html
 cp ../../collection/CPICRec_doxepin_CYP2C19_CYP2D6/index.html dist/CPIC_doxepin.html
 cp ../../collection/CPICRec_escitalopram_CYP2C19/index.html dist/CPIC_escitalopram.html
@@ -68,7 +68,7 @@ cp ../../collection/CPICRec_tropisetron_CYP2D6/index.html dist/CPIC_tropisetron.
 cp ../../collection/CPICRec_voriconazole_CYP2C19/index.html dist/CPIC_voriconazole.html
 cp ../../collection/DPWGRec_amitriptyline_CYP2C19/index.html dist/DPWG_amitriptyline.html
 cp ../../collection/DPWGRec_clomipramine_CYP2C19/index.html dist/DPWG_clomipramine.html
-cp ../../collection/DPWGRec_escitalopram_CYP2C19/index.html dist/CPIC_DPWG_escitalopram.html
+cp ../../collection/DPWGRec_escitalopram_CYP2C19/index.html dist/DPWG_escitalopram.html
 ```
 
 To run a built version in dev environment use serve
