@@ -22,7 +22,9 @@
       "dc:creator": "Clinical Pharmacogenomics Implementation Consortium",
       "dc:source": "https://cpicpgx.org/guidelines/guideline-for-codeine-and-cyp2d6/",
       "dc:date": "2020-12",
-      "dc:isReferencedBy": "https://pubmed.ncbi.nlm.nih.gov/33387367/"
+      "dc:description": "This guideline recommends prescribing of tramadol for the CYP2D6 phenotype. The guideline has an 'A' level of evidence, indicating that the preponderance of evidence is high or moderate in favor of changing prescribing."
+      "dc:isReferencedBy": "https://pubmed.ncbi.nlm.nih.gov/33387367/",
+      "schema:endorsers": "American Society of Health-System Pharmacists (ASHSP)",
       "implementedBy": [
         {
           "@id": "recommendation.js",
