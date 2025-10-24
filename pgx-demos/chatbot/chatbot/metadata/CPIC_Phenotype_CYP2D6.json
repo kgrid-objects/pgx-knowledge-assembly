@@ -7,7 +7,7 @@
   "dc:identifier": "ark:/99999/fk49z9gr7p/v1.1",
   "dc:version": "v1.1",
   "dc:date": "2025-05-22",
-  "dc:description": "KGrid CPIC guidelines Genotype to Phenotype for CYP2D6",
+  "dc:description": "Genotype to Phenotype definitions for CYP2D6 according to CPIC and DPWG",
   "schema:creator": {
     "@id": "https://kgrid.org",
     "@type": "schema:Organization",
@@ -19,6 +19,19 @@
     {
       "@id": "genotype_to_Phenotype_for_CYP2D6",
       "@type": "koio:Knowledge",
+      "dc:publisher": "Clinical Pharmacogenomics Implementation Consortium",
+      "dc:date": "2019-03",
+      "dc:source": "https://cpicpgx.org/wp-content/uploads/2019/03/Final-Consensus-CYP2D6-genotype-to-phenotype-table_-final_Mar2019.pdf",
+      "dc:description": "Expert consensus for CYP2D6 phenotype definitions based on genotype",
+      "dc:isReferencedBy": "https://pubmed.ncbi.nlm.nih.gov/31647186/",
+      "schema:creator": [
+        {
+          "schema:name": "Clinical Pharmacogenomics Implementation Consortium"
+        },
+        {
+          "schema:name": "Dutch Pharmacogenetics Working Group"
+        }
+      ],
       "implementedBy": [
         {
           "@id": "phenotype.js",
@@ -29,7 +42,7 @@
           "@type": "Function"
         }
       ],
-      "hasTest": [        
+      "hasTest": [
         {
           "@id": "cyp2d6_phenotype_knowledge_tests",
           "dc:title": "Knowledge Tests (Python)",
@@ -50,6 +63,7 @@
         "Service"
       ],
       "dc:description": "A JavaScript/Python library with a function that accepts a genetic profile and provide corresponding phenotypes.",
+      "hasInterface": "library_service_specification.md",
       "dependsOn": [
         "genotype_to_Phenotype_for_CYP2D6"
       ],

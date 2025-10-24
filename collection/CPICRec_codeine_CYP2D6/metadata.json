@@ -19,13 +19,16 @@
     {
       "@id": "CYP2D6_Codeine_recommendations",
       "@type": "koio:Knowledge",
-      "dc:creator": "Clinical Pharmacogenomics Implementation Consortium",
+      "schema:creator": {
+        "schema:name": "Clinical Pharmacogenomics Implementation Consortium"
+      },
       "dc:source": "https://cpicpgx.org/guidelines/guideline-for-codeine-and-cyp2d6/",
       "dc:date": "2020-12",
       "dc:description": "This guideline recommends prescribing of codeine for the CYP2D6 phenotype. The guideline has an 'A' level of evidence, indicating that the preponderance of evidence is high or moderate in favor of changing prescribing.",
-      "dc:isReferencedBy": 
-      [
-        "https://pubmed.ncbi.nlm.nih.gov/22205192/","https://pubmed.ncbi.nlm.nih.gov/24458010/","https://pubmed.ncbi.nlm.nih.gov/33387367/"
+      "dc:isReferencedBy": [
+        "https://pubmed.ncbi.nlm.nih.gov/22205192/",
+        "https://pubmed.ncbi.nlm.nih.gov/24458010/",
+        "https://pubmed.ncbi.nlm.nih.gov/33387367/"
       ],
       "schema:endorsers": "American Society of Health-System Pharmacists (ASHSP)",
       "implementedBy": [
@@ -38,7 +41,7 @@
           "@type": "Function"
         }
       ],
-      "hasTest": [        
+      "hasTest": [
         {
           "@id": "codeine_recommendation_knowledge_tests",
           "dc:title": "Knowledge Tests (Python)",

@@ -24,10 +24,14 @@
       "dc:source": "https://cpicpgx.org/wp-content/uploads/2019/03/Final-Consensus-CYP2D6-genotype-to-phenotype-table_-final_Mar2019.pdf",
       "dc:description": "Expert consensus for CYP2D6 phenotype definitions based on genotype",
       "dc:isReferencedBy": "https://pubmed.ncbi.nlm.nih.gov/31647186/",
-      "dc:creator": 
-        [
-          "Clinical Pharmacogenomics Implementation Consortium", "Dutch Pharmacogenetics Working Group"
-        ],
+      "schema:creator": [
+        {
+          "schema:name": "Clinical Pharmacogenomics Implementation Consortium"
+        },
+        {
+          "schema:name": "Dutch Pharmacogenetics Working Group"
+        }
+      ],
       "implementedBy": [
         {
           "@id": "phenotype.js",
@@ -38,7 +42,7 @@
           "@type": "Function"
         }
       ],
-      "hasTest": [        
+      "hasTest": [
         {
           "@id": "cyp2d6_phenotype_knowledge_tests",
           "dc:title": "Knowledge Tests (Python)",
