@@ -440,7 +440,7 @@ Media queries
 		max-height:800px;
 	}
 }
-@media only screen and (min-height: 678px) and (max-height: 1091px) {
+@media only screen and (min-height: 678px) and (max-height: 900px) {
 	tbody {
 		display: block;
 		overflow: auto;
