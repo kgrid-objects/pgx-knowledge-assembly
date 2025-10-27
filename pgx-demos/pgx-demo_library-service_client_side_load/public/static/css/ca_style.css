@@ -440,7 +440,7 @@ Media queries
 		max-height:800px;
 	}
 }
-@media only screen and (min-height: 678px) and (max-height: 900px) {
+@media only screen and (min-height: 678px) and (max-height: 1000px) {
 	tbody {
 		display: block;
 		overflow: auto;
@@ -453,10 +453,10 @@ Media queries
 		padding: 6px;
 	}
 	ul#reclist {
-		max-height:900px;
+		max-height:1000px;
 	}
 	ul#reclistdpwg {
-		max-height:900px;
+		max-height:1000px;
 	}
 
 }
